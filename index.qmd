@@ -2,7 +2,7 @@
 title: "Welcome to My Analytics Lab"
 ---
 
-![](assets/images/smpns.gif){fig-align="center"width=500px}
+![](assets/images/welcometotheclub.gif){fig-align="center"width=500px}
 
 ---
 
