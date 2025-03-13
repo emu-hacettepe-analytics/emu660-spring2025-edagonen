@@ -1,5 +1,5 @@
 ---
-title: "Welcome to My Analytics Lab"
+title: "Welcome to My Analytics Lab" {text-align="center"}
 ---
 
 ![](assets/images/welcometotheclub.gif){fig-align="center"width=500px}
