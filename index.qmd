@@ -1,13 +1,14 @@
 ---
-title: "Welcome to My Analytics Lab" {text-align="center"}
+title: "Welcome to My Analytics Lab" 
+
 ---
 
 ![](assets/images/welcometotheclub.gif){fig-align="center"width=500px}
 
 ---
 
-Hello! My name is Eda Gönen.
+**Hello! I'm Eda Gönen.**
 
-This is my personal webpage.
+Welcome to my personal website! Here, I share my work in data analytics, blog posts, and a few different projects. I enjoy working with data and finding new ways to understand it. I’ll also be sharing my thoughts on technology from time to time.
 
-Please stay tuned to follow my works on data analytics, blog posts, and more.
+Stay tuned, there’s plenty to discover and learn together!
