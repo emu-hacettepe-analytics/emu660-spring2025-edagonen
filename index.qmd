@@ -1,5 +1,5 @@
 ---
-## "Welcome to My Analytics Lab"
+title: "Welcome to My Analytics Lab"
 
 ## <span style="color:pink;">Education</span>
 
