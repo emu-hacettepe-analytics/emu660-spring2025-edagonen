@@ -2,6 +2,9 @@
 title: "Welcome to My Analytics Lab"
 ---
 
+![](assets/images/welcometoclub.gif){fig-align="center"width=500px}
+---
+
 Hello!! My name is Eda Gönen.
 
 This is my personal webpage.
