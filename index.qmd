@@ -1,5 +1,7 @@
 ---
 title: "Welcome to My Analytics Lab"
+
+<span style="color:pink;">Education</span>
 ---
 
 ![](assets/images/welcometotheclub.gif){fig-align="center"width=500px}
