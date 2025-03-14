@@ -3,38 +3,58 @@ title: "About Me"
 sidebar: false 
 ---
 
-![](assets/images/vesikalik.jpeg){fig-align="center"}
+## [Education]{style="color:red;"}
 
-# Education
+-   **M.S, Industrial Engineering**, Hacettepe University, *Turkey*
+    -   *2025-ongoing*
 
--   B.S., ................................., ....................................University, Turkey, 20xx - 20xx.
--   M.S., Industrial Engineering, Hacettepe University, Turkey, 20xx - ongoing.
--   Ph.D.., Industrial Engineering, Hacettepe University, Turkey, 20xx - ongoing.
+<!-- -->
 
-# Work Experience
+-   **M.S, Business Administration**, Hacettepe University, *Turkey*
+    -   *2022-2023*
 
-## Employements
+<!-- -->
 
-1.  Firm xxx, position xx, year xxx
+-   **B.S, Industrial Engineering**, TOBB University of Economics and Technology, *Turkey*
+    -   *2015-2020*
 
-2.  Firm yyy, position yyy, year yyy
+## [Work Experience]{style="color:red;"}
 
-## Internships
+-   **TRT**, Planning Specialist, Turkey
 
-1.  Firm aaa, position xx, year xxx
+    -   *Dec 2021 - ongoing*
 
-2.  Firm bbb, position yyy, year yyy
+        ***Broadcast Planning & Performance Analysis**: Managing and monitoring TV broadcasts, analyzing rating performance, and optimizing scheduling and discount strategies.*
 
-# Projects
+        ***Data-Driven Decision Making**: Conducting data analysis, preparing reports, and ensuring effective team coordination for strategic planning.*
 
-1.  TUBİTAK 1001..........................
+-   **LC WAIKIKI ,** International Store Merchandiser, Turkey
 
-# Publications
+    -   *Jan 2021 - Dec 2021*
 
-1.  Dasdemir, E., Batta, R., Koksalan, M., Tezcaner Ozturk, D. (2022) “UAV Routing for Reconnaissance Mission: A Multi-Objective Orienteering Problem with Time-Dependent Prizes and Multiple Connections”, Computers & Operations Research, 145: 105882.
+        *Managing international store stocks, analyzing performance metrics, and optimizing shipping strategies based on regional clothing preferences.*
 
-# Competencies
+        *Developing and implementing discount strategies to enhance sales*.
 
-R, Quarto, Git, Python
+-   **TURK PATENT VE MARKA KURUMU**, Intern, Turkey
 
-# Hobbies
+    -   *Dec 2019 - Sep 2019*
+
+-   **MAN TURKIYE**, Quality Control Engineer Intern, Turkey
+
+    -   *Jan 2019 - Apr 2019*
+
+-   **ERSA OFIS MOBILYALARI** , IT Intern, Turkey
+
+    -   *Aug 2018- May 2019*\
+
+## [Competencies]{style="color:red;"}
+
+-   **Mathematical Modelling**
+-   **MS Office**
+-   **R**
+-   **CPLEX**
+-   **MySQL**
+-   **MS Office**
+
+## [Hobbies]{style="color:red;"}
