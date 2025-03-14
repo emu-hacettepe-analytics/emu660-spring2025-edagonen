@@ -1,5 +1,8 @@
 ---
-title: "My Assignments"
+::: {style="text-align: center"}
+::: {style="font-family: fantasy; font-size: 50px; font-style: normal; font-variant: small-caps; font-weight: 700; line-height: 39.6px; color: #333333;"}
+**Welcome to My Analytics Lab**
+:::
 ---
 
 On this page, I showcase the assignment I conducted for the \[term and year, e.g. Spring 2024-2025\] EMU660 Decision Making with Analytics course. xx
