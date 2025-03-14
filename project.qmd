@@ -1,5 +1,5 @@
 ---
-title: "Project X"
+title: "<div style='text-align:center;'><span style='color:red; font-style:italic;'>Project X</span></div>"
 ---
 
 Welcome to my/our project page.
