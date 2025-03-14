@@ -4,9 +4,6 @@ sidebar: false
 ---
 ## [Short Biography]{style="color:red;"}
 
-- As an **industrial engineer** with a passion for data analysis, broadcasting, and artificial intelligence, I have built my career on exploring innovative solutions in these fields. After graduating from TOBB University, I began working as a data analyst in the broadcasting sector, specifically at TRT1, where I focused on broadcast planning and data analysis. 
-
-Currently, I am pursuing a master's degree in industrial engineering while developing projects that integrate AI and innovation into the broadcasting industry. I also share insights on industry trends through blog writing and continuously work on enhancing my professional expertise.
 
 ## [Education]{style="color:red;"}
 
