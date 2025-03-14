@@ -126,5 +126,40 @@
     "crumbs": [
       "Assignment 2"
     ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "M.S, Industrial Engineering, Hacettepe University, Turkey\n\n2025 - ongoing\n\n\n\n\nM.S, Business Administration, Hacettepe University, Turkey\n\n2022 - 2023\n\n\n\n\nB.S, Industrial Engineering, TOBB University of Economics and Technology, Turkey\n\n2015 - 2020"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About Me",
+    "section": "",
+    "text": "M.S, Industrial Engineering, Hacettepe University, Turkey\n\n2025 - ongoing\n\n\n\n\nM.S, Business Administration, Hacettepe University, Turkey\n\n2022 - 2023\n\n\n\n\nB.S, Industrial Engineering, TOBB University of Economics and Technology, Turkey\n\n2015 - 2020"
+  },
+  {
+    "objectID": "about.html#work-experience",
+    "href": "about.html#work-experience",
+    "title": "About Me",
+    "section": "Work Experience",
+    "text": "Work Experience\n\nTRT, Planning Specialist, Turkey\n\nDec 2021 - ongoing\nBroadcast Planning & Performance Analysis: Managing and monitoring TV broadcasts, analyzing rating performance, and optimizing scheduling and discount strategies.\nData-Driven Decision Making: Conducting data analysis, preparing reports, and ensuring effective team coordination for strategic planning.\n\nLC WAIKIKI , International Store Merchandiser, Turkey\n\nJan 2021 - Dec 2021\nManaging international store stocks, analyzing performance metrics, and optimizing shipping strategies based on regional clothing preferences.\nDeveloping and implementing discount strategies to enhance sales.\n\nTURK PATENT VE MARKA KURUMU, Intern, Turkey\n\nDec 2019 - Sep 2019\n\nMAN TURKIYE, Quality Control Engineer Intern, Turkey\n\nJan 2019 - Apr 2019\n\nERSA OFIS MOBILYALARI , IT Intern, Turkey\n\nAug 2018- May 2019"
+  },
+  {
+    "objectID": "about.html#competencies",
+    "href": "about.html#competencies",
+    "title": "About Me",
+    "section": "Competencies",
+    "text": "Competencies\n\nMathematical Modelling\nMS Office\nR\nCPLEX\nMySQL\nMS Office"
+  },
+  {
+    "objectID": "about.html#hobbies",
+    "href": "about.html#hobbies",
+    "title": "About Me",
+    "section": "Hobbies",
+    "text": "Hobbies"
   }
 ]
