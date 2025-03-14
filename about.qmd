@@ -22,11 +22,11 @@ Currently, I am pursuing a master's degree in industrial engineering while devel
 
 -   **B.S, Industrial Engineering**, TOBB University of Economics and Technology, *Turkey*
 
-    -   *2015 - 2020* ![](assets/images/tobblogo.png){width="7%"}
+    -   *2015 - 2020* ![](assets/images/tobblogo.png){width="6%"}
 
 ## [*Work Experience*]{style="color:red;"}
 
--   **TRT**, Planning Specialist, Turkey
+-   **TRT**, Planning Specialist, Turkey ![](assets/images/trtlogo.png){width="8%"}
 
     -   *Dec 2021 - ongoing*
 
@@ -34,7 +34,7 @@ Currently, I am pursuing a master's degree in industrial engineering while devel
 
         ***Data-Driven Decision Making**: Conducting data analysis, preparing reports, and ensuring effective team coordination for strategic planning.*
 
--   **LC WAIKIKI ,** International Store Merchandiser, Turkey
+-   **LC WAIKIKI ,** International Store Merchandiser, Turkey ![](assets/images/lcwlogo.jpg){width="15%"}
 
     -   *Jan 2021 - Dec 2021*
 
@@ -42,15 +42,15 @@ Currently, I am pursuing a master's degree in industrial engineering while devel
 
         *Developing and implementing discount strategies to enhance sales*.
 
--   **TURK PATENT VE MARKA KURUMU**, Intern, Turkey
+-   **TURK PATENT VE MARKA KURUMU**, Intern, Turkey ![](assets/images/tpelogo.png){width="10%"}
 
     -   *Dec 2019 - Sep 2019*
 
--   **MAN TURKIYE**, Quality Control Engineer Intern, Turkey
+-   **MAN TURKIYE**, Quality Control Engineer Intern, Turkey ![](assets/images/manlogo.jpg){width="10%"}
 
     -   *Jan 2019 - Apr 2019*
 
--   **ERSA OFIS MOBILYALARI** , IT Intern, Turkey
+-   **ERSA OFIS MOBILYALARI** , IT Intern, Turkey ![](assets/images/ersalogo.jpg){width="10%"}
 
     -   *Aug 2018- May 2019*\
 
