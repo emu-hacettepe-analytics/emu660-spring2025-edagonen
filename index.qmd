@@ -1,5 +1,6 @@
 ---
-title: "Welcome to My Analytics Lab"
+title: "<div style='text-align:center;'><span style='color:red; font-style:italic;'>Welcome to My Analytics Lab</span></div>"
+
 sidebar: false
 ---
 
