@@ -4,6 +4,8 @@ title: "<div style='text-align:center;'><span style='color:red; font-style:itali
 sidebar: false
 ---
 
+![](images/clipboard-3014854296.gif)
+
 ![](assets/images/welcometotheclub.gif){fig-align="center" width="500px"}
 
 ------------------------------------------------------------------------
