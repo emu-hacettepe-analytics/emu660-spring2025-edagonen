@@ -3,22 +3,24 @@ title: "About Me"
 sidebar: false 
 ---
 
-## [Education]{style="color:red;"}
+## [*Education*]{style="color:red;"}
 
 -   **M.S, Industrial Engineering**, Hacettepe University, *Turkey*
-    -   *2025 - ongoing*
+
+-   *2025 - ongoing*![](images/clipboard-1960187180.png){width="7%"}
 
 <!-- -->
 
 -   **M.S, Business Administration**, Hacettepe University, *Turkey*
-    -   *2022 - 2023*
+    -   *2022 - 2023* ![](images/clipboard-3995431783.png){width="7%"}
 
 <!-- -->
 
 -   **B.S, Industrial Engineering**, TOBB University of Economics and Technology, *Turkey*
-    -   *2015 - 2020*
 
-## [Work Experience]{style="color:red;"}
+    -   *2015 - 2020* ![](assets/images/tobblogo.png){width="7%"}
+
+## [*Work Experience*]{style="color:red;"}
 
 -   **TRT**, Planning Specialist, Turkey
 
@@ -48,7 +50,7 @@ sidebar: false
 
     -   *Aug 2018- May 2019*\
 
-## [Competencies]{style="color:red;"}
+## [*Competencies*]{style="color:red;"}
 
 -   **Mathematical Modelling**
 -   **MS Office**
@@ -57,4 +59,4 @@ sidebar: false
 -   **MySQL**
 -   **MS Office**
 
-## [Hobbies]{style="color:red;"}
+## [*Hobbies*]{style="color:red;"}
