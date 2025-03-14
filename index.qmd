@@ -6,10 +6,6 @@ sidebar: false
 
 ![](images/clipboard-3014854296.gif)
 
-![](assets/images/welcometotheclub.gif){fig-align="center" width="500px"}
-
-------------------------------------------------------------------------
-
 **Hello! I'm Eda Gönen.**
 
 Welcome to my personal website! Here, I share my work in data analytics, blog posts, and a few different projects. I enjoy working with data and finding new ways to understand it. I’ll also be sharing my thoughts on technology from time to time.
