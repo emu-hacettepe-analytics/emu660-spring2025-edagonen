@@ -18,6 +18,12 @@ sidebar: false
 -   **B.S, Industrial Engineering**, TOBB University of Economics and Technology, *Turkey*
     -   *2015 - 2020*
 
+<p align="center" style="color:red; font-size: 20px;">
+
+★ ★ ★
+
+</p>
+
 ## [Work Experience]{style="color:red;"}
 
 -   **TRT**, Planning Specialist, Turkey
