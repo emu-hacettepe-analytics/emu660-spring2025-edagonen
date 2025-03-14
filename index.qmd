@@ -1,12 +1,10 @@
 ---
 title: "Welcome to My Analytics Lab"
-
-<span style="color:pink;">Education</span>
 ---
 
-![](assets/images/welcometotheclub.gif){fig-align="center"width=500px}
+![](assets/images/welcometotheclub.gif){fig-align="center" width="500px"}
 
----
+------------------------------------------------------------------------
 
 **Hello! I'm Eda Gönen.**
 
