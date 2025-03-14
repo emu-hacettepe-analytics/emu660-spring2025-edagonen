@@ -6,17 +6,17 @@ sidebar: false
 ## [Education]{style="color:red;"}
 
 -   **M.S, Industrial Engineering**, Hacettepe University, *Turkey*
-    -   *2025-ongoing*
+    -   *2025 - ongoing*
 
 <!-- -->
 
 -   **M.S, Business Administration**, Hacettepe University, *Turkey*
-    -   *2022-2023*
+    -   *2022 - 2023*
 
 <!-- -->
 
 -   **B.S, Industrial Engineering**, TOBB University of Economics and Technology, *Turkey*
-    -   *2015-2020*
+    -   *2015 - 2020*
 
 ## [Work Experience]{style="color:red;"}
 
