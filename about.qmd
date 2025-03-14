@@ -3,8 +3,6 @@ title: "About Me"
 sidebar: false 
 ---
 
-## [Short Biography]{style="color:red;"}
-
 ## [Education]{style="color:red;"}
 
 -   **M.S, Industrial Engineering**, Hacettepe University, *Turkey*
