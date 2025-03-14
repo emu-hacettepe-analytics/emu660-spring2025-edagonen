@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Welcome to My Analytics Lab",
     "section": "",
-    "text": "Hello! I’m Eda Gönen.\nWelcome to my personal website! Here, I share my work in data analytics, blog posts, and a few different projects. I enjoy working with data and finding new ways to understand it. I’ll also be sharing my thoughts on technology from time to time.\nStay tuned, there’s plenty to discover and learn together!\n\n\n\n Back to top"
+    "text": "Hello! I’m Eda Gönen.\nWelcome to my personal website! Here, I share my work in data analytics, blog posts, and a few different projects. I enjoy working with data and finding new ways to understand it. I’ll also be sharing my thoughts on technology from time to time.\nStay tuned, there’s plenty to discover and learn together!"
   },
   {
     "objectID": "project.html",
@@ -175,5 +175,12 @@
     "title": "About Me",
     "section": "",
     "text": "M.S, Industrial Engineering, Hacettepe University, Turkey\n\n2025 - ongoing"
+  },
+  {
+    "objectID": "index.html#deneme",
+    "href": "index.html#deneme",
+    "title": "Welcome to My Analytics Lab",
+    "section": "Deneme",
+    "text": "Deneme"
   }
 ]
