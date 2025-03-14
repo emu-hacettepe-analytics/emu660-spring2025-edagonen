@@ -1,5 +1,6 @@
 ---
 title: "Welcome to My Analytics Lab"
+sidebar: false
 ---
 
 ![](assets/images/welcometotheclub.gif){fig-align="center" width="500px"}
