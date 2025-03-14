@@ -1,5 +1,5 @@
 ---
-title: "<div style='text-align:center;'><span style='color:red; font-style:italic;'>My Assignments</span></div>"
+title: "My Assignments"
 ---
 
 On this page, I showcase the assignment I conducted for the \[term and year, e.g. Spring 2024-2025\] EMU660 Decision Making with Analytics course. xx

@@ -1,5 +1,5 @@
 ---
-title: "<div style='text-align:center;'><span style='color:red; font-style:italic;'>My Blog</span></div>"
+title: "My Blog"
 sidebar: false 
 ---
 
