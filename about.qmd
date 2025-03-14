@@ -4,6 +4,8 @@ sidebar: false
 ---
 ## [Short Biography]{style="color:red;"}
 
+-   **M.S, Industrial Engineering**, Hacettepe University, *Turkey*
+    -   *2025 - ongoing*
 
 ## [Education]{style="color:red;"}
 
