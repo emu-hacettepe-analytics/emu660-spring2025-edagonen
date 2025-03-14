@@ -7,7 +7,7 @@ website:
   navbar:
     search: true
     left:
-      - text: "<span style='color:red; font-style:italic;'>Home</span>"
+      - text: Home
         href: index.qmd
       - text: About Me
         href: about.qmd
