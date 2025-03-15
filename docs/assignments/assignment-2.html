@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../assignments.html" rel="prev">
+<link href="../assignments/datascience.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -193,8 +193,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </li>
         <li class="sidebar-item">
- <span class="menu-text">datascience.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../assignments/datascience.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"></span></a>
+  </div>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../assignments/assignment-2.html" class="sidebar-item-text sidebar-link active">
@@ -203,7 +206,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
     </ul>
     </div>
-    
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#quick-overview-of-the-mtcars-dataset" id="toc-quick-overview-of-the-mtcars-dataset" class="nav-link active" data-scroll-target="#quick-overview-of-the-mtcars-dataset"><em>Quick Overview of the <code>mtcars</code> Dataset</em></a></li>
+  <li><a href="#write-a-custom-summary-function-applying-the-function-using-a-loop" id="toc-write-a-custom-summary-function-applying-the-function-using-a-loop" class="nav-link" data-scroll-target="#write-a-custom-summary-function-applying-the-function-using-a-loop"><strong><em>Write a Custom Summary Function &amp; Applying the Function Using a Loop</em></strong></a></li>
+  <li><a href="#an-alternative-approach-with-sapply-and-apply" id="toc-an-alternative-approach-with-sapply-and-apply" class="nav-link" data-scroll-target="#an-alternative-approach-with-sapply-and-apply"><em>An alternative approach with sapply and apply</em></a></li>
+  </ul>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -231,6 +242,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<section id="quick-overview-of-the-mtcars-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="quick-overview-of-the-mtcars-dataset"><em>Quick Overview of the <code>mtcars</code> Dataset</em></h3>
+<p>In R, <code>data(mtcars)</code> loads the <code>mtcars</code> dataset, which contains features of 32 cars. <code>str(mtcars)</code> then displays the dataset’s structure, revealing the types and initial values of its columns, providing a quick overview</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(mtcars)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -249,6 +263,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  $ carb: num  4 4 1 1 2 1 4 2 2 4 ...</code></pre>
 </div>
 </div>
+</section>
+<section id="write-a-custom-summary-function-applying-the-function-using-a-loop" class="level3">
+<h3 class="anchored" data-anchor-id="write-a-custom-summary-function-applying-the-function-using-a-loop"><strong><em>Write a Custom Summary Function &amp; Applying the Function Using a Loop</em></strong></h3>
+<p>This R code calculates basic statistics for numerical columns in the mtcars dataset. It defines a function, compute_stats, to find the mean, median, variance, IQR, min, and max of a numeric vector, handling potential missing values. A for loop iterates through each column of mtcars, applying compute_stats to numerical ones. The results, with column names, are stored in a list and printed, providing a summary of each numerical column’s statistics.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># İstatistikleri hesaplayan fonksiyon</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>compute_stats <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
@@ -510,8 +528,265 @@ $carb$maks
 [1] 8</code></pre>
 </div>
 </div>
+<p>To automate statistical analysis of numerical columns within the mtcars dataset, a for loop iterates through each column name. Utilizing is.numeric(), the loop identifies numerical columns and applies the compute_stats function. This function calculates key statistics like mean, median, and variance, returning them in a named list. The loop then stores these results, indexed by column names, within a comprehensive list, which is subsequently printed. This approach efficiently provides a structured statistical overview of all numerical columns in the dataset.</p>
+</section>
+<section id="an-alternative-approach-with-sapply-and-apply" class="level3">
+<h3 class="anchored" data-anchor-id="an-alternative-approach-with-sapply-and-apply"><em>An alternative approach with sapply and apply</em></h3>
+<p>The <code>sapply</code> function in R is a user-friendly and efficient way to apply a function over a list or vector. In the context of the <code>mtcars</code> dataset, <code>sapply</code> iterates through each column, applying the <code>compute_stats</code> function to those that are numeric. This streamlines the process of calculating statistics for multiple columns, returning the results in a simplified format, such as a vector or matrix. Its ability to directly handle data frames makes it a powerful tool for quick statistical analysis.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sapply ile tüm sütunlara compute_stats fonksiyonunu uygula</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>mtcars_istatistikleri_sapply <span class="ot">&lt;-</span> <span class="fu">sapply</span>(mtcars, compute_stats)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Sonuçları yazdır</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(mtcars_istatistikleri_sapply)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>         mpg      cyl      disp     hp       drat      wt       qsec    
+mean     20.09062 6.1875   230.7219 146.6875 3.596563  3.21725  17.84875
+median   19.2     6        196.3    123      3.695     3.325    17.71   
+variance 36.3241  3.189516 15360.8  4700.867 0.2858814 0.957379 3.193166
+IQR      7.375    4        205.175  83.5     0.84      1.02875  2.0075  
+min      10.4     4        71.1     52       2.76      1.513    14.5    
+maks     33.9     8        472      335      4.93      5.424    22.9    
+         vs        am        gear      carb    
+mean     0.4375    0.40625   3.6875    2.8125  
+median   0         0         4         2       
+variance 0.2540323 0.2489919 0.5443548 2.608871
+IQR      1         1         1         2       
+min      0         0         3         1       
+maks     1         1         5         8       </code></pre>
+</div>
+</div>
+<p>The <code>apply</code> function in R is designed to apply a function over the rows or columns of a matrix or array. In this scenario, the <code>mtcars</code> data frame is first converted to a matrix. Then, <code>apply</code> is used to iterate over the columns, applying the <code>compute_stats</code> function to each. This approach allows for consistent application of statistical calculations across all columns, returning the results in a structured format. While <code>apply</code> is versatile, it requires the data to be in a matrix format, making it slightly less direct for data frames compared to <code>sapply</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># apply ile tüm sütunlara compute_stats fonksiyonunu uygula</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>mtcars_istatistikleri_apply <span class="ot">&lt;-</span> <span class="fu">apply</span>(mtcars, <span class="at">MARGIN =</span> <span class="dv">2</span>, compute_stats)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Sonuçları yazdır</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(mtcars_istatistikleri_apply)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$mpg
+$mpg$mean
+[1] 20.09062
+
+$mpg$median
+[1] 19.2
+
+$mpg$variance
+[1] 36.3241
+
+$mpg$IQR
+[1] 7.375
+
+$mpg$min
+[1] 10.4
+
+$mpg$maks
+[1] 33.9
 
 
+$cyl
+$cyl$mean
+[1] 6.1875
+
+$cyl$median
+[1] 6
+
+$cyl$variance
+[1] 3.189516
+
+$cyl$IQR
+[1] 4
+
+$cyl$min
+[1] 4
+
+$cyl$maks
+[1] 8
+
+
+$disp
+$disp$mean
+[1] 230.7219
+
+$disp$median
+[1] 196.3
+
+$disp$variance
+[1] 15360.8
+
+$disp$IQR
+[1] 205.175
+
+$disp$min
+[1] 71.1
+
+$disp$maks
+[1] 472
+
+
+$hp
+$hp$mean
+[1] 146.6875
+
+$hp$median
+[1] 123
+
+$hp$variance
+[1] 4700.867
+
+$hp$IQR
+[1] 83.5
+
+$hp$min
+[1] 52
+
+$hp$maks
+[1] 335
+
+
+$drat
+$drat$mean
+[1] 3.596563
+
+$drat$median
+[1] 3.695
+
+$drat$variance
+[1] 0.2858814
+
+$drat$IQR
+[1] 0.84
+
+$drat$min
+[1] 2.76
+
+$drat$maks
+[1] 4.93
+
+
+$wt
+$wt$mean
+[1] 3.21725
+
+$wt$median
+[1] 3.325
+
+$wt$variance
+[1] 0.957379
+
+$wt$IQR
+[1] 1.02875
+
+$wt$min
+[1] 1.513
+
+$wt$maks
+[1] 5.424
+
+
+$qsec
+$qsec$mean
+[1] 17.84875
+
+$qsec$median
+[1] 17.71
+
+$qsec$variance
+[1] 3.193166
+
+$qsec$IQR
+[1] 2.0075
+
+$qsec$min
+[1] 14.5
+
+$qsec$maks
+[1] 22.9
+
+
+$vs
+$vs$mean
+[1] 0.4375
+
+$vs$median
+[1] 0
+
+$vs$variance
+[1] 0.2540323
+
+$vs$IQR
+[1] 1
+
+$vs$min
+[1] 0
+
+$vs$maks
+[1] 1
+
+
+$am
+$am$mean
+[1] 0.40625
+
+$am$median
+[1] 0
+
+$am$variance
+[1] 0.2489919
+
+$am$IQR
+[1] 1
+
+$am$min
+[1] 0
+
+$am$maks
+[1] 1
+
+
+$gear
+$gear$mean
+[1] 3.6875
+
+$gear$median
+[1] 4
+
+$gear$variance
+[1] 0.5443548
+
+$gear$IQR
+[1] 1
+
+$gear$min
+[1] 3
+
+$gear$maks
+[1] 5
+
+
+$carb
+$carb$mean
+[1] 2.8125
+
+$carb$median
+[1] 2
+
+$carb$variance
+[1] 2.608871
+
+$carb$IQR
+[1] 2
+
+$carb$min
+[1] 1
+
+$carb$maks
+[1] 8</code></pre>
+</div>
+</div>
+
+
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1080,8 +1355,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../assignments.html" class="pagination-link" aria-label="My Assignments">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">My Assignments</span>
+      <a href="../assignments/datascience.html" class="pagination-link" aria-label="<div style='text-align:center;'><span style='color:red; font-style:italic;'>On Data Science and Industrial Engineering</span></div>">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
