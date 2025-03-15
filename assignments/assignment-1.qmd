@@ -1,9 +1,6 @@
 ---
 title: "On Data Science and Industrial Engineering"
-  theme: styles.scss
 ---
-
-# *On Data Science and Industrial Engineering*
 
 ## *The Role of Data Science and Its Applications: Insights from Kerem Demirtaş*
 

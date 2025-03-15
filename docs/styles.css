@@ -1,1 +1,11 @@
 /* css styles */
+/* Tüm başlıkları kırmızı yapmak için */
+h1, h2, h3, h4, h5, h6 {
+  color: red !important; /* !important eklenerek diğer stil kurallarını geçersiz kılar */
+  font-style: italic; /* Başlıkları italik yapar */
+}
+
+/* Normal metinlerin siyah kalmasını sağlar */
+body, p {
+  color: black !important;
+}
