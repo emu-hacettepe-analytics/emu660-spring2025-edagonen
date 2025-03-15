@@ -71,5 +71,4 @@ Currently, I am pursuing a master's degree in industrial engineering while devel
 -   **Photography** 📸
 -   **Cooking** 🍳
 
-
-Learn More -> [Download CV](assets/files/Eda_Gonen.pdf)
+[***Learn More -\>***]{style="color:Red"} [Download CV](assets/files/Eda_Gonen.pdf)
