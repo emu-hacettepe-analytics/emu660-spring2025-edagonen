@@ -199,3 +199,33 @@ cat("Versiyon 2 Medyan:", version2_median, "\n")
 cat("Versiyon 2 Sapma:", version2_sd)
 
 ```
+
+```{r}
+
+library(knitr)  # kable fonksiyonu için
+
+```
+
+
+```{r}
+
+# Bu kısım tamamen AI tarafından yazılmıstır.
+# Sonuçları birleştirip tabloyu oluştur
+
+statistics_table <- data.frame(
+  Method = c("Original (Mean)", "Original (SD)", 
+             "Imputed (Median, Mean)", "Imputed (Median, SD)", 
+             "Imputed (Random, Mean)", "Imputed (Random, SD)"),
+  Value = c(mean_value, sd_value,
+            mean(na_example_median), sd(na_example_median),
+            mean(na_example_random), sd(na_example_random))
+)
+
+# Tabloyu yazdır
+kable(statistics_table, caption = "Comparison of Statistics Before and After Handling NA Values")
+
+```
+
+
+
+
