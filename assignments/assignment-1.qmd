@@ -1,5 +1,5 @@
 ---
-title: "<span style='color:red; font-style:italic;'>Assignment 1</span>"
+title: "<span style='color:red; font-style:italic;'>On Data Science and Industrial Engineering</span>"
 ---
 
 # ***On Data Science and Industrial Engineering***
