@@ -34,7 +34,7 @@ website:
       search: true
       contents:
         - assignments.qmd
-        - assignments/On Data Science and Industrial Engineering.qmd
+        - assignments/assignment-1.qmd
         - assignments/assignment-2.qmd  
   page-navigation: true
   back-to-top-navigation: true
