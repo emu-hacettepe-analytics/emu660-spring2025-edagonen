@@ -24,18 +24,25 @@ website:
         href: https://github.com/edagonen
       - icon: linkedin
         href: https://www.linkedin.com/in/edagonen/
+
   sidebar:
     - title: "Assignments"
       style: "docked"
       search: true
       contents:
-        - assignments.qmd
-        - assignments/datascience.qmd  
-        - assignments/statisticsofmrcars.qmd  
+        - text: "Assignments"
+          href: assignments.qmd
+        - text: "On Data Science and Industrial Engineering"
+          href: assignments/datascience.qmd
+        - text: "MRCars Statistics"
+          href: assignments/statisticsofmrcars.qmd
+        - text: "Handling Missing Values"
+          href: assignments/handlingna.qmd
+
   page-navigation: true
   back-to-top-navigation: true
   page-footer:
-    center: "Hacettepe IE - EMU660 - Spring 2024" 
+    center: "Hacettepe IE - EMU660 - Spring 2024"
     border: true
 
 format:
@@ -43,13 +50,8 @@ format:
     toc: true
     toc-location: left
     theme: 
-      light: simplex 
+      light: simplex
       dark: cyborg
     css: styles.css
 
-
 editor: visual
-
-
-
-
