@@ -1,3 +1,55 @@
 ---
 title: "Assignment 2"
 ---
+
+```{r}
+
+data(mtcars)
+str(mtcars)
+
+```
+
+```{r}
+
+# İstatistikleri hesaplayan fonksiyon
+compute_stats <- function(x) {
+  # Girdi sayısal mı kontrol et
+  if (!is.numeric(x)) {
+    stop("Hata: Girdi sayısal bir vektör olmalıdır.")
+  }
+
+  # İstatistik hesaplamaları
+  mean_x <- mean(x, na.rm = TRUE)
+  median_x <- median(x, na.rm = TRUE)
+  var_x <- var(x, na.rm = TRUE)
+  iqr_x <- IQR(x, na.rm = TRUE)
+  min_x <- min(x, na.rm = TRUE)
+  max_x <- max(x, na.rm = TRUE)
+
+  # Sonuçları içeren listeyi döndür
+  compute_stats_list <- list(
+    mean = mean_x,
+    median = median_x,
+    variance = var_x,
+    IQR = iqr_x,
+    min = min_x,
+    maks = max_x
+  )
+
+  return(compute_stats_list)
+}
+
+# mtcars veri seti için tüm sayısal sütunların istatistiklerini hesapla
+mtcars_istatistikleri <- list() # Boş bir liste oluştur
+
+for (header in names(mtcars)) {
+  if (is.numeric(mtcars[[header]])) {
+    mtcars_istatistikleri[[header]] <- compute_stats(mtcars[[header]]) # Sonuçları listeye ekle
+  }
+}
+
+# Sonuçları yazdır
+print(mtcars_istatistikleri)
+  
+  
+```
