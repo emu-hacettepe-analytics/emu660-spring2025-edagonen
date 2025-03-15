@@ -6,7 +6,7 @@ title: "<span style='color:red; font-style:italic;'>On Data Science and Industri
 
 ## [**The Role of Data Science and Its Applications: Insights from Kerem Demirtaş**]
 
-[Kerem Demirtaş is a Data Scientist currently working at Invent Analytics. Previously, he worked at Spyke Games and Smart Kiwi. One of his significant projects was *Royal Reachers*, where he focused on analyzing users' gaming behaviors and demographic structures to deliver the most suitable offers at the most optimal times, thereby maximizing sales. Later in his career, he contributed to a project aimed at optimizing inventory management in retail. This involved developing software that determines how much stock should be held at various locations and for which models, ultimately helping businesses maximize their sales.]
+[Kerem Demirtaş is a Data Scientist currently working at Invent Analytics. Previously, he worked at Spyke Games and Smart Kiwii. One of his significant projects was *Royal Reachers*, where he focused on analyzing users' gaming behaviors and demographic structures to deliver the most suitable offers at the most optimal times, thereby maximizing sales. Later in his career, he contributed to a project aimed at optimizing inventory management in retail. This involved developing software that determines how much stock should be held at various locations and for which models, ultimately helping businesses maximize their sales.]
 
 [His research interests revolve around autonomous vehicles, traffic flow modeling, transportation simulations, and optimization techniques in mobility systems.]
 
