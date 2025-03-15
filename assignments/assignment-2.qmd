@@ -4,7 +4,7 @@ title: "<div style='text-align:center;'><span style='color:red; font-style:itali
 
 ### ***Quick Overview of the `mtcars` Dataset***
 
-In R, `data(mtcars)` loads the `mtcars` dataset, which contains features of 32 cars. `str(mtcars)` then displays the dataset's structure, revealing the types and initial values of its columns, providing a quick overview
+In R, `data(mtcars)` loads the `mtcars` dataset, which contains features of 32 cars. `str(mtcars)` then displays the dataset's structure, revealing the types and initial values of its columns, providing a quick overview.
 
 ```{r}
 
@@ -90,8 +90,13 @@ print(mtcars_istatistikleri_apply)
 
 ```
 
+## ***Handling Missing Values in the dslabs 'na_example' Dataset: Methods and Comparisons***
+
+### *Installing and Loading the 'dslaps'*
+
 ```{r}
 
+#install.packages("dslabs")
 library(dslabs)
 
 ```
@@ -103,3 +108,93 @@ After successfully installing and loading the 'dslabs' library, we can now print
 print(na_example)
 
 ```
+
+### *Number and Locations of NA Values*
+
+This R code calculates the missing values (NA) within the 'na_example' dataset. Initially, we determined the total count of NA values present and identified their index positions within the dataset.
+
+```{r}
+
+total_na <- sum(is.na(na_example))
+cat("Total NA values:", total_na)
+
+```
+
+```{r}
+
+which(is.na(na_example))
+
+```
+
+### ***Statistical Calculation Ignoring NA Values***
+
+```{r}
+
+# NA değerleri göz ardı ederek ortalama ve standart sapma hesapla
+mean_value <- mean(na_example, na.rm = TRUE)
+sd_value <- sd(na_example, na.rm = TRUE)
+
+# Sonuçları ekrana yazdır
+cat("Mean:", mean_value, "\n")
+cat("Standart Deviation:", sd_value)
+
+```
+
+### ***Replacing NA Values with the Median***
+
+In this process, we replace all missing (NA) values in the na_example dataset with the median of the non-missing values. The median is chosen because it is less sensitive to extreme values (outliers) compared to the mean.
+
+```{r}
+
+# NA olmayan değerlerin medyanını hesapla
+median_others <- median(na_example, na.rm = TRUE)
+
+# NA değerleri medyan ile değiştir
+na_example_median <- ifelse(is.na(na_example), median_others, na_example)
+
+# Sonucu yazdır
+cat("Medyan:", median_others, "\n")
+print(na_example_median)
+
+
+```
+
+```{r}
+
+version1_median <- median(na_example_median)
+version1_sd <- sd(na_example_median)
+
+# Sonuçları yazdır
+cat("Versiyon 1 Medyan:", version1_median, "\n")
+cat("Versiyon 1 Sapma:", version1_sd)
+
+```
+
+### ***Replacing NA Values with Randomly Selected Non-missing Value***
+
+This process replaces all `NA` values in the dataset with a randomly selected non-missing value from the same dataset. First, we extract all non-missing values, then for each `NA`, a random value from the non-missing values is chosen to fill in the missing spot.
+
+```{r}
+
+# NA olmayan değerleri al
+non_na_values <- na_example[!is.na(na_example)]
+
+# NA değerlerini rastgele bir NA olmayan değerle değiştir
+na_example_random <- ifelse(is.na(na_example), sample(non_na_values, 1), na_example)
+
+# Sonuçları yazdır
+print(na_example_random)
+
+```
+```{r}
+
+version2_median <- median(na_example_random)
+version2_sd <- sd(na_example_random)
+
+# Sonuçları yazdır
+cat("Versiyon 2 Medyan:", version2_median, "\n")
+cat("Versiyon 2 Sapma:", version2_sd)
+
+```
+
+

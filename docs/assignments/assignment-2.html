@@ -213,6 +213,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#quick-overview-of-the-mtcars-dataset" id="toc-quick-overview-of-the-mtcars-dataset" class="nav-link active" data-scroll-target="#quick-overview-of-the-mtcars-dataset"><strong><em>Quick Overview of the <code>mtcars</code> Dataset</em></strong></a></li>
   <li><a href="#write-a-custom-summary-function-applying-the-function-using-a-loop" id="toc-write-a-custom-summary-function-applying-the-function-using-a-loop" class="nav-link" data-scroll-target="#write-a-custom-summary-function-applying-the-function-using-a-loop"><strong><em>Write a Custom Summary Function &amp; Applying the Function Using a Loop</em></strong></a></li>
   <li><a href="#an-alternative-approach-with-sapply-and-apply" id="toc-an-alternative-approach-with-sapply-and-apply" class="nav-link" data-scroll-target="#an-alternative-approach-with-sapply-and-apply"><strong><em>An alternative approach with sapply and apply</em></strong></a></li>
+  <li><a href="#handling-missing-values-in-the-dslabs-na_example-dataset-methods-and-comparisons" id="toc-handling-missing-values-in-the-dslabs-na_example-dataset-methods-and-comparisons" class="nav-link" data-scroll-target="#handling-missing-values-in-the-dslabs-na_example-dataset-methods-and-comparisons"><strong><em>Handling Missing Values in the dslabs ‘na_example’ Dataset: Methods and Comparisons</em></strong></a>
+  <ul class="collapse">
+  <li><a href="#installing-and-loading-the-dslaps" id="toc-installing-and-loading-the-dslaps" class="nav-link" data-scroll-target="#installing-and-loading-the-dslaps"><em>Installing and Loading the ‘dslaps’</em></a></li>
+  <li><a href="#number-and-locations-of-na-values" id="toc-number-and-locations-of-na-values" class="nav-link" data-scroll-target="#number-and-locations-of-na-values"><em>Number and Locations of NA Values</em></a></li>
+  <li><a href="#statistical-calculation-ignoring-na-values" id="toc-statistical-calculation-ignoring-na-values" class="nav-link" data-scroll-target="#statistical-calculation-ignoring-na-values"><strong><em>Statistical Calculation Ignoring NA Values</em></strong></a></li>
+  <li><a href="#replacing-na-values-with-the-median" id="toc-replacing-na-values-with-the-median" class="nav-link" data-scroll-target="#replacing-na-values-with-the-median"><strong><em>Replacing NA Values with the Median</em></strong></a></li>
+  <li><a href="#replacing-na-values-with-randomly-selected-non-missing-value" id="toc-replacing-na-values-with-randomly-selected-non-missing-value" class="nav-link" data-scroll-target="#replacing-na-values-with-randomly-selected-non-missing-value"><strong><em>Replacing NA Values with Randomly Selected Non-missing Value</em></strong></a></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -244,7 +252,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="quick-overview-of-the-mtcars-dataset" class="level3">
 <h3 class="anchored" data-anchor-id="quick-overview-of-the-mtcars-dataset"><strong><em>Quick Overview of the <code>mtcars</code> Dataset</em></strong></h3>
-<p>In R, <code>data(mtcars)</code> loads the <code>mtcars</code> dataset, which contains features of 32 cars. <code>str(mtcars)</code> then displays the dataset’s structure, revealing the types and initial values of its columns, providing a quick overview</p>
+<p>In R, <code>data(mtcars)</code> loads the <code>mtcars</code> dataset, which contains features of 32 cars. <code>str(mtcars)</code> then displays the dataset’s structure, revealing the types and initial values of its columns, providing a quick overview.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(mtcars)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -784,8 +792,14 @@ $carb$maks
 [1] 8</code></pre>
 </div>
 </div>
+</section>
+<section id="handling-missing-values-in-the-dslabs-na_example-dataset-methods-and-comparisons" class="level2">
+<h2 class="anchored" data-anchor-id="handling-missing-values-in-the-dslabs-na_example-dataset-methods-and-comparisons"><strong><em>Handling Missing Values in the dslabs ‘na_example’ Dataset: Methods and Comparisons</em></strong></h2>
+<section id="installing-and-loading-the-dslaps" class="level3">
+<h3 class="anchored" data-anchor-id="installing-and-loading-the-dslaps"><em>Installing and Loading the ‘dslaps’</em></h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dslabs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("dslabs")</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dslabs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'dslabs' was built under R version 4.4.3</code></pre>
 </div>
@@ -838,8 +852,172 @@ $carb$maks
  [985]  2  4  3  3  3 NA  1  1  2  2  1  1  2  2 NA  2</code></pre>
 </div>
 </div>
+</section>
+<section id="number-and-locations-of-na-values" class="level3">
+<h3 class="anchored" data-anchor-id="number-and-locations-of-na-values"><em>Number and Locations of NA Values</em></h3>
+<p>This R code calculates the missing values (NA) within the ‘na_example’ dataset. Initially, we determined the total count of NA values present and identified their index positions within the dataset.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>total_na <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(na_example))</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Total NA values:"</span>, total_na)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Total NA values: 145</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span>(<span class="fu">is.na</span>(na_example))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  [1]  12  17  27  50  51  52  59  65  66  68  91 117 125 126 127 128 139 140
+ [19] 141 142 153 158 168 169 172 179 189 190 203 205 207 208 212 214 237 241
+ [37] 243 244 253 257 265 267 269 279 282 287 290 298 310 325 326 330 341 348
+ [55] 361 374 392 395 397 407 410 437 443 446 461 468 470 490 496 505 527 536
+ [73] 539 553 561 576 578 589 599 603 609 616 618 620 630 633 636 641 652 653
+ [91] 666 667 668 677 680 687 691 695 701 726 734 735 736 745 746 747 748 751
+[109] 756 762 767 788 789 807 821 826 832 838 843 844 845 849 850 853 859 869
+[127] 887 892 893 906 909 911 918 924 925 939 943 950 962 965 966 968 979 990
+[145] 999</code></pre>
+</div>
+</div>
+</section>
+<section id="statistical-calculation-ignoring-na-values" class="level3">
+<h3 class="anchored" data-anchor-id="statistical-calculation-ignoring-na-values"><strong><em>Statistical Calculation Ignoring NA Values</em></strong></h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># NA değerleri göz ardı ederek ortalama ve standart sapma hesapla</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>mean_value <span class="ot">&lt;-</span> <span class="fu">mean</span>(na_example, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>sd_value <span class="ot">&lt;-</span> <span class="fu">sd</span>(na_example, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Sonuçları ekrana yazdır</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Mean:"</span>, mean_value, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Mean: 2.301754 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Standart Deviation:"</span>, sd_value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Standart Deviation: 1.22338</code></pre>
+</div>
+</div>
+</section>
+<section id="replacing-na-values-with-the-median" class="level3">
+<h3 class="anchored" data-anchor-id="replacing-na-values-with-the-median"><strong><em>Replacing NA Values with the Median</em></strong></h3>
+<p>In this process, we replace all missing (NA) values in the na_example dataset with the median of the non-missing values. The median is chosen because it is less sensitive to extreme values (outliers) compared to the mean.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># NA olmayan değerlerin medyanını hesapla</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>median_others <span class="ot">&lt;-</span> <span class="fu">median</span>(na_example, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co"># NA değerleri medyan ile değiştir</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>na_example_median <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(na_example), median_others, na_example)</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Sonucu yazdır</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Medyan:"</span>, median_others, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Medyan: 2 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(na_example_median)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   [1] 2 1 3 2 1 3 1 4 3 2 2 2 2 2 1 4 2 1 1 2 1 2 2 1 2 5 2 2 2 3 1 2 4 1 1 1 4
+  [38] 5 2 3 4 1 2 4 1 1 2 1 5 2 2 2 1 1 5 1 3 1 2 4 4 7 3 2 2 2 1 2 4 1 2 2 3 2
+  [75] 1 2 2 4 3 4 2 3 1 3 2 1 1 1 3 1 2 3 1 2 2 1 2 2 1 1 4 1 1 2 3 3 2 2 3 3 3
+ [112] 4 1 1 1 2 2 4 3 4 3 1 2 1 2 2 2 2 1 5 1 2 1 3 5 3 2 2 2 2 2 2 3 5 3 1 1 4
+ [149] 2 4 3 3 2 2 3 2 6 2 1 1 2 2 1 3 1 1 5 2 2 2 4 2 2 5 1 4 3 3 2 4 3 1 4 1 1
+ [186] 3 1 1 2 2 3 5 2 2 2 3 1 2 2 3 2 1 2 2 2 1 2 2 2 1 1 2 3 2 1 2 2 1 3 2 2 1
+ [223] 1 2 3 1 1 1 4 3 4 2 2 1 4 1 2 5 1 4 2 3 2 2 1 1 5 2 3 3 2 4 2 3 2 5 2 2 3
+ [260] 4 6 2 2 2 2 2 2 2 2 3 3 2 2 4 3 1 4 2 2 2 4 2 6 2 3 1 2 2 2 2 1 1 3 2 3 3
+ [297] 1 2 1 4 2 1 1 3 2 1 2 3 1 2 2 3 3 2 1 2 3 5 5 1 2 3 3 1 2 2 1 2 4 2 2 1 1
+ [334] 1 3 2 1 1 3 4 2 1 2 1 1 3 3 2 1 1 3 5 3 2 3 4 1 4 3 1 2 2 1 2 2 1 2 2 6 1
+ [371] 2 4 5 2 3 4 2 1 1 4 2 1 1 1 1 2 1 4 4 1 3 2 3 3 2 2 2 1 2 1 1 4 2 1 4 4 2
+ [408] 1 2 2 3 2 2 2 1 4 3 6 1 2 3 1 3 2 2 2 1 1 3 2 1 1 1 3 2 2 2 4 4 4 1 1 2 4
+ [445] 3 2 1 3 1 3 2 4 2 2 2 3 2 1 4 3 2 1 4 3 1 3 2 2 3 2 1 3 1 4 1 1 1 2 4 3 1
+ [482] 2 2 2 3 2 3 1 1 2 3 2 1 1 2 2 2 2 2 3 3 1 1 2 2 1 2 1 1 3 3 1 3 1 1 1 1 1
+ [519] 2 5 1 1 2 2 1 1 2 1 4 1 2 4 1 3 2 2 1 1 2 2 1 1 4 2 3 3 1 5 3 1 1 2 2 1 1
+ [556] 3 1 3 2 4 2 2 3 2 1 2 1 1 1 2 2 3 1 5 2 2 2 2 3 2 2 2 1 5 3 2 3 1 2 3 1 2
+ [593] 2 2 1 2 2 4 2 6 1 2 2 1 1 2 2 3 2 3 2 3 3 4 2 2 2 2 4 2 1 1 2 2 3 1 1 1 3
+ [630] 2 2 5 2 7 1 2 4 3 3 1 2 1 1 1 1 3 2 4 2 2 3 2 2 1 4 3 2 2 2 3 2 4 2 2 4 2
+ [667] 2 2 6 3 3 1 4 4 2 1 2 1 6 2 3 3 2 1 1 6 2 1 5 1 2 2 6 2 2 4 1 3 1 2 2 1 1
+ [704] 3 1 2 4 2 1 3 2 4 3 2 2 1 1 5 6 4 2 2 2 2 4 2 1 2 2 2 2 4 5 2 2 2 4 3 3 3
+ [741] 2 4 2 4 2 2 2 2 2 1 2 2 4 3 2 2 2 3 1 3 4 2 1 2 1 2 2 3 1 2 1 2 1 2 1 2 2
+ [778] 2 2 1 1 3 3 1 3 4 3 2 2 4 2 3 2 1 3 2 4 2 2 3 1 2 4 3 3 4 2 1 4 2 1 1 1 3
+ [815] 1 5 2 2 4 2 2 1 3 1 2 2 1 2 1 2 1 2 1 3 2 3 2 2 2 1 4 2 2 2 2 2 4 2 2 2 3
+ [852] 1 2 5 5 2 2 2 2 2 1 3 1 3 2 4 2 4 2 4 1 2 3 2 3 3 2 3 2 2 2 1 3 2 4 2 2 3
+ [889] 3 2 2 2 2 3 2 1 2 4 1 1 1 1 4 3 2 2 3 2 2 1 2 3 2 1 1 1 2 2 2 2 3 3 2 2 2
+ [926] 4 5 2 2 2 1 2 3 1 3 3 4 3 2 1 1 1 2 4 3 5 1 1 2 2 2 2 2 2 5 2 2 3 1 2 3 2
+ [963] 1 2 2 2 2 2 3 1 1 2 5 3 5 1 1 4 2 2 1 3 1 1 2 4 3 3 3 2 1 1 2 2 1 1 2 2 2
+[1000] 2</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>version1_median <span class="ot">&lt;-</span> <span class="fu">median</span>(na_example_median)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>version1_sd <span class="ot">&lt;-</span> <span class="fu">sd</span>(na_example_median)</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Sonuçları yazdır</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Versiyon 1 Medyan:"</span>, version1_median, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Versiyon 1 Medyan: 2 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Versiyon 1 Sapma:"</span>, version1_sd)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Versiyon 1 Sapma: 1.136102</code></pre>
+</div>
+</div>
+</section>
+<section id="replacing-na-values-with-randomly-selected-non-missing-value" class="level3">
+<h3 class="anchored" data-anchor-id="replacing-na-values-with-randomly-selected-non-missing-value"><strong><em>Replacing NA Values with Randomly Selected Non-missing Value</em></strong></h3>
+<p>This process replaces all <code>NA</code> values in the dataset with a randomly selected non-missing value from the same dataset. First, we extract all non-missing values, then for each <code>NA</code>, a random value from the non-missing values is chosen to fill in the missing spot.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># NA olmayan değerleri al</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>non_na_values <span class="ot">&lt;-</span> na_example[<span class="sc">!</span><span class="fu">is.na</span>(na_example)]</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co"># NA değerlerini rastgele bir NA olmayan değerle değiştir</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>na_example_random <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(na_example), <span class="fu">sample</span>(non_na_values, <span class="dv">1</span>), na_example)</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Sonuçları yazdır</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(na_example_random)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   [1] 2 1 3 2 1 3 1 4 3 2 2 3 2 2 1 4 3 1 1 2 1 2 2 1 2 5 3 2 2 3 1 2 4 1 1 1 4
+  [38] 5 2 3 4 1 2 4 1 1 2 1 5 3 3 3 1 1 5 1 3 1 3 4 4 7 3 2 3 3 1 3 4 1 2 2 3 2
+  [75] 1 2 2 4 3 4 2 3 1 3 2 1 1 1 3 1 3 3 1 2 2 1 2 2 1 1 4 1 1 2 3 3 2 2 3 3 3
+ [112] 4 1 1 1 2 3 4 3 4 3 1 2 1 3 3 3 3 1 5 1 2 1 3 5 3 2 2 3 3 3 3 3 5 3 1 1 4
+ [149] 2 4 3 3 3 2 3 2 6 3 1 1 2 2 1 3 1 1 5 3 3 2 4 3 2 5 1 4 3 3 3 4 3 1 4 1 1
+ [186] 3 1 1 3 3 3 5 2 2 2 3 1 2 2 3 2 1 3 2 3 1 3 3 2 1 1 3 3 3 1 2 2 1 3 2 2 1
+ [223] 1 2 3 1 1 1 4 3 4 2 2 1 4 1 3 5 1 4 3 3 3 3 1 1 5 2 3 3 2 4 3 3 2 5 3 2 3
+ [260] 4 6 2 2 2 3 2 3 2 3 3 3 2 2 4 3 1 4 2 3 2 4 3 6 2 3 1 3 2 2 3 1 1 3 2 3 3
+ [297] 1 3 1 4 2 1 1 3 2 1 2 3 1 3 2 3 3 2 1 2 3 5 5 1 2 3 3 1 3 3 1 2 4 3 2 1 1
+ [334] 1 3 2 1 1 3 4 3 1 2 1 1 3 3 3 1 1 3 5 3 2 3 4 1 4 3 1 3 2 1 2 2 1 2 2 6 1
+ [371] 2 4 5 3 3 4 2 1 1 4 2 1 1 1 1 2 1 4 4 1 3 3 3 3 3 2 3 1 2 1 1 4 2 1 4 4 3
+ [408] 1 2 3 3 2 2 2 1 4 3 6 1 2 3 1 3 2 2 2 1 1 3 2 1 1 1 3 2 2 3 4 4 4 1 1 3 4
+ [445] 3 3 1 3 1 3 2 4 2 2 2 3 2 1 4 3 3 1 4 3 1 3 2 3 3 3 1 3 1 4 1 1 1 2 4 3 1
+ [482] 2 2 2 3 2 3 1 1 3 3 2 1 1 2 3 2 2 2 3 3 1 1 2 3 1 2 1 1 3 3 1 3 1 1 1 1 1
+ [519] 2 5 1 1 2 2 1 1 3 1 4 1 2 4 1 3 2 3 1 1 3 2 1 1 4 2 3 3 1 5 3 1 1 2 3 1 1
+ [556] 3 1 3 2 4 3 2 3 2 1 2 1 1 1 2 2 3 1 5 2 3 2 3 3 2 2 2 1 5 3 2 3 1 3 3 1 2
+ [593] 2 2 1 2 2 4 3 6 1 2 3 1 1 2 2 3 3 3 2 3 3 4 2 3 2 3 4 3 1 1 2 2 3 1 1 1 3
+ [630] 3 2 5 3 7 1 3 4 3 3 1 3 1 1 1 1 3 2 4 2 2 3 3 3 1 4 3 2 2 2 3 2 4 2 2 4 3
+ [667] 3 3 6 3 3 1 4 4 2 1 3 1 6 3 3 3 2 1 1 6 3 1 5 1 3 2 6 2 3 4 1 3 1 2 3 1 1
+ [704] 3 1 2 4 2 1 3 2 4 3 2 2 1 1 5 6 4 2 2 2 2 4 3 1 2 2 2 2 4 5 3 3 3 4 3 3 3
+ [741] 2 4 2 4 3 3 3 3 2 1 3 2 4 3 2 3 2 3 1 3 4 3 1 2 1 2 3 3 1 2 1 2 1 2 1 2 2
+ [778] 2 2 1 1 3 3 1 3 4 3 3 3 4 2 3 2 1 3 2 4 2 2 3 1 2 4 3 3 4 3 1 4 2 1 1 1 3
+ [815] 1 5 2 2 4 2 3 1 3 1 2 3 1 2 1 2 1 3 1 3 2 3 2 3 2 1 4 2 3 3 3 2 4 2 3 3 3
+ [852] 1 3 5 5 2 2 2 3 2 1 3 1 3 2 4 2 4 3 4 1 2 3 2 3 3 2 3 2 2 2 1 3 2 4 2 3 3
+ [889] 3 2 2 3 3 3 2 1 2 4 1 1 1 1 4 3 2 3 3 2 3 1 3 3 2 1 1 1 2 3 2 2 3 3 2 3 3
+ [926] 4 5 2 2 2 1 2 3 1 3 3 4 3 3 1 1 1 3 4 3 5 1 1 2 3 2 2 2 2 5 2 2 3 1 2 3 3
+ [963] 1 2 3 3 2 3 3 1 1 2 5 3 5 1 1 4 3 2 1 3 1 1 2 4 3 3 3 3 1 1 2 2 1 1 2 2 3
+[1000] 2</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>version2_median <span class="ot">&lt;-</span> <span class="fu">median</span>(na_example_random)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>version2_sd <span class="ot">&lt;-</span> <span class="fu">sd</span>(na_example_random)</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Sonuçları yazdır</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Versiyon 2 Medyan:"</span>, version2_median, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Versiyon 2 Medyan: 2 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Versiyon 2 Sapma:"</span>, version2_sd)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Versiyon 2 Sapma: 1.157554</code></pre>
+</div>
+</div>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
