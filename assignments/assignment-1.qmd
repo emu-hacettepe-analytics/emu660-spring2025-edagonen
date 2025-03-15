@@ -1,53 +1,50 @@
 ---
 title: "On Data Science and Industrial Engineering"
+format:
+  html:
+    css: styles.scss
 ---
 
-# \[***On Data Science and Industrial Engineering***\]
+# *On Data Science and Industrial Engineering*
 
-## \[**The Role of Data Science and Its Applications: Insights from Kerem Demirtaş**\]
+## *The Role of Data Science and Its Applications: Insights from Kerem Demirtaş*
 
-\[Kerem Demirtaş is a Data Scientist currently working at Invent Analytics. Previously, he worked at Spyke Games and Smart Kiwii. One of his significant projects was *Royal Reachers*, where he focused on analyzing users' gaming behaviors and demographic structures to deliver the most suitable offers at the most optimal times, thereby maximizing sales. Later in his career, he contributed to a project aimed at optimizing inventory management in retail. This involved developing software that determines how much stock should be held at various locations and for which models, ultimately helping businesses maximize their sales.\]
+Kerem Demirtaş is a Data Scientist currently working at Invent Analytics. Previously, he worked at Spyke Games and Smart Kiwi. One of his significant projects was *Royal Reachers*, where he focused on analyzing users' gaming behaviors and demographic structures to deliver the most suitable offers at the most optimal times, thereby maximizing sales. Later in his career, he contributed to a project aimed at optimizing inventory management in retail. This involved developing software that determines how much stock should be held at various locations and for which models, ultimately helping businesses maximize their sales.
 
-\[His research interests revolve around autonomous vehicles, traffic flow modeling, transportation simulations, and optimization techniques in mobility systems.\]
+His research interests revolve around autonomous vehicles, traffic flow modeling, transportation simulations, and optimization techniques in mobility systems.
 
-## \[**The Scope of Data Science**\]
+## *The Scope of Data Science*
 
-\[Data science finds applications in various fields, including:\]
+Data science finds applications in various fields, including:
 
--   \[**Epidemiology:** Predicting the likelihood of disease outbreaks, identifying high-risk regions, and implementing preventive measures.\]
+-   **Epidemiology:** Predicting the likelihood of disease outbreaks, identifying high-risk regions, and implementing preventive measures.
+-   **Retail:** Optimizing stock levels and sales strategies to enhance profitability.
+-   **Autonomous Vehicles:** Improving traffic efficiency, reducing congestion, and enhancing the decision-making capabilities of self-driving cars.
 
--   \[**Retail:** Optimizing stock levels and sales strategies to enhance profitability.\]
+## *What Data Science is NOT*
 
--   \[**Autonomous Vehicles:** Improving traffic efficiency, reducing congestion, and enhancing the decision-making capabilities of self-driving cars.\]
+-   It is not merely an exaggerated form of statistics.
+-   It is not just about building models.
+-   It is not exclusively tied to *Big Data*.
+-   Writing Python code does not make someone a data analyst.
+-   Data analysis does not always provide definitive answers to every question.
 
-## \[**What Data Science is NOT**\]
+## *The Data Science Workflow*
 
--   \[It is not merely an exaggerated form of statistics.\]
+1.  **Problem Identification:** Clearly defining the problem is the first step in data science. A historical example of this is the analysis conducted during World War II on aircraft durability. Engineers initially focused on reinforcing the most frequently damaged parts of returning planes, but statistician **Abraham Wald** proposed a different approach—suggesting that undamaged areas of returning planes were actually where the planes that were shot down had suffered critical damage. This shift in thinking led to more effective reinforcement strategies.
 
--   \[It is not just about building models.\]
+2.  **Data Collection:** Gathering unbiased data is crucial. Abraham Wald’s *unbiased thinking* methodology is a key example. His research showed that survivorship bias can mislead analyses if data from unsuccessful cases (e.g., planes that didn’t return) is not considered.
 
--   \[It is not exclusively tied to *Big Data*.\]
+3.  **Exploratory Data Analysis (EDA):** Before building models, it is essential to understand and visualize the data. A classic example is **John Snow’s** study on cholera outbreaks in 1854 London. By mapping out cases and identifying contaminated water sources, he demonstrated that cholera was waterborne—long before germ theory was widely accepted. This showcases how data visualization and pattern recognition can lead to groundbreaking discoveries.
 
--   \[Writing Python code does not make someone a data analyst.\]
+4.  **Model Building:** At this stage, predictive and analytical models are developed. A relevant example is **Lewis Fry Richardson’s** pioneering work on weather forecasting, where he proposed numerical methods for predicting atmospheric conditions. Another example is the *World War II Diet Problem*, which used linear programming to optimize military rations by balancing nutrition and cost.
 
--   \[Data analysis does not always provide definitive answers to every question.\]
+5.  **Model Evaluation:** Assessing model performance and avoiding overfitting are crucial aspects of data science. Overfitting occurs when a model learns noise instead of actual patterns, reducing its real-world applicability. An illustrative case is the **Deep Blue vs. Garry Kasparov** chess match, where the AI was trained to analyze millions of moves but had to generalize its strategies to defeat a world champion.
 
-## \[**The Data Science Workflow**\]
+6.  **Production and Live Performance:** Once a model is finalized, it must be deployed in a real-world setting. This step involves monitoring AI tools and ensuring their effectiveness. Examples include AI-driven recommendation systems in e-commerce, self-learning fraud detection systems in banking, and real-time traffic prediction tools in transportation networks.
 
-1.  \[**Problem Identification:** Clearly defining the problem is the first step in data science. A historical example of this is the analysis conducted during World War II on aircraft durability. Engineers initially focused on reinforcing the most frequently damaged parts of returning planes, but statistician **Abraham Wald** proposed a different approach—suggesting that undamaged areas of returning planes were actually where the planes that were shot down had suffered critical damage. This shift in thinking led to more effective reinforcement strategies.\]
+## *Kerem Demirtaş’s Research on Autonomous Vehicles*
 
-2.  \[**Data Collection:** Gathering unbiased data is crucial. Abraham Wald’s *unbiased thinking* methodology is a key example. His research showed that survivorship bias can mislead analyses if data from unsuccessful cases (e.g., planes that didn’t return) is not considered.\]
+His thesis, *"Object-driven Cellular Automaton Model for Platooning of Autonomous Vehicles on Freeways with Multiple Lanes"*, explores how autonomous vehicles can form convoys and adapt to complex road conditions. The primary motivation behind his research is to minimize the following distance between vehicles, optimize acceleration and deceleration during lane changes, and reduce the impact of stop-and-go waves in traffic flow. By refining the mechanics of platooning, his work contributes to the development of more efficient and safer autonomous driving systems.
 
-3.  \[**Exploratory Data Analysis (EDA):** Before building models, it is essential to understand and visualize the data. A classic example is **John Snow’s** study on cholera outbreaks in 1854 London. By mapping out cases and identifying contaminated water sources, he demonstrated that cholera was waterborne—long before germ theory was widely accepted. This showcases how data visualization and pattern recognition can lead to groundbreaking discoveries.\]
-
-4.  \[**Model Building:** At this stage, predictive and analytical models are developed. A relevant example is **Lewis Fry Richardson’s** pioneering work on weather forecasting, where he proposed numerical methods for predicting atmospheric conditions. Another example is the *World War II Diet Problem*, which used linear programming to optimize military rations by balancing nutrition and cost.\]
-
-5.  \[**Model Evaluation:** Assessing model performance and avoiding overfitting are crucial aspects of data science. Overfitting occurs when a model learns noise instead of actual patterns, reducing its real-world applicability. An illustrative case is the **Deep Blue vs. Garry Kasparov** chess match, where the AI was trained to analyze millions of moves but had to generalize its strategies to defeat a world champion.\]
-
-6.  \[**Production and Live Performance:** Once a model is finalized, it must be deployed in a real-world setting. This step involves monitoring AI tools and ensuring their effectiveness. Examples include AI-driven recommendation systems in e-commerce, self-learning fraud detection systems in banking, and real-time traffic prediction tools in transportation networks.\]
-
-## \[**Kerem Demirtaş’s Research on Autonomous Vehicles**\]
-
-\[His thesis, *"Object-driven Cellular Automaton Model for Platooning of Autonomous Vehicles on Freeways with Multiple Lanes"*, explores how autonomous vehicles can form convoys and adapt to complex road conditions. The primary motivation behind his research is to minimize the following distance between vehicles, optimize acceleration and deceleration during lane changes, and reduce the impact of stop-and-go waves in traffic flow. By refining the mechanics of platooning, his work contributes to the development of more efficient and safer autonomous driving systems.\]
-
-\[Ultimately, his work highlights the power of data science in solving complex real-world problems, from optimizing business operations to transforming the future of mobility.\]
+Ultimately, his work highlights the power of data science in solving complex real-world problems, from optimizing business operations to transforming the future of mobility.
