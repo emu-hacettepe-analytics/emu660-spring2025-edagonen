@@ -31,7 +31,7 @@ website:
       contents:
         - assignments.qmd
         - assignments/datascience.qmd  
-        - assignments/assignment-2.qmd  
+        - assignments/statisticsofmrcars.qmd  
   page-navigation: true
   back-to-top-navigation: true
   page-footer:

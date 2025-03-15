@@ -206,7 +206,6 @@ library(knitr)  # kable fonksiyonu için
 
 ```
 
-
 ```{r}
 
 # Bu kod bloğu tamamen AI tarafından yazılmıstır.
@@ -227,5 +226,3 @@ kable(statistics_table, caption = "Comparison of Statistics Before and After Han
 ```
 
 Regarding the data, imputing with the median seems more appropriate as it preserves the central tendency without being affected by outliers. Imputing with random values could better reflect the distribution of the data, but it may introduce some variability. Looking at the original data, if the number of missing values is minimal, ignoring them could be acceptable. However, if the missing values are not random, it could introduce bias in the data.
-
-
