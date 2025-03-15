@@ -1,8 +1,6 @@
 ---
 title: "On Data Science and Industrial Engineering"
-format:
-  html:
-    css: styles.scss
+  theme: styles.scss
 ---
 
 # *On Data Science and Industrial Engineering*
