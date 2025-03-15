@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignment 2 – EdaaG’s Analytics Lab</title>
+<title>Statistical Analysis of the mtcars Dataset in R – EdaaG's Analytics Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -166,7 +166,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../assignments/assignment-2.html">Assignment 2</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../assignments/assignment-2.html"></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -201,7 +201,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../assignments/assignment-2.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Assignment 2</span></a>
+ <span class="menu-text"></span></a>
   </div>
 </li>
     </ul>
@@ -210,9 +210,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#quick-overview-of-the-mtcars-dataset" id="toc-quick-overview-of-the-mtcars-dataset" class="nav-link active" data-scroll-target="#quick-overview-of-the-mtcars-dataset"><em>Quick Overview of the <code>mtcars</code> Dataset</em></a></li>
+  <li><a href="#quick-overview-of-the-mtcars-dataset" id="toc-quick-overview-of-the-mtcars-dataset" class="nav-link active" data-scroll-target="#quick-overview-of-the-mtcars-dataset"><strong><em>Quick Overview of the <code>mtcars</code> Dataset</em></strong></a></li>
   <li><a href="#write-a-custom-summary-function-applying-the-function-using-a-loop" id="toc-write-a-custom-summary-function-applying-the-function-using-a-loop" class="nav-link" data-scroll-target="#write-a-custom-summary-function-applying-the-function-using-a-loop"><strong><em>Write a Custom Summary Function &amp; Applying the Function Using a Loop</em></strong></a></li>
-  <li><a href="#an-alternative-approach-with-sapply-and-apply" id="toc-an-alternative-approach-with-sapply-and-apply" class="nav-link" data-scroll-target="#an-alternative-approach-with-sapply-and-apply"><em>An alternative approach with sapply and apply</em></a></li>
+  <li><a href="#an-alternative-approach-with-sapply-and-apply" id="toc-an-alternative-approach-with-sapply-and-apply" class="nav-link" data-scroll-target="#an-alternative-approach-with-sapply-and-apply"><strong><em>An alternative approach with sapply and apply</em></strong></a></li>
   </ul>
 </nav>
 </nav>
@@ -225,7 +225,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assignment 2</h1>
+<h1 class="title"><span style="color:red; font-style:italic;">Statistical Analysis of the mtcars Dataset in R</span></h1>
 </div>
 
 
@@ -243,7 +243,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <section id="quick-overview-of-the-mtcars-dataset" class="level3">
-<h3 class="anchored" data-anchor-id="quick-overview-of-the-mtcars-dataset"><em>Quick Overview of the <code>mtcars</code> Dataset</em></h3>
+<h3 class="anchored" data-anchor-id="quick-overview-of-the-mtcars-dataset"><strong><em>Quick Overview of the <code>mtcars</code> Dataset</em></strong></h3>
 <p>In R, <code>data(mtcars)</code> loads the <code>mtcars</code> dataset, which contains features of 32 cars. <code>str(mtcars)</code> then displays the dataset’s structure, revealing the types and initial values of its columns, providing a quick overview</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(mtcars)</span>
@@ -531,7 +531,7 @@ $carb$maks
 <p>To automate statistical analysis of numerical columns within the mtcars dataset, a for loop iterates through each column name. Utilizing is.numeric(), the loop identifies numerical columns and applies the compute_stats function. This function calculates key statistics like mean, median, and variance, returning them in a named list. The loop then stores these results, indexed by column names, within a comprehensive list, which is subsequently printed. This approach efficiently provides a structured statistical overview of all numerical columns in the dataset.</p>
 </section>
 <section id="an-alternative-approach-with-sapply-and-apply" class="level3">
-<h3 class="anchored" data-anchor-id="an-alternative-approach-with-sapply-and-apply"><em>An alternative approach with sapply and apply</em></h3>
+<h3 class="anchored" data-anchor-id="an-alternative-approach-with-sapply-and-apply"><strong><em>An alternative approach with sapply and apply</em></strong></h3>
 <p>The <code>sapply</code> function in R is a user-friendly and efficient way to apply a function over a list or vector. In the context of the <code>mtcars</code> dataset, <code>sapply</code> iterates through each column, applying the <code>compute_stats</code> function to those that are numeric. This streamlines the process of calculating statistics for multiple columns, returning the results in a simplified format, such as a vector or matrix. Its ability to directly handle data frames makes it a powerful tool for quick statistical analysis.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sapply ile tüm sütunlara compute_stats fonksiyonunu uygula</span></span>
