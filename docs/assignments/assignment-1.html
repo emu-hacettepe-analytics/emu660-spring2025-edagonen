@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignment 1 – EdaGonen’s Analytics Lab</title>
+<title>Assignment 1 – EdaGonen's Analytics Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -168,7 +134,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../assignments/assignment-1.html">Assignment 1</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../assignments/assignment-1.html"><span style="color:red; font-style:italic;">Assignment 1</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -197,7 +163,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../assignments/assignment-1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Assignment 1</span></a>
+ <span class="menu-text"><span style="color:red; font-style:italic;">Assignment 1</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -212,9 +178,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#assignment-1" id="toc-assignment-1" class="nav-link active" data-scroll-target="#assignment-1">Assignment 1</a>
+  <li><a href="#on-data-science-and-industrial-engineering" id="toc-on-data-science-and-industrial-engineering" class="nav-link active" data-scroll-target="#on-data-science-and-industrial-engineering"><strong><em>On Data Science and Industrial Engineering</em></strong></a>
   <ul class="collapse">
-  <li><a href="#a" id="toc-a" class="nav-link" data-scroll-target="#a">(a)</a></li>
+  <li><a href="#the-role-of-data-science-and-its-applications-insights-from-kerem-demirtaş" id="toc-the-role-of-data-science-and-its-applications-insights-from-kerem-demirtaş" class="nav-link" data-scroll-target="#the-role-of-data-science-and-its-applications-insights-from-kerem-demirtaş"><strong>The Role of Data Science and Its Applications: Insights from Kerem Demirtaş</strong></a></li>
+  <li><a href="#the-scope-of-data-science" id="toc-the-scope-of-data-science" class="nav-link" data-scroll-target="#the-scope-of-data-science"><strong>The Scope of Data Science</strong></a></li>
+  <li><a href="#what-data-science-is-not" id="toc-what-data-science-is-not" class="nav-link" data-scroll-target="#what-data-science-is-not"><strong>What Data Science is NOT</strong></a></li>
+  <li><a href="#the-data-science-workflow" id="toc-the-data-science-workflow" class="nav-link" data-scroll-target="#the-data-science-workflow"><strong>The Data Science Workflow</strong></a></li>
+  <li><a href="#kerem-demirtaşs-research-on-autonomous-vehicles" id="toc-kerem-demirtaşs-research-on-autonomous-vehicles" class="nav-link" data-scroll-target="#kerem-demirtaşs-research-on-autonomous-vehicles"><strong>Kerem Demirtaş’s Research on Autonomous Vehicles</strong></a></li>
   <li><a href="#b" id="toc-b" class="nav-link" data-scroll-target="#b">(b)</a></li>
   </ul></li>
   </ul>
@@ -229,7 +199,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assignment 1</h1>
+<h1 class="title"><span style="color:red; font-style:italic;">Assignment 1</span></h1>
 </div>
 
 
@@ -246,17 +216,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="assignment-1" class="level1">
-<h1>Assignment 1</h1>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
-<p>My first assignment has two parts.</p>
-<section id="a" class="level2">
-<h2 class="anchored" data-anchor-id="a">(a)</h2>
+<section id="on-data-science-and-industrial-engineering" class="level1" style="color:Red">
+<h1 style="color:Red"><strong><em>On Data Science and Industrial Engineering</em></strong></h1>
+<section id="the-role-of-data-science-and-its-applications-insights-from-kerem-demirtaş" class="level2">
+<h2 class="anchored" data-anchor-id="the-role-of-data-science-and-its-applications-insights-from-kerem-demirtaş"><strong>The Role of Data Science and Its Applications: Insights from Kerem Demirtaş</strong></h2>
+<p>Kerem Demirtaş is a Data Scientist currently working at Invent Analytics. Previously, he worked at Spyke Games and Smart Kiwi. One of his significant projects was <em>Royal Reachers</em>, where he focused on analyzing users’ gaming behaviors and demographic structures to deliver the most suitable offers at the most optimal times, thereby maximizing sales. Later in his career, he contributed to a project aimed at optimizing inventory management in retail. This involved developing software that determines how much stock should be held at various locations and for which models, ultimately helping businesses maximize their sales.</p>
+<p>His research interests revolve around autonomous vehicles, traffic flow modeling, transportation simulations, and optimization techniques in mobility systems.</p>
+</section>
+<section id="the-scope-of-data-science" class="level2">
+<h2 class="anchored" data-anchor-id="the-scope-of-data-science"><strong>The Scope of Data Science</strong></h2>
+<p>Data science finds applications in various fields, including:</p>
+<ul>
+<li><p><strong>Epidemiology:</strong> Predicting the likelihood of disease outbreaks, identifying high-risk regions, and implementing preventive measures.</p></li>
+<li><p><strong>Retail:</strong> Optimizing stock levels and sales strategies to enhance profitability.</p></li>
+<li><p><strong>Autonomous Vehicles:</strong> Improving traffic efficiency, reducing congestion, and enhancing the decision-making capabilities of self-driving cars.</p></li>
+</ul>
+</section>
+<section id="what-data-science-is-not" class="level2">
+<h2 class="anchored" data-anchor-id="what-data-science-is-not"><strong>What Data Science is NOT</strong></h2>
+<ul>
+<li><p>It is not merely an exaggerated form of statistics.</p></li>
+<li><p>It is not just about building models.</p></li>
+<li><p>It is not exclusively tied to <em>Big Data</em>.</p></li>
+<li><p>Writing Python code does not make someone a data analyst.</p></li>
+<li><p>Data analysis does not always provide definitive answers to every question.</p></li>
+</ul>
+</section>
+<section id="the-data-science-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="the-data-science-workflow"><strong>The Data Science Workflow</strong></h2>
+<ol type="1">
+<li><p><strong>Problem Identification:</strong> Clearly defining the problem is the first step in data science. A historical example of this is the analysis conducted during World War II on aircraft durability. Engineers initially focused on reinforcing the most frequently damaged parts of returning planes, but statistician <strong>Abraham Wald</strong> proposed a different approach—suggesting that undamaged areas of returning planes were actually where the planes that were shot down had suffered critical damage. This shift in thinking led to more effective reinforcement strategies.</p></li>
+<li><p><strong>Data Collection:</strong> Gathering unbiased data is crucial. Abraham Wald’s <em>unbiased thinking</em> methodology is a key example. His research showed that survivorship bias can mislead analyses if data from unsuccessful cases (e.g., planes that didn’t return) is not considered.</p></li>
+<li><p><strong>Exploratory Data Analysis (EDA):</strong> Before building models, it is essential to understand and visualize the data. A classic example is <strong>John Snow’s</strong> study on cholera outbreaks in 1854 London. By mapping out cases and identifying contaminated water sources, he demonstrated that cholera was waterborne—long before germ theory was widely accepted. This showcases how data visualization and pattern recognition can lead to groundbreaking discoveries.</p></li>
+<li><p><strong>Model Building:</strong> At this stage, predictive and analytical models are developed. A relevant example is <strong>Lewis Fry Richardson’s</strong> pioneering work on weather forecasting, where he proposed numerical methods for predicting atmospheric conditions. Another example is the <em>World War II Diet Problem</em>, which used linear programming to optimize military rations by balancing nutrition and cost.</p></li>
+<li><p><strong>Model Evaluation:</strong> Assessing model performance and avoiding overfitting are crucial aspects of data science. Overfitting occurs when a model learns noise instead of actual patterns, reducing its real-world applicability. An illustrative case is the <strong>Deep Blue vs.&nbsp;Garry Kasparov</strong> chess match, where the AI was trained to analyze millions of moves but had to generalize its strategies to defeat a world champion.</p></li>
+<li><p><strong>Production and Live Performance:</strong> Once a model is finalized, it must be deployed in a real-world setting. This step involves monitoring AI tools and ensuring their effectiveness. Examples include AI-driven recommendation systems in e-commerce, self-learning fraud detection systems in banking, and real-time traffic prediction tools in transportation networks.</p></li>
+</ol>
+</section>
+<section id="kerem-demirtaşs-research-on-autonomous-vehicles" class="level2">
+<h2 class="anchored" data-anchor-id="kerem-demirtaşs-research-on-autonomous-vehicles"><strong>Kerem Demirtaş’s Research on Autonomous Vehicles</strong></h2>
+<p>His thesis, <em>“Object-driven Cellular Automaton Model for Platooning of Autonomous Vehicles on Freeways with Multiple Lanes”</em>, explores how autonomous vehicles can form convoys and adapt to complex road conditions. The primary motivation behind his research is to minimize the following distance between vehicles, optimize acceleration and deceleration during lane changes, and reduce the impact of stop-and-go waves in traffic flow. By refining the mechanics of platooning, his work contributes to the development of more efficient and safer autonomous driving systems.</p>
+<p>Ultimately, his work highlights the power of data science in solving complex real-world problems, from optimizing business operations to transforming the future of mobility.</p>
 </section>
 <section id="b" class="level2">
 <h2 class="anchored" data-anchor-id="b">(b)</h2>
