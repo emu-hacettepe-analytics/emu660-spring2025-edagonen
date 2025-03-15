@@ -1,8 +1,10 @@
 ---
-title: "<div style='text-align:center;'><span style='color:red; font-style:italic;'>Statistical Analysis of the mtcars Dataset in R</span></div>"
+title: "<div style='text-align:center;'><span style='color:red; font-style:italic;'>Statistical Analysis</span></div>"
 ---
 
-### ***Quick Overview of the `mtcars` Dataset***
+## **Statistical Analysis of the mtcars Dataset in R**
+
+### *Quick Overview of the `mtcars` Dataset*
 
 In R, `data(mtcars)` loads the `mtcars` dataset, which contains features of 32 cars. `str(mtcars)` then displays the dataset's structure, revealing the types and initial values of its columns, providing a quick overview.
 
@@ -13,7 +15,7 @@ str(mtcars)
 
 ```
 
-### ***Write a Custom Summary Function & Applying the Function Using a Loop***
+### *Write a Custom Summary Function & Applying the Function Using a Loop*
 
 This R code calculates basic statistics for numerical columns in the mtcars dataset. It defines a function, compute_stats, to find the mean, median, variance, IQR, min, and max of a numeric vector, handling potential missing values. A for loop iterates through each column of mtcars, applying compute_stats to numerical ones. The results, with column names, are stored in a list and printed, providing a summary of each numerical column's statistics.
 
@@ -64,7 +66,7 @@ print(mtcars_istatistikleri)
 
 To automate statistical analysis of numerical columns within the mtcars dataset, a for loop iterates through each column name. Utilizing is.numeric(), the loop identifies numerical columns and applies the compute_stats function. This function calculates key statistics like mean, median, and variance, returning them in a named list. The loop then stores these results, indexed by column names, within a comprehensive list, which is subsequently printed. This approach efficiently provides a structured statistical overview of all numerical columns in the dataset.
 
-### ***An alternative approach with sapply and apply***
+### *An alternative approach with sapply and apply*
 
 The `sapply` function in R is a user-friendly and efficient way to apply a function over a list or vector. In the context of the `mtcars` dataset, `sapply` iterates through each column, applying the `compute_stats` function to those that are numeric. This streamlines the process of calculating statistics for multiple columns, returning the results in a simplified format, such as a vector or matrix. Its ability to directly handle data frames makes it a powerful tool for quick statistical analysis.
 
@@ -90,7 +92,7 @@ print(mtcars_istatistikleri_apply)
 
 ```
 
-## ***Handling Missing Values in the dslabs 'na_example' Dataset: Methods and Comparisons***
+## **Handling Missing Values in the dslabs 'na_example' Dataset: Methods and Comparisons**
 
 ### *Installing and Loading the 'dslaps'*
 
@@ -140,7 +142,7 @@ cat("Standart Deviation:", sd_value)
 
 ```
 
-### ***Replacing NA Values with the Median***
+### *Replacing NA Values with the Median*
 
 In this process, we replace all missing (NA) values in the na_example dataset with the median of the non-missing values. The median is chosen because it is less sensitive to extreme values (outliers) compared to the mean.
 
@@ -170,7 +172,7 @@ cat("Versiyon 1 Sapma:", version1_sd)
 
 ```
 
-### ***Replacing NA Values with Randomly Selected Non-missing Value***
+### *Replacing NA Values with Randomly Selected Non-missing Value*
 
 This process replaces all `NA` values in the dataset with a randomly selected non-missing value from the same dataset. First, we extract all non-missing values, then for each `NA`, a random value from the non-missing values is chosen to fill in the missing spot.
 
@@ -186,6 +188,7 @@ na_example_random <- ifelse(is.na(na_example), sample(non_na_values, 1), na_exam
 print(na_example_random)
 
 ```
+
 ```{r}
 
 version2_median <- median(na_example_random)
@@ -196,5 +199,3 @@ cat("Versiyon 2 Medyan:", version2_median, "\n")
 cat("Versiyon 2 Sapma:", version2_sd)
 
 ```
-
-

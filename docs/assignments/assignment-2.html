@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Statistical Analysis of the mtcars Dataset in R – EdaaG's Analytics Lab</title>
+<title>Statistical Analysis – EdaaG's Analytics Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -210,16 +210,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#quick-overview-of-the-mtcars-dataset" id="toc-quick-overview-of-the-mtcars-dataset" class="nav-link active" data-scroll-target="#quick-overview-of-the-mtcars-dataset"><strong><em>Quick Overview of the <code>mtcars</code> Dataset</em></strong></a></li>
-  <li><a href="#write-a-custom-summary-function-applying-the-function-using-a-loop" id="toc-write-a-custom-summary-function-applying-the-function-using-a-loop" class="nav-link" data-scroll-target="#write-a-custom-summary-function-applying-the-function-using-a-loop"><strong><em>Write a Custom Summary Function &amp; Applying the Function Using a Loop</em></strong></a></li>
-  <li><a href="#an-alternative-approach-with-sapply-and-apply" id="toc-an-alternative-approach-with-sapply-and-apply" class="nav-link" data-scroll-target="#an-alternative-approach-with-sapply-and-apply"><strong><em>An alternative approach with sapply and apply</em></strong></a></li>
-  <li><a href="#handling-missing-values-in-the-dslabs-na_example-dataset-methods-and-comparisons" id="toc-handling-missing-values-in-the-dslabs-na_example-dataset-methods-and-comparisons" class="nav-link" data-scroll-target="#handling-missing-values-in-the-dslabs-na_example-dataset-methods-and-comparisons"><strong><em>Handling Missing Values in the dslabs ‘na_example’ Dataset: Methods and Comparisons</em></strong></a>
+  <li><a href="#statistical-analysis-of-the-mtcars-dataset-in-r" id="toc-statistical-analysis-of-the-mtcars-dataset-in-r" class="nav-link active" data-scroll-target="#statistical-analysis-of-the-mtcars-dataset-in-r"><strong>Statistical Analysis of the mtcars Dataset in R</strong></a>
+  <ul class="collapse">
+  <li><a href="#quick-overview-of-the-mtcars-dataset" id="toc-quick-overview-of-the-mtcars-dataset" class="nav-link" data-scroll-target="#quick-overview-of-the-mtcars-dataset"><em>Quick Overview of the <code>mtcars</code> Dataset</em></a></li>
+  <li><a href="#write-a-custom-summary-function-applying-the-function-using-a-loop" id="toc-write-a-custom-summary-function-applying-the-function-using-a-loop" class="nav-link" data-scroll-target="#write-a-custom-summary-function-applying-the-function-using-a-loop"><em>Write a Custom Summary Function &amp; Applying the Function Using a Loop</em></a></li>
+  <li><a href="#an-alternative-approach-with-sapply-and-apply" id="toc-an-alternative-approach-with-sapply-and-apply" class="nav-link" data-scroll-target="#an-alternative-approach-with-sapply-and-apply"><em>An alternative approach with sapply and apply</em></a></li>
+  </ul></li>
+  <li><a href="#handling-missing-values-in-the-dslabs-na_example-dataset-methods-and-comparisons" id="toc-handling-missing-values-in-the-dslabs-na_example-dataset-methods-and-comparisons" class="nav-link" data-scroll-target="#handling-missing-values-in-the-dslabs-na_example-dataset-methods-and-comparisons"><strong>Handling Missing Values in the dslabs ‘na_example’ Dataset: Methods and Comparisons</strong></a>
   <ul class="collapse">
   <li><a href="#installing-and-loading-the-dslaps" id="toc-installing-and-loading-the-dslaps" class="nav-link" data-scroll-target="#installing-and-loading-the-dslaps"><em>Installing and Loading the ‘dslaps’</em></a></li>
   <li><a href="#number-and-locations-of-na-values" id="toc-number-and-locations-of-na-values" class="nav-link" data-scroll-target="#number-and-locations-of-na-values"><em>Number and Locations of NA Values</em></a></li>
   <li><a href="#statistical-calculation-ignoring-na-values" id="toc-statistical-calculation-ignoring-na-values" class="nav-link" data-scroll-target="#statistical-calculation-ignoring-na-values"><strong><em>Statistical Calculation Ignoring NA Values</em></strong></a></li>
-  <li><a href="#replacing-na-values-with-the-median" id="toc-replacing-na-values-with-the-median" class="nav-link" data-scroll-target="#replacing-na-values-with-the-median"><strong><em>Replacing NA Values with the Median</em></strong></a></li>
-  <li><a href="#replacing-na-values-with-randomly-selected-non-missing-value" id="toc-replacing-na-values-with-randomly-selected-non-missing-value" class="nav-link" data-scroll-target="#replacing-na-values-with-randomly-selected-non-missing-value"><strong><em>Replacing NA Values with Randomly Selected Non-missing Value</em></strong></a></li>
+  <li><a href="#replacing-na-values-with-the-median" id="toc-replacing-na-values-with-the-median" class="nav-link" data-scroll-target="#replacing-na-values-with-the-median"><em>Replacing NA Values with the Median</em></a></li>
+  <li><a href="#replacing-na-values-with-randomly-selected-non-missing-value" id="toc-replacing-na-values-with-randomly-selected-non-missing-value" class="nav-link" data-scroll-target="#replacing-na-values-with-randomly-selected-non-missing-value"><em>Replacing NA Values with Randomly Selected Non-missing Value</em></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -233,7 +236,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span style="color:red; font-style:italic;">Statistical Analysis of the mtcars Dataset in R</span></h1>
+<h1 class="title"><span style="color:red; font-style:italic;">Statistical Analysis</span></h1>
 </div>
 
 
@@ -250,8 +253,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<section id="statistical-analysis-of-the-mtcars-dataset-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-analysis-of-the-mtcars-dataset-in-r"><strong>Statistical Analysis of the mtcars Dataset in R</strong></h2>
 <section id="quick-overview-of-the-mtcars-dataset" class="level3">
-<h3 class="anchored" data-anchor-id="quick-overview-of-the-mtcars-dataset"><strong><em>Quick Overview of the <code>mtcars</code> Dataset</em></strong></h3>
+<h3 class="anchored" data-anchor-id="quick-overview-of-the-mtcars-dataset"><em>Quick Overview of the <code>mtcars</code> Dataset</em></h3>
 <p>In R, <code>data(mtcars)</code> loads the <code>mtcars</code> dataset, which contains features of 32 cars. <code>str(mtcars)</code> then displays the dataset’s structure, revealing the types and initial values of its columns, providing a quick overview.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(mtcars)</span>
@@ -273,7 +278,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 <section id="write-a-custom-summary-function-applying-the-function-using-a-loop" class="level3">
-<h3 class="anchored" data-anchor-id="write-a-custom-summary-function-applying-the-function-using-a-loop"><strong><em>Write a Custom Summary Function &amp; Applying the Function Using a Loop</em></strong></h3>
+<h3 class="anchored" data-anchor-id="write-a-custom-summary-function-applying-the-function-using-a-loop"><em>Write a Custom Summary Function &amp; Applying the Function Using a Loop</em></h3>
 <p>This R code calculates basic statistics for numerical columns in the mtcars dataset. It defines a function, compute_stats, to find the mean, median, variance, IQR, min, and max of a numeric vector, handling potential missing values. A for loop iterates through each column of mtcars, applying compute_stats to numerical ones. The results, with column names, are stored in a list and printed, providing a summary of each numerical column’s statistics.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># İstatistikleri hesaplayan fonksiyon</span></span>
@@ -539,7 +544,7 @@ $carb$maks
 <p>To automate statistical analysis of numerical columns within the mtcars dataset, a for loop iterates through each column name. Utilizing is.numeric(), the loop identifies numerical columns and applies the compute_stats function. This function calculates key statistics like mean, median, and variance, returning them in a named list. The loop then stores these results, indexed by column names, within a comprehensive list, which is subsequently printed. This approach efficiently provides a structured statistical overview of all numerical columns in the dataset.</p>
 </section>
 <section id="an-alternative-approach-with-sapply-and-apply" class="level3">
-<h3 class="anchored" data-anchor-id="an-alternative-approach-with-sapply-and-apply"><strong><em>An alternative approach with sapply and apply</em></strong></h3>
+<h3 class="anchored" data-anchor-id="an-alternative-approach-with-sapply-and-apply"><em>An alternative approach with sapply and apply</em></h3>
 <p>The <code>sapply</code> function in R is a user-friendly and efficient way to apply a function over a list or vector. In the context of the <code>mtcars</code> dataset, <code>sapply</code> iterates through each column, applying the <code>compute_stats</code> function to those that are numeric. This streamlines the process of calculating statistics for multiple columns, returning the results in a simplified format, such as a vector or matrix. Its ability to directly handle data frames makes it a powerful tool for quick statistical analysis.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sapply ile tüm sütunlara compute_stats fonksiyonunu uygula</span></span>
@@ -793,8 +798,9 @@ $carb$maks
 </div>
 </div>
 </section>
+</section>
 <section id="handling-missing-values-in-the-dslabs-na_example-dataset-methods-and-comparisons" class="level2">
-<h2 class="anchored" data-anchor-id="handling-missing-values-in-the-dslabs-na_example-dataset-methods-and-comparisons"><strong><em>Handling Missing Values in the dslabs ‘na_example’ Dataset: Methods and Comparisons</em></strong></h2>
+<h2 class="anchored" data-anchor-id="handling-missing-values-in-the-dslabs-na_example-dataset-methods-and-comparisons"><strong>Handling Missing Values in the dslabs ‘na_example’ Dataset: Methods and Comparisons</strong></h2>
 <section id="installing-and-loading-the-dslaps" class="level3">
 <h3 class="anchored" data-anchor-id="installing-and-loading-the-dslaps"><em>Installing and Loading the ‘dslaps’</em></h3>
 <div class="cell">
@@ -897,7 +903,7 @@ $carb$maks
 </div>
 </section>
 <section id="replacing-na-values-with-the-median" class="level3">
-<h3 class="anchored" data-anchor-id="replacing-na-values-with-the-median"><strong><em>Replacing NA Values with the Median</em></strong></h3>
+<h3 class="anchored" data-anchor-id="replacing-na-values-with-the-median"><em>Replacing NA Values with the Median</em></h3>
 <p>In this process, we replace all missing (NA) values in the na_example dataset with the median of the non-missing values. The median is chosen because it is less sensitive to extreme values (outliers) compared to the mean.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># NA olmayan değerlerin medyanını hesapla</span></span>
@@ -959,7 +965,7 @@ $carb$maks
 </div>
 </section>
 <section id="replacing-na-values-with-randomly-selected-non-missing-value" class="level3">
-<h3 class="anchored" data-anchor-id="replacing-na-values-with-randomly-selected-non-missing-value"><strong><em>Replacing NA Values with Randomly Selected Non-missing Value</em></strong></h3>
+<h3 class="anchored" data-anchor-id="replacing-na-values-with-randomly-selected-non-missing-value"><em>Replacing NA Values with Randomly Selected Non-missing Value</em></h3>
 <p>This process replaces all <code>NA</code> values in the dataset with a randomly selected non-missing value from the same dataset. First, we extract all non-missing values, then for each <code>NA</code>, a random value from the non-missing values is chosen to fill in the missing spot.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># NA olmayan değerleri al</span></span>
@@ -971,33 +977,33 @@ $carb$maks
 <span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Sonuçları yazdır</span></span>
 <span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(na_example_random)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   [1] 2 1 3 2 1 3 1 4 3 2 2 3 2 2 1 4 3 1 1 2 1 2 2 1 2 5 3 2 2 3 1 2 4 1 1 1 4
-  [38] 5 2 3 4 1 2 4 1 1 2 1 5 3 3 3 1 1 5 1 3 1 3 4 4 7 3 2 3 3 1 3 4 1 2 2 3 2
-  [75] 1 2 2 4 3 4 2 3 1 3 2 1 1 1 3 1 3 3 1 2 2 1 2 2 1 1 4 1 1 2 3 3 2 2 3 3 3
- [112] 4 1 1 1 2 3 4 3 4 3 1 2 1 3 3 3 3 1 5 1 2 1 3 5 3 2 2 3 3 3 3 3 5 3 1 1 4
- [149] 2 4 3 3 3 2 3 2 6 3 1 1 2 2 1 3 1 1 5 3 3 2 4 3 2 5 1 4 3 3 3 4 3 1 4 1 1
- [186] 3 1 1 3 3 3 5 2 2 2 3 1 2 2 3 2 1 3 2 3 1 3 3 2 1 1 3 3 3 1 2 2 1 3 2 2 1
- [223] 1 2 3 1 1 1 4 3 4 2 2 1 4 1 3 5 1 4 3 3 3 3 1 1 5 2 3 3 2 4 3 3 2 5 3 2 3
- [260] 4 6 2 2 2 3 2 3 2 3 3 3 2 2 4 3 1 4 2 3 2 4 3 6 2 3 1 3 2 2 3 1 1 3 2 3 3
- [297] 1 3 1 4 2 1 1 3 2 1 2 3 1 3 2 3 3 2 1 2 3 5 5 1 2 3 3 1 3 3 1 2 4 3 2 1 1
- [334] 1 3 2 1 1 3 4 3 1 2 1 1 3 3 3 1 1 3 5 3 2 3 4 1 4 3 1 3 2 1 2 2 1 2 2 6 1
- [371] 2 4 5 3 3 4 2 1 1 4 2 1 1 1 1 2 1 4 4 1 3 3 3 3 3 2 3 1 2 1 1 4 2 1 4 4 3
- [408] 1 2 3 3 2 2 2 1 4 3 6 1 2 3 1 3 2 2 2 1 1 3 2 1 1 1 3 2 2 3 4 4 4 1 1 3 4
- [445] 3 3 1 3 1 3 2 4 2 2 2 3 2 1 4 3 3 1 4 3 1 3 2 3 3 3 1 3 1 4 1 1 1 2 4 3 1
- [482] 2 2 2 3 2 3 1 1 3 3 2 1 1 2 3 2 2 2 3 3 1 1 2 3 1 2 1 1 3 3 1 3 1 1 1 1 1
- [519] 2 5 1 1 2 2 1 1 3 1 4 1 2 4 1 3 2 3 1 1 3 2 1 1 4 2 3 3 1 5 3 1 1 2 3 1 1
- [556] 3 1 3 2 4 3 2 3 2 1 2 1 1 1 2 2 3 1 5 2 3 2 3 3 2 2 2 1 5 3 2 3 1 3 3 1 2
- [593] 2 2 1 2 2 4 3 6 1 2 3 1 1 2 2 3 3 3 2 3 3 4 2 3 2 3 4 3 1 1 2 2 3 1 1 1 3
- [630] 3 2 5 3 7 1 3 4 3 3 1 3 1 1 1 1 3 2 4 2 2 3 3 3 1 4 3 2 2 2 3 2 4 2 2 4 3
- [667] 3 3 6 3 3 1 4 4 2 1 3 1 6 3 3 3 2 1 1 6 3 1 5 1 3 2 6 2 3 4 1 3 1 2 3 1 1
- [704] 3 1 2 4 2 1 3 2 4 3 2 2 1 1 5 6 4 2 2 2 2 4 3 1 2 2 2 2 4 5 3 3 3 4 3 3 3
- [741] 2 4 2 4 3 3 3 3 2 1 3 2 4 3 2 3 2 3 1 3 4 3 1 2 1 2 3 3 1 2 1 2 1 2 1 2 2
- [778] 2 2 1 1 3 3 1 3 4 3 3 3 4 2 3 2 1 3 2 4 2 2 3 1 2 4 3 3 4 3 1 4 2 1 1 1 3
- [815] 1 5 2 2 4 2 3 1 3 1 2 3 1 2 1 2 1 3 1 3 2 3 2 3 2 1 4 2 3 3 3 2 4 2 3 3 3
- [852] 1 3 5 5 2 2 2 3 2 1 3 1 3 2 4 2 4 3 4 1 2 3 2 3 3 2 3 2 2 2 1 3 2 4 2 3 3
- [889] 3 2 2 3 3 3 2 1 2 4 1 1 1 1 4 3 2 3 3 2 3 1 3 3 2 1 1 1 2 3 2 2 3 3 2 3 3
- [926] 4 5 2 2 2 1 2 3 1 3 3 4 3 3 1 1 1 3 4 3 5 1 1 2 3 2 2 2 2 5 2 2 3 1 2 3 3
- [963] 1 2 3 3 2 3 3 1 1 2 5 3 5 1 1 4 3 2 1 3 1 1 2 4 3 3 3 3 1 1 2 2 1 1 2 2 3
+<pre><code>   [1] 2 1 3 2 1 3 1 4 3 2 2 5 2 2 1 4 5 1 1 2 1 2 2 1 2 5 5 2 2 3 1 2 4 1 1 1 4
+  [38] 5 2 3 4 1 2 4 1 1 2 1 5 5 5 5 1 1 5 1 3 1 5 4 4 7 3 2 5 5 1 5 4 1 2 2 3 2
+  [75] 1 2 2 4 3 4 2 3 1 3 2 1 1 1 3 1 5 3 1 2 2 1 2 2 1 1 4 1 1 2 3 3 2 2 3 3 3
+ [112] 4 1 1 1 2 5 4 3 4 3 1 2 1 5 5 5 5 1 5 1 2 1 3 5 3 2 2 5 5 5 5 3 5 3 1 1 4
+ [149] 2 4 3 3 5 2 3 2 6 5 1 1 2 2 1 3 1 1 5 5 5 2 4 5 2 5 1 4 3 3 5 4 3 1 4 1 1
+ [186] 3 1 1 5 5 3 5 2 2 2 3 1 2 2 3 2 1 5 2 5 1 5 5 2 1 1 5 3 5 1 2 2 1 3 2 2 1
+ [223] 1 2 3 1 1 1 4 3 4 2 2 1 4 1 5 5 1 4 5 3 5 5 1 1 5 2 3 3 2 4 5 3 2 5 5 2 3
+ [260] 4 6 2 2 2 5 2 5 2 5 3 3 2 2 4 3 1 4 2 5 2 4 5 6 2 3 1 5 2 2 5 1 1 3 2 3 3
+ [297] 1 5 1 4 2 1 1 3 2 1 2 3 1 5 2 3 3 2 1 2 3 5 5 1 2 3 3 1 5 5 1 2 4 5 2 1 1
+ [334] 1 3 2 1 1 3 4 5 1 2 1 1 3 3 5 1 1 3 5 3 2 3 4 1 4 3 1 5 2 1 2 2 1 2 2 6 1
+ [371] 2 4 5 5 3 4 2 1 1 4 2 1 1 1 1 2 1 4 4 1 3 5 3 3 5 2 5 1 2 1 1 4 2 1 4 4 5
+ [408] 1 2 5 3 2 2 2 1 4 3 6 1 2 3 1 3 2 2 2 1 1 3 2 1 1 1 3 2 2 5 4 4 4 1 1 5 4
+ [445] 3 5 1 3 1 3 2 4 2 2 2 3 2 1 4 3 5 1 4 3 1 3 2 5 3 5 1 3 1 4 1 1 1 2 4 3 1
+ [482] 2 2 2 3 2 3 1 1 5 3 2 1 1 2 5 2 2 2 3 3 1 1 2 5 1 2 1 1 3 3 1 3 1 1 1 1 1
+ [519] 2 5 1 1 2 2 1 1 5 1 4 1 2 4 1 3 2 5 1 1 5 2 1 1 4 2 3 3 1 5 3 1 1 2 5 1 1
+ [556] 3 1 3 2 4 5 2 3 2 1 2 1 1 1 2 2 3 1 5 2 5 2 5 3 2 2 2 1 5 3 2 3 1 5 3 1 2
+ [593] 2 2 1 2 2 4 5 6 1 2 5 1 1 2 2 3 5 3 2 3 3 4 2 5 2 5 4 5 1 1 2 2 3 1 1 1 3
+ [630] 5 2 5 5 7 1 5 4 3 3 1 5 1 1 1 1 3 2 4 2 2 3 5 5 1 4 3 2 2 2 3 2 4 2 2 4 5
+ [667] 5 5 6 3 3 1 4 4 2 1 5 1 6 5 3 3 2 1 1 6 5 1 5 1 5 2 6 2 5 4 1 3 1 2 5 1 1
+ [704] 3 1 2 4 2 1 3 2 4 3 2 2 1 1 5 6 4 2 2 2 2 4 5 1 2 2 2 2 4 5 5 5 5 4 3 3 3
+ [741] 2 4 2 4 5 5 5 5 2 1 5 2 4 3 2 5 2 3 1 3 4 5 1 2 1 2 5 3 1 2 1 2 1 2 1 2 2
+ [778] 2 2 1 1 3 3 1 3 4 3 5 5 4 2 3 2 1 3 2 4 2 2 3 1 2 4 3 3 4 5 1 4 2 1 1 1 3
+ [815] 1 5 2 2 4 2 5 1 3 1 2 5 1 2 1 2 1 5 1 3 2 3 2 5 2 1 4 2 5 5 5 2 4 2 5 5 3
+ [852] 1 5 5 5 2 2 2 5 2 1 3 1 3 2 4 2 4 5 4 1 2 3 2 3 3 2 3 2 2 2 1 3 2 4 2 5 3
+ [889] 3 2 2 5 5 3 2 1 2 4 1 1 1 1 4 3 2 5 3 2 5 1 5 3 2 1 1 1 2 5 2 2 3 3 2 5 5
+ [926] 4 5 2 2 2 1 2 3 1 3 3 4 3 5 1 1 1 5 4 3 5 1 1 2 5 2 2 2 2 5 2 2 3 1 2 3 5
+ [963] 1 2 5 5 2 5 3 1 1 2 5 3 5 1 1 4 5 2 1 3 1 1 2 4 3 3 3 5 1 1 2 2 1 1 2 2 5
 [1000] 2</code></pre>
 </div>
 </div>
@@ -1012,7 +1018,7 @@ $carb$maks
 </div>
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Versiyon 2 Sapma:"</span>, version2_sd)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Versiyon 2 Sapma: 1.157554</code></pre>
+<pre><code>Versiyon 2 Sapma: 1.477476</code></pre>
 </div>
 </div>
 
