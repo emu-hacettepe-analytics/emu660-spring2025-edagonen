@@ -89,3 +89,17 @@ mtcars_istatistikleri_apply <- apply(mtcars, MARGIN = 2, compute_stats)
 print(mtcars_istatistikleri_apply)
 
 ```
+
+```{r}
+
+library(dslabs)
+
+```
+
+After successfully installing and loading the 'dslabs' library, we can now print the desired dataset.
+
+```{r}
+
+print(na_example)
+
+```
