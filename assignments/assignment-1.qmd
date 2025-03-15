@@ -8,7 +8,7 @@ Kerem Demirtaş is a Data Scientist currently working at Invent Analytics. Previ
 
 His research interests revolve around autonomous vehicles, traffic flow modeling, transportation simulations, and optimization techniques in mobility systems.
 
-## *The Scope of Data Science* 
+## *The Scope of Data Science*
 
 Data science finds applications in various fields, including:
 
@@ -16,7 +16,7 @@ Data science finds applications in various fields, including:
 -   **Retail:** Optimizing stock levels and sales strategies to enhance profitability.
 -   **Autonomous Vehicles:** Improving traffic efficiency, reducing congestion, and enhancing the decision-making capabilities of self-driving cars.
 
-## *What Data Science is NOT* 
+## *What Data Science is NOT*
 
 -   It is not merely an exaggerated form of statistics.
 -   It is not just about building models.
@@ -24,8 +24,7 @@ Data science finds applications in various fields, including:
 -   Writing Python code does not make someone a data analyst.
 -   Data analysis does not always provide definitive answers to every question.
 
-## *The Data Science Workflow* 
-
+## *The Data Science Workflow*
 
 1.  **Problem Identification:** Clearly defining the problem is the first step in data science. A historical example of this is the analysis conducted during World War II on aircraft durability. Engineers initially focused on reinforcing the most frequently damaged parts of returning planes, but statistician **Abraham Wald** proposed a different approach—suggesting that undamaged areas of returning planes were actually where the planes that were shot down had suffered critical damage. This shift in thinking led to more effective reinforcement strategies.
 
