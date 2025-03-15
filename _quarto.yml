@@ -19,11 +19,13 @@ website:
             href: assignments.qmd
           - text: Project
             href: project.qmd
+            
     tools:
       - icon: github
         href: https://github.com/edagonen
       - icon: linkedin
         href: https://www.linkedin.com/in/edagonen
+
   sidebar:
     - title: "Assignments"
       style: "docked"
@@ -37,7 +39,6 @@ website:
   page-footer:
     center: "Hacettepe IE - EMU660 - Spring 2024" 
     border: true
-
 format:
   html:
     toc: true
@@ -47,5 +48,5 @@ format:
       dark: cyborg
     css: styles.css
 
-editor: visual
 
+editor: visual
