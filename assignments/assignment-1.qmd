@@ -1,5 +1,5 @@
 ---
-title: "On Data Science and Industrial Engineering"
+title: "On Data Science and Industrial Engineering.."
 ---
 
 ## [*The Role of Data Science and Its Applications: Insights from Kerem Demirtaş*]{style="color:Red"}
