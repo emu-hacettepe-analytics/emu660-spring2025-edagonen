@@ -1,14 +1,14 @@
 ---
-title: "On Data Science and Industrial Engineering.."
+title: "<div style='text-align:center;'><span style='color:red; font-style:italic;'>On Data Science and Industrial Engineering</span></div>"
 ---
 
-## [*The Role of Data Science and Its Applications: Insights from Kerem Demirtaş*]{style="color:Red"}
+## [*The Role of Data Science and Its Applications: Insights from Kerem Demirtaş*]{style="color:#800000"}
 
 Kerem Demirtaş is a Data Scientist currently working at Invent Analytics. Previously, he worked at Spyke Games and Smart Kiwi. One of his significant projects was *Royal Reachers*, where he focused on analyzing users' gaming behaviors and demographic structures to deliver the most suitable offers at the most optimal times, thereby maximizing sales. Later in his career, he contributed to a project aimed at optimizing inventory management in retail. This involved developing software that determines how much stock should be held at various locations and for which models, ultimately helping businesses maximize their sales.
 
 His research interests revolve around autonomous vehicles, traffic flow modeling, transportation simulations, and optimization techniques in mobility systems.
 
-## *The Scope of Data Science*
+## *The Scope of Data Science* {style="color:#800000"}
 
 Data science finds applications in various fields, including:
 
@@ -16,7 +16,7 @@ Data science finds applications in various fields, including:
 -   **Retail:** Optimizing stock levels and sales strategies to enhance profitability.
 -   **Autonomous Vehicles:** Improving traffic efficiency, reducing congestion, and enhancing the decision-making capabilities of self-driving cars.
 
-## *What Data Science is NOT*
+## *What Data Science is NOT* {style="color:#800000"}
 
 -   It is not merely an exaggerated form of statistics.
 -   It is not just about building models.
@@ -24,7 +24,7 @@ Data science finds applications in various fields, including:
 -   Writing Python code does not make someone a data analyst.
 -   Data analysis does not always provide definitive answers to every question.
 
-## *The Data Science Workflow*
+## *The Data Science Workflow* {style="color:#800000"}
 
 1.  **Problem Identification:** Clearly defining the problem is the first step in data science. A historical example of this is the analysis conducted during World War II on aircraft durability. Engineers initially focused on reinforcing the most frequently damaged parts of returning planes, but statistician **Abraham Wald** proposed a different approach—suggesting that undamaged areas of returning planes were actually where the planes that were shot down had suffered critical damage. This shift in thinking led to more effective reinforcement strategies.
 
@@ -38,7 +38,7 @@ Data science finds applications in various fields, including:
 
 6.  **Production and Live Performance:** Once a model is finalized, it must be deployed in a real-world setting. This step involves monitoring AI tools and ensuring their effectiveness. Examples include AI-driven recommendation systems in e-commerce, self-learning fraud detection systems in banking, and real-time traffic prediction tools in transportation networks.
 
-## *Kerem Demirtaş’s Research on Autonomous Vehicles*
+## *Kerem Demirtaş’s Research on Autonomous Vehicles* {style="color:#800000"}
 
 His thesis, *"Object-driven Cellular Automaton Model for Platooning of Autonomous Vehicles on Freeways with Multiple Lanes"*, explores how autonomous vehicles can form convoys and adapt to complex road conditions. The primary motivation behind his research is to minimize the following distance between vehicles, optimize acceleration and deceleration during lane changes, and reduce the impact of stop-and-go waves in traffic flow. By refining the mechanics of platooning, his work contributes to the development of more efficient and safer autonomous driving systems.
 
