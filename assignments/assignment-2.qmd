@@ -2,12 +2,20 @@
 title: "Assignment 2"
 ---
 
+### *Quick Overview of the `mtcars` Dataset*
+
+In R, `data(mtcars)` loads the `mtcars` dataset, which contains features of 32 cars. `str(mtcars)` then displays the dataset's structure, revealing the types and initial values of its columns, providing a quick overview
+
 ```{r}
 
 data(mtcars)
 str(mtcars)
 
 ```
+
+### ***Write a Custom Summary Function & Applying the Function Using a Loop***
+
+This R code calculates basic statistics for numerical columns in the mtcars dataset. It defines a function, compute_stats, to find the mean, median, variance, IQR, min, and max of a numeric vector, handling potential missing values. A for loop iterates through each column of mtcars, applying compute_stats to numerical ones. The results, with column names, are stored in a list and printed, providing a summary of each numerical column's statistics.
 
 ```{r}
 
@@ -52,4 +60,32 @@ for (header in names(mtcars)) {
 print(mtcars_istatistikleri)
   
   
+```
+
+To automate statistical analysis of numerical columns within the mtcars dataset, a for loop iterates through each column name. Utilizing is.numeric(), the loop identifies numerical columns and applies the compute_stats function. This function calculates key statistics like mean, median, and variance, returning them in a named list. The loop then stores these results, indexed by column names, within a comprehensive list, which is subsequently printed. This approach efficiently provides a structured statistical overview of all numerical columns in the dataset.
+
+### *An alternative approach with sapply and apply*
+
+The `sapply` function in R is a user-friendly and efficient way to apply a function over a list or vector. In the context of the `mtcars` dataset, `sapply` iterates through each column, applying the `compute_stats` function to those that are numeric. This streamlines the process of calculating statistics for multiple columns, returning the results in a simplified format, such as a vector or matrix. Its ability to directly handle data frames makes it a powerful tool for quick statistical analysis.
+
+```{r}
+
+# sapply ile tüm sütunlara compute_stats fonksiyonunu uygula
+mtcars_istatistikleri_sapply <- sapply(mtcars, compute_stats)
+
+# Sonuçları yazdır
+print(mtcars_istatistikleri_sapply)
+
+```
+
+The `apply` function in R is designed to apply a function over the rows or columns of a matrix or array. In this scenario, the `mtcars` data frame is first converted to a matrix. Then, `apply` is used to iterate over the columns, applying the `compute_stats` function to each. This approach allows for consistent application of statistical calculations across all columns, returning the results in a structured format. While `apply` is versatile, it requires the data to be in a matrix format, making it slightly less direct for data frames compared to `sapply`.
+
+```{r}
+
+# apply ile tüm sütunlara compute_stats fonksiyonunu uygula
+mtcars_istatistikleri_apply <- apply(mtcars, MARGIN = 2, compute_stats)
+
+# Sonuçları yazdır
+print(mtcars_istatistikleri_apply)
+
 ```
