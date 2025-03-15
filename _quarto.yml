@@ -30,7 +30,7 @@ website:
       search: true
       contents:
         - assignments.qmd
-        - assignments/datascience.qmd
+        - datascience.qmd
         - assignments/assignment-2.qmd  
   page-navigation: true
   back-to-top-navigation: true
