@@ -1,8 +1,8 @@
 ---
-title: "Assignment 2"
+title: "<div style='text-align:center;'><span style='color:red; font-style:italic;'>Statistical Analysis of the mtcars Dataset in R</span></div>"
 ---
 
-### *Quick Overview of the `mtcars` Dataset*
+### ***Quick Overview of the `mtcars` Dataset***
 
 In R, `data(mtcars)` loads the `mtcars` dataset, which contains features of 32 cars. `str(mtcars)` then displays the dataset's structure, revealing the types and initial values of its columns, providing a quick overview
 
@@ -64,7 +64,7 @@ print(mtcars_istatistikleri)
 
 To automate statistical analysis of numerical columns within the mtcars dataset, a for loop iterates through each column name. Utilizing is.numeric(), the loop identifies numerical columns and applies the compute_stats function. This function calculates key statistics like mean, median, and variance, returning them in a named list. The loop then stores these results, indexed by column names, within a comprehensive list, which is subsequently printed. This approach efficiently provides a structured statistical overview of all numerical columns in the dataset.
 
-### *An alternative approach with sapply and apply*
+### ***An alternative approach with sapply and apply***
 
 The `sapply` function in R is a user-friendly and efficient way to apply a function over a list or vector. In the context of the `mtcars` dataset, `sapply` iterates through each column, applying the `compute_stats` function to those that are numeric. This streamlines the process of calculating statistics for multiple columns, returning the results in a simplified format, such as a vector or matrix. Its ability to directly handle data frames makes it a powerful tool for quick statistical analysis.
 
