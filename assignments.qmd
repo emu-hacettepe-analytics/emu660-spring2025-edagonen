@@ -1,7 +1,11 @@
 ---
-title: "My Assignments"
+title: "<div style='text-align:center;'><span style='color:red; font-style:italic;'>EMU660 Spring 2024-2025 Assignment Portfolio</span></div>"
 ---
 
-On this page, I showcase the assignment I conducted for the \[term and year, e.g. Spring 2024-2025\] EMU660 Decision Making with Analytics course. xx
+***On this page, I showcase the assignments I conducted for the EMU660 Decision Making with Analytics course during the \[term and year, e.g. Spring 2024-2025\].***
 
-Please use left menu to navigate through my assignments.
+Throughout this course, I worked on various analytical problems and decision-making tasks using different methodologies and tools. You can explore these assignments by navigating through the left menu, where I have categorized each one by topic and methodology.
+
+Please use the left menu to navigate through my assignments, which include topics like Data Science, MRCars Statistics, and more. Each assignment provides insights into the methods applied and the results achieved.
+
+!["Ctrl + C, Ctrl + V, Genius!" ⌨️🐧 ](images/codingpengu.gif){fig-align="left" width="23%"}
