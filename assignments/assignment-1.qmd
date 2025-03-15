@@ -4,7 +4,7 @@ title: "<div style='text-align:center;'><span style='color:red; font-style:itali
 
 Below, you will find a brief summary of the discussion video on data analytics and industrial engineering, available at the following link:
 
-(https://www.youtube.com/watch?v=Fi8-phj1X1A)
+[Watch the video here](https://www.youtube.com/watch?v=Fi8-phj1X1A)
 
 ## *The Role of Data Science and Its Applications: Insights from Kerem Demirtaş*
 
