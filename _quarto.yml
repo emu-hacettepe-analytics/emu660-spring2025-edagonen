@@ -34,6 +34,7 @@ website:
         - assignments.qmd
         - assignments/ondatascience.qmd
         - assignments/assignment-2.qmd  
+        
   page-navigation: true
   back-to-top-navigation: true
   page-footer:
