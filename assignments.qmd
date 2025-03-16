@@ -8,4 +8,4 @@ Throughout this course, I worked on various analytical problems and decision-mak
 
 Please use the left menu to navigate through my assignments, which include topics like Data Science, MRCars Statistics, and more. Each assignment provides insights into the methods applied and the results achieved.
 
-!["Ctrl + C, Ctrl + V, Genius!" ⌨️🐧 ](images/codingpengu.gif){fig-align="left" width="23%"}
+!["Ctrl + C, Ctrl + V, Genius!" ⌨️🐧](images/codingpengu.gif){fig-align="left" width="23%"}
