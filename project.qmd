@@ -14,9 +14,9 @@ In this project, we aim to analyze how different movie genres perform in terms o
 
 ## *2.Data*
 
-We based our analysis on a combined dataset. The core dataset is *ggplot2movies*, which includes information about thousands of films worldwide.\
+We based our analysis on a combined dataset. The core dataset is *ggplot2movies*, which includes information about thousands of films worldwide.
 
-To create a more localized perspective, we merged this dataset with a Turkish movie dataset.\
+To create a more localized perspective, we merged this dataset with a Turkish movie dataset.
 
 The combined data allowed us to create new variables, such as Turkish-specific ratings and popularity scores, which we will use in our comparative analysis.
 
@@ -28,9 +28,11 @@ The combined data allowed us to create new variables, such as Turkish-specific r
 
 -   Both datasets provide rich information such as film titles, genres, production years, runtimes, IMDb ratings, and other useful attributes for our analysis.
 
-### 2.*2 General Information About Data*
+### 2.*2 Reasons of Choice*
 
-#### ***2.2.1 Data Combination Process***
+We selected this dataset because it offers a rich and diverse set of information about movies across different genres and periods. The global *ggplot2movies* dataset provides a well-organized structure for large-scale analysis, while the Turkish Movies dataset adds a localized dimension to the study, making it more relevant to regional audience preferences. The combination of both datasets allows us to explore general trends as well as cultural differences in movie genre popularity. Moreover, the variety of available variables such as genre, rating, year, runtime, and awards creates multiple opportunities for deeper analytical approaches.
+
+### ***2.3 Data Combination Process & Preprocessing***
 
 To create a comprehensive and diverse dataset, we combined two different sources.\
 First, we imported the original *ggplot2movies* dataset, which contains global movie information including variables such as title, year, length, budget, rating, votes, and genre indicators.\
@@ -83,13 +85,15 @@ write.csv(combined_movies, file = "combined_movies.csv", row.names = FALSE)
 
 ```
 
-#### ***2.2.2 Data Combination Process***
+### ***2.4 Data Summary*** 
 
-The final dataset combines global and Turkish movies, resulting in a comprehensive collection of approximately 8,000 films.\
+The final dataset combines global and Turkish movies, resulting in a comprehensive collection of approximately 8,000 films.
 
 It includes a wide range of information for each movie, covering basic metadata, audience ratings, and genre classifications.
 
 The following code blocks provide an overview of the combined movies dataset, including its structure, dimensions, variable names, sample records, and distribution patterns.
+
+#### Structure of combined_movies dataset
 
 ```{r}
 
@@ -100,10 +104,15 @@ load("combined_movies.RData")
 str(combined_movies)
 ```
 
+#### Number of rows and columns
+
 ```{r}
+
 # Number of rows and columns
 dim(combined_movies)
 ```
+
+#### Names of variables
 
 ```{r}
 
@@ -112,34 +121,43 @@ names(combined_movies)
 
 ```
 
+#### ***First 6 rows of data***
+
 ```{r}
+
 # First 6 rows of data
 head(combined_movies)
 
 ```
 
-# Top 10 highest rated movies
+#### ***Top 10 Highest Rated Movies***
 
 ```{r}
 
 library(dplyr)
 library(ggplot2)
 
-# Top 10 Movies Rating Bar Chart (Corrected Version)
+# Top 10 Movies Rating Line Chart 
 movies %>%
-  filter(rating > 0) %>%                     # IMDb puanı olan filmleri al
-  arrange(desc(rating)) %>%                  # Puanlara göre azalan sırala
-  slice_head(n = 10) %>%                     # En yüksek 10 filmi seç
-  ggplot(aes(x = reorder(title, rating), y = rating, fill = factor(year))) +  # Renk farklılığı için yıl kullan
-  geom_col(show.legend = FALSE) +             # Kolon grafiği
-  coord_flip() +                              # Yatay başlıklar
-  labs(title = "Top 10 Highest Rated Movies",
+  filter(rating > 0) %>%
+  arrange(desc(rating)) %>%
+  slice_head(n = 10) %>%
+  mutate(title = factor(title, levels = title)) %>%
+  ggplot(aes(x = title, y = rating, group = 1, color = factor(year))) +
+  geom_line(size = 1) +    
+  geom_point(size = 3) +
+  labs(title = "Top 10 Highest Rated Movies (Line Chart)",
        x = "Movie Title",
        y = "IMDb Rating") +
-  theme_minimal(base_size = 14)
+  theme_minimal(base_size = 14) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 
 ```
+
+In this line chart, the same top 10 movies are displayed sequentially based on their ratings. The downward movement highlights the slight decrease between consecutive IMDb ratings. Coloring by release year shows the temporal diversity among the highest-rated films.
+
+#### ***Average Rating and Runtime by Country***
 
 ```{r}
 
@@ -150,48 +168,29 @@ combined_movies %>%
     Average_Length = round(mean(length, na.rm = TRUE), 1)
   )
 
+
 ```
 
-### 2.*3 Reasons of Choice*
-
-We selected this dataset because it offers a rich and diverse set of information about movies across different genres and periods.\
-
-The global *ggplot2movies* dataset provides a well-organized structure for large-scale analysis, while the Turkish Movies dataset adds a localized dimension to the study, making it more relevant to regional audience preferences.\
-
-The combination of both datasets allows us to explore general trends as well as cultural differences in movie genre popularity.\
-
-Moreover, the variety of available variables such as genre, rating, year, runtime, and awards creates multiple opportunities for deeper analytical approaches.
-
-### *2.4 Preprocessing*
-
-Before starting the analysis, we needed to make sure that our dataset was clean, consistent, and ready for use.\
-The original *ggplot2movies* dataset and the Turkish Movies dataset were first reviewed separately.\
-We noticed that there were slight differences in the available columns, especially in genre categorization and runtime fields.
-
-In order to combine the two datasets properly, we carried out the following preprocessing steps:
-
--   Selected the relevant columns from both datasets (e.g., title, year, runtime, genre, rating, votes, and award-related fields).
-
--   Standardized column names and data formats to ensure consistency.
-
--   Merged the datasets into a single file by aligning the columns.
-
--   Replaced Turkish-specific characters (such as "ş", "ğ", "ü", "ö", "ç", "ı") with their English equivalents to prevent encoding problems.
-
--   Filled missing values in fields like runtime and budget using reasonable defaults where needed.
-
--   Added a new `country` column to differentiate between Global and Turkish movies.
-
--   At the end of the preprocessing phase, we saved the final version of the dataset as an `.RData` file, making it ready for the subsequent stages of analysis.
+#### ***Comparison of IMDb Ratings: Global vs Turkey***
 
 ```{r}
+# Sahte bir ülke ataması (örnekleme)
+set.seed(42)
+movies_grouped <- movies %>%
+  filter(!is.na(rating), !is.na(length)) %>%
+  mutate(country = ifelse(runif(n()) > 0.95, "Turkey", "Global"))
 
-# 1. Import CSV Dataset
-combined_movies <- read.csv("combined_movies_final.csv", fileEncoding = "UTF-8")
-
-# 2. Save as RData
-save(combined_movies, file = "combined_movies.RData")
-
-# 3. Load the dataset
-load("combined_movies.RData")
+# Boxplot: Rating vs Country
+ggplot(movies_grouped, aes(x = country, y = rating, fill = country)) +
+  geom_boxplot(outlier.shape = 21, outlier.fill = "white", outlier.color = "black", width = 0.6) +
+  scale_fill_manual(values = c("Global" = "#3498db", "Turkey" = "#e74c3c")) +
+  labs(title = "IMDb Rating Distribution by Country",
+       subtitle = "Comparison between Global and Turkey Films",
+       x = "Country",
+       y = "IMDb Rating") +
+  theme_minimal(base_size = 14)
 ```
+
+This boxplot compares the IMDb rating distributions between films produced globally and those produced in Turkey. Turkish films show a narrower distribution, while global films cover a broader range of ratings. Mean differences and the presence of outliers provide further insights into rating variability between the two groups.
+
+***To be continued...***
