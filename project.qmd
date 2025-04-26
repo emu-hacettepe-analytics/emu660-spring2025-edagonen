@@ -8,11 +8,11 @@ Welcome to our project page.
 
 Keep an eye on this space to stay updated with my project activities.
 
-## *1.Project Overview and Scope*
+## ***1.Project Overview and Scope***
 
 In this project, we aim to analyze how different movie genres perform in terms of audience preferences. Our primary focus is to identify genre-based patterns in film popularity and ratings, using a data-driven approach. To make the analysis more meaningful and localized, we enriched a widely-used global movie dataset by merging it with a Turkish-specific movie dataset. Through this project, we plan to discover whether certain genres are more successful among audiences and if factors like production year, runtime, or budget have a significant effect on genre-based popularity.
 
-## *2.Data*
+## ***2.Data***
 
 We based our analysis on a combined dataset. The core dataset is *ggplot2movies*, which includes information about thousands of films worldwide.
 
@@ -20,7 +20,7 @@ To create a more localized perspective, we merged this dataset with a Turkish mo
 
 The combined data allowed us to create new variables, such as Turkish-specific ratings and popularity scores, which we will use in our comparative analysis.
 
-### *2.1 Data Source*
+### ***2.1 Data Source***
 
 -   The global movie data is sourced from the open-access *ggplot2movies* dataset, widely used in data analysis and visualization projects.
 
@@ -28,7 +28,7 @@ The combined data allowed us to create new variables, such as Turkish-specific r
 
 -   Both datasets provide rich information such as film titles, genres, production years, runtimes, IMDb ratings, and other useful attributes for our analysis.
 
-### 2.*2 Reasons of Choice*
+### **2.*2 Reasons of Choice***
 
 We selected this dataset because it offers a rich and diverse set of information about movies across different genres and periods. The global *ggplot2movies* dataset provides a well-organized structure for large-scale analysis, while the Turkish Movies dataset adds a localized dimension to the study, making it more relevant to regional audience preferences. The combination of both datasets allows us to explore general trends as well as cultural differences in movie genre popularity. Moreover, the variety of available variables such as genre, rating, year, runtime, and awards creates multiple opportunities for deeper analytical approaches.
 
@@ -129,6 +129,10 @@ names(combined_movies)
 head(combined_movies)
 
 ```
+
+## ***3.Data Analysis***
+
+The analyses presented here are intended solely for illustrative purposes and do not represent a definitive study.
 
 #### ***Top 10 Highest Rated Movies***
 
