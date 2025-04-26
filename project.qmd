@@ -1,5 +1,10 @@
 ---
-title: "<div style='text-align:center;'><span style='color:red; font-style:italic;'>Project Genre Matters: Exploring Film Audience Preferences</span></div>"
+title: "<span style='color:red; font-style:italic'>Project Genre Matters: Exploring Film Audience Preferences</span>"
+sidebar: false
+format:
+  html:
+    theme: journal
+    css: styles.css
 ---
 
 Welcome to our project page.
@@ -85,7 +90,7 @@ write.csv(combined_movies, file = "combined_movies.csv", row.names = FALSE)
 
 ```
 
-### ***2.4 Data Summary*** 
+### ***2.4 Data Summary***
 
 The final dataset combines global and Turkish movies, resulting in a comprehensive collection of approximately 8,000 films.
 

@@ -1,7 +1,10 @@
 ---
-title: "<div style='text-align:center;'><span style='color:red; font-style:italic;'>Welcome to My Analytics Lab</span></div>"
-
+title: "<span style='color:red; font-style:italic'>Welcome to My Analytic Lab</span>"
 sidebar: false
+format:
+  html:
+    theme: journal
+    css: styles.css
 ---
 
 ![](images/clipboard-3014854296.gif)

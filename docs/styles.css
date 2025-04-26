@@ -1,26 +1,44 @@
-/* Genel sayfa ayarları */
+/* Sayfa genel ayarları */
 body {
-  background-color: #f5f5f5; /* Açık gri arka plan */
-  font-family: 'Raleway', sans-serif; /* Modern zarif font */
+  background-color: #fdf6e3; /* Hafif bej arka plan */
+  font-family: 'Playfair Display', serif;
+  color: #333333; /* Normal yazılar koyu gri */
 }
 
 /* Navbar */
 .navbar {
-  background-color: #cc0000 !important; /* Güzel koyu kırmızı */
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); /* Hafif gölge efekti */
+  background-color: #c40000 !important; /* Ferrari kırmızı */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
 
 /* Navbar yazıları */
-.navbar-brand, .nav-link {
-  color: white !important; /* Yazılar beyaz */
-  font-weight: 600; /* Hafif kalın yazı */
-  letter-spacing: 0.5px; /* Harfler aralıklı */
+.navbar-brand, .navbar-nav .nav-link {
+  color: white !important; /* Navbar linkleri beyaz */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: 'Playfair Display', serif;
 }
 
 /* Navbar hover efekti */
-.navbar-brand:hover, .nav-link:hover {
-  color: #ffd700 !important; /* Hoverda altın sarısı */
+.navbar-brand:hover, .navbar-nav .nav-link:hover {
+  color: #ffd700 !important; /* Hover: Altın sarısı */
+}
+
+/* Sidebar veya Menü için ayarlar */
+.navbar-nav {
+  background-color: #fdf6e3 !important; /* Menü arka planını da bej yap */
+}
+
+/* Menüdeki linkler */
+.navbar-nav .nav-link {
+  color: #333333 !important; /* Menüdeki başlıklar koyu gri */
+}
+
+/* İçerik başlıkları */
+h1, h2, h3, h4, h5, h6 {
+  color: #222222; /* Başlıklar koyu siyah */
+  font-weight: 700;
 }
 

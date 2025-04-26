@@ -7,7 +7,7 @@ format:
     css: styles.css
 
 ---
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
 As an **industrial engineer** with a passion for data analysis, broadcasting, and artificial intelligence, I have built my career on exploring innovative solutions in these fields. After graduating from TOBB University, I began working as a data analyst in the broadcasting sector, specifically at TRT1, where I focused on broadcast planning and data analysis.
 
