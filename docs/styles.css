@@ -1,1 +1,26 @@
-/* css styles */
+/* Genel sayfa ayarları */
+body {
+  background-color: #f5f5f5; /* Açık gri arka plan */
+  font-family: 'Raleway', sans-serif; /* Modern zarif font */
+}
+
+/* Navbar */
+.navbar {
+  background-color: #cc0000 !important; /* Güzel koyu kırmızı */
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); /* Hafif gölge efekti */
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+/* Navbar yazıları */
+.navbar-brand, .nav-link {
+  color: white !important; /* Yazılar beyaz */
+  font-weight: 600; /* Hafif kalın yazı */
+  letter-spacing: 0.5px; /* Harfler aralıklı */
+}
+
+/* Navbar hover efekti */
+.navbar-brand:hover, .nav-link:hover {
+  color: #ffd700 !important; /* Hoverda altın sarısı */
+}
+
