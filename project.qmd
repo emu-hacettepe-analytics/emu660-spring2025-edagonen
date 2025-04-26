@@ -123,22 +123,18 @@ head(combined_movies)
 library(dplyr)
 library(ggplot2)
 
-# Top 10 Highest Rated Movies tablosu
-top10_movies <- combined_movies %>%
-  arrange(desc(rating)) %>%
-  select(title, rating, country) %>%
-  head(10)
-
-top10_movies
-
-# Top 10 Movies Rating Bar Chart
-ggplot(top10_movies, aes(x = reorder(title, rating), y = rating, fill = country)) +
-  geom_bar(stat = "identity") +
-  coord_flip() +  # Başlıkları yatay gösterir
+# Top 10 Movies Rating Bar Chart (Corrected Version)
+movies %>%
+  filter(rating > 0) %>%                     # IMDb puanı olan filmleri al
+  arrange(desc(rating)) %>%                  # Puanlara göre azalan sırala
+  slice_head(n = 10) %>%                     # En yüksek 10 filmi seç
+  ggplot(aes(x = reorder(title, rating), y = rating, fill = factor(year))) +  # Renk farklılığı için yıl kullan
+  geom_col(show.legend = FALSE) +             # Kolon grafiği
+  coord_flip() +                              # Yatay başlıklar
   labs(title = "Top 10 Highest Rated Movies",
        x = "Movie Title",
-       y = "Rating") +
-  theme_minimal()
+       y = "IMDb Rating") +
+  theme_minimal(base_size = 14)
 
 
 ```
