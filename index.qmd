@@ -12,4 +12,4 @@ Welcome to my personal website! Here, I share my work in data analytics, blog po
 
 Stay tuned, there’s plenty to discover and learn together!
 
-## [*Deneme*]{style="color:red;"}
+
