@@ -1,57 +1,67 @@
 ---
-title: "Project X"
+title: "<div style='text-align:center;'><span style='color:red; font-style:italic;'>Project Genre Matters: Exploring Film Audience Preferences</span></div>"
 ---
 
-Welcome to my/our project page.
+Welcome to our project page.
 
 Keep an eye on this space to stay updated with my project activities.
 
-(The titles below are provided as examples; please feel free to adjust them as necessary.)
+## *1.Project Overview and Scope*
 
-# 1. Project Overview and Scope
+In this project, we aim to analyze how different movie genres perform in terms of audience preferences. Our primary focus is to identify genre-based patterns in film popularity and ratings, using a data-driven approach. To make the analysis more meaningful and localized, we enriched a widely-used global movie dataset by merging it with a Turkish-specific movie dataset. Through this project, we plan to discover whether certain genres are more successful among audiences and if factors like production year, runtime, or budget have a significant effect on genre-based popularity.
 
-xxxxxx
+## *2.Data*
 
-# 2. Data
+We based our analysis on a combined dataset. The core dataset is *ggplot2movies*, which includes information about thousands of films worldwide.\
 
-xxxxxx
+To create a more localized perspective, we merged this dataset with a Turkish movie dataset.\
 
-## 2.1 Data Source
+The combined data allowed us to create new variables, such as Turkish-specific ratings and popularity scores, which we will use in our comparative analysis.
 
-xxxxxx
+### *2.1 Data Source*
 
-## 2.2 General Information About Data
+-   The global movie data is sourced from the open-access *ggplot2movies* dataset, widely used in data analysis and visualization projects.
 
-xxxxxx
+-   The Turkish-specific data was obtained from Kaggle, specifically from the [Turkish Movies Dataset](https://www.kaggle.com/datasets/emreokcular/turkish-movies) shared by Emre Okçular.
 
-## 2.3 Reason of Choice
+-   Both datasets provide rich information such as film titles, genres, production years, runtimes, IMDb ratings, and other useful attributes for our analysis.
 
-xxxxxx
-
-## 2.4 Preprocessing
+### 2.*2 General Information About Data*
 
 xxxxxx
+
+### 2.*3 Reasons of Choice*
+
+We selected this dataset because it offers a rich and diverse set of information about movies across different genres and periods.\
+
+The global *ggplot2movies* dataset provides a well-organized structure for large-scale analysis, while the Turkish Movies dataset adds a localized dimension to the study, making it more relevant to regional audience preferences.\
+
+The combination of both datasets allows us to explore general trends as well as cultural differences in movie genre popularity.\
+
+Moreover, the variety of available variables such as genre, rating, year, runtime, and awards creates multiple opportunities for deeper analytical approaches.
+
+### *2.4 Preprocessing*
+
+Before starting the analysis, we needed to make sure that our dataset was clean, consistent, and ready for use.\
+The original *ggplot2movies* dataset and the Turkish Movies dataset were first reviewed separately.\
+We noticed that there were slight differences in the available columns, especially in genre categorization and runtime fields.
+
+In order to combine the two datasets properly, we carried out the following preprocessing steps:
+
+-   Selected the relevant columns from both datasets (e.g., title, year, runtime, genre, rating, votes, and award-related fields).
+
+-   Standardized column names and data formats to ensure consistency.
+
+-   Merged the datasets into a single file by aligning the columns.
+
+-   Replaced Turkish-specific characters (such as "ş", "ğ", "ü", "ö", "ç", "ı") with their English equivalents to prevent encoding problems.
+
+-   Filled missing values in fields like runtime and budget using reasonable defaults where needed.
+
+-   Added a new `country` column to differentiate between Global and Turkish movies.
+
+-   At the end of the preprocessing phase, we saved the final version of the dataset as an `.RData` file, making it ready for the subsequent stages of analysis.
 
 # 3. Analysis
-
-xxxxxx
-
-## 3.1 Exploratory Data Analysis
-
-xxxxxx
-
-## 3.2 Trend Analysis
-
-xxxxxx
-
-## 3.3 Model Fitting
-
-xxxxxx
-
-## 3.4 Results
-
-xxxxxx
-
-# 4. Results and Key Takeaways
 
 xxxxxx
