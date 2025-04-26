@@ -28,7 +28,135 @@ The combined data allowed us to create new variables, such as Turkish-specific r
 
 ### 2.*2 General Information About Data*
 
-xxxxxx
+#### ***2.2.1 Data Combination Process***
+
+To create a comprehensive and diverse dataset, we combined two different sources.\
+First, we imported the original *ggplot2movies* dataset, which contains global movie information including variables such as title, year, length, budget, rating, votes, and genre indicators.\
+Second, we processed a Turkish movie dataset, cleaned it, and expanded its structure to match the global dataset's format.
+
+We standardized column names, added missing fields where necessary (e.g., budget, votes, genre dummies), and included a `country` variable to distinguish between Global and Turkish movies.\
+After ensuring consistency across both datasets, we merged them into a single, unified dataset named `combined_movies`.\
+This final dataset preserves authentic movie titles and metadata while also incorporating localized Turkish film information, making it suitable for international and regional analyses.
+
+The combined dataset was saved in both `.RData` and `.csv` formats for flexibility in further exploration and analysis.
+
+```{r}
+
+# 1. Global movies verisini yükle
+load("movies.RData")
+
+# 2. Turkish movies verisini oku
+turkish_movies <- read.csv("final_dataset.csv", fileEncoding = "UTF-8")
+
+# 3. Turkish movies verisini genişlet
+turkish_movies_expanded <- data.frame(
+  title = turkish_movies$localized.title,
+  year = as.integer(turkish_movies$runtimes),
+  length = as.integer(turkish_movies$runtimes),
+  budget = NA,
+  rating = turkish_movies$rating,
+  votes = NA,
+  r1 = NA, r2 = NA, r3 = NA, r4 = NA, r5 = NA, 
+  r6 = NA, r7 = NA, r8 = NA, r9 = NA, r10 = NA,
+  mpaa = NA,
+  Action = NA, Animation = NA, Comedy = NA, Drama = NA,
+  Documentary = NA, Romance = NA, Short = NA,
+  country = "Turkey"
+)
+
+# 4. Global movies'a country kolonu ekle
+movies$country <- "Global"
+
+# 5. Kolon sıralarını eşitle
+turkish_movies_expanded <- turkish_movies_expanded[, names(movies)]
+
+# 6. İkisini birleştir
+combined_movies <- rbind(movies, turkish_movies_expanded)
+
+# 7. Kaydet
+save(combined_movies, file = "combined_movies.RData")
+
+# 8. CSV de oluştur
+write.csv(combined_movies, file = "combined_movies.csv", row.names = FALSE)
+
+```
+
+#### ***2.2.2 Data Combination Process***
+
+The final dataset combines global and Turkish movies, resulting in a comprehensive collection of approximately 8,000 films.\
+
+It includes a wide range of information for each movie, covering basic metadata, audience ratings, and genre classifications.
+
+The following code blocks provide an overview of the combined movies dataset, including its structure, dimensions, variable names, sample records, and distribution patterns.
+
+```{r}
+
+# Load the combined dataset
+load("combined_movies.RData")
+
+# Show structure
+str(combined_movies)
+```
+
+```{r}
+# Number of rows and columns
+dim(combined_movies)
+```
+
+```{r}
+
+# Names of variables
+names(combined_movies)
+
+```
+
+```{r}
+# First 6 rows of data
+head(combined_movies)
+
+```
+
+# Top 10 highest rated movies
+
+library(dplyr)
+
+combined_movies %\>% arrange(desc(rating)) %\>% select(title, rating, country) %\>% head(10)
+
+```{r}
+
+library(dplyr)
+library(ggplot2)
+
+# Top 10 Highest Rated Movies tablosu
+top10_movies <- combined_movies %>%
+  arrange(desc(rating)) %>%
+  select(title, rating, country) %>%
+  head(10)
+
+top10_movies
+
+# Top 10 Movies Rating Bar Chart
+ggplot(top10_movies, aes(x = reorder(title, rating), y = rating, fill = country)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +  # Başlıkları yatay gösterir
+  labs(title = "Top 10 Highest Rated Movies",
+       x = "Movie Title",
+       y = "Rating") +
+  theme_minimal()
+
+
+```
+
+```{r}
+
+combined_movies %>%
+  group_by(country) %>%
+  summarize(
+    Average_Rating = round(mean(rating, na.rm = TRUE), 2),
+    Average_Length = round(mean(length, na.rm = TRUE), 1)
+  )
+
+```
 
 ### 2.*3 Reasons of Choice*
 
@@ -62,6 +190,14 @@ In order to combine the two datasets properly, we carried out the following prep
 
 -   At the end of the preprocessing phase, we saved the final version of the dataset as an `.RData` file, making it ready for the subsequent stages of analysis.
 
-# 3. Analysis
+```{r}
 
-xxxxxx
+# 1. Import CSV Dataset
+combined_movies <- read.csv("combined_movies_final.csv", fileEncoding = "UTF-8")
+
+# 2. Save as RData
+save(combined_movies, file = "combined_movies.RData")
+
+# 3. Load the dataset
+load("combined_movies.RData")
+```

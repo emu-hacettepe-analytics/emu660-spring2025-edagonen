@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Project X – EdaaG’s Analytics Lab</title>
+<title>Project Genre Matters: Exploring Film Audience Preferences – EdaaG's Analytics Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -135,22 +169,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-overview-and-scope" id="toc-project-overview-and-scope" class="nav-link active" data-scroll-target="#project-overview-and-scope">1. Project Overview and Scope</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">2. Data</a>
+  <li><a href="#project-overview-and-scope" id="toc-project-overview-and-scope" class="nav-link active" data-scroll-target="#project-overview-and-scope"><em>1.Project Overview and Scope</em></a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><em>2.Data</em></a>
   <ul class="collapse">
-  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source">2.1 Data Source</a></li>
-  <li><a href="#general-information-about-data" id="toc-general-information-about-data" class="nav-link" data-scroll-target="#general-information-about-data">2.2 General Information About Data</a></li>
-  <li><a href="#reason-of-choice" id="toc-reason-of-choice" class="nav-link" data-scroll-target="#reason-of-choice">2.3 Reason of Choice</a></li>
-  <li><a href="#preprocessing" id="toc-preprocessing" class="nav-link" data-scroll-target="#preprocessing">2.4 Preprocessing</a></li>
+  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source"><em>2.1 Data Source</em></a></li>
+  <li><a href="#general-information-about-data" id="toc-general-information-about-data" class="nav-link" data-scroll-target="#general-information-about-data">2.<em>2 General Information About Data</em></a></li>
   </ul></li>
-  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">3. Analysis</a>
+  <li><a href="#top-10-highest-rated-movies" id="toc-top-10-highest-rated-movies" class="nav-link" data-scroll-target="#top-10-highest-rated-movies">Top 10 highest rated movies</a>
   <ul class="collapse">
-  <li><a href="#exploratory-data-analysis" id="toc-exploratory-data-analysis" class="nav-link" data-scroll-target="#exploratory-data-analysis">3.1 Exploratory Data Analysis</a></li>
-  <li><a href="#trend-analysis" id="toc-trend-analysis" class="nav-link" data-scroll-target="#trend-analysis">3.2 Trend Analysis</a></li>
-  <li><a href="#model-fitting" id="toc-model-fitting" class="nav-link" data-scroll-target="#model-fitting">3.3 Model Fitting</a></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">3.4 Results</a></li>
+  <li><a href="#reasons-of-choice" id="toc-reasons-of-choice" class="nav-link" data-scroll-target="#reasons-of-choice">2.<em>3 Reasons of Choice</em></a></li>
+  <li><a href="#preprocessing" id="toc-preprocessing" class="nav-link" data-scroll-target="#preprocessing"><em>2.4 Preprocessing</em></a></li>
   </ul></li>
-  <li><a href="#results-and-key-takeaways" id="toc-results-and-key-takeaways" class="nav-link" data-scroll-target="#results-and-key-takeaways">4. Results and Key Takeaways</a></li>
   </ul>
 </nav>
 </nav>
@@ -163,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Project X</h1>
+<h1 class="title"><span style="color:red; font-style:italic;">Project Genre Matters: Exploring Film Audience Preferences</span></h1>
 </div>
 
 
@@ -180,58 +209,284 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Welcome to my/our project page.</p>
+<p>Welcome to our project page.</p>
 <p>Keep an eye on this space to stay updated with my project activities.</p>
-<p>(The titles below are provided as examples; please feel free to adjust them as necessary.)</p>
-<section id="project-overview-and-scope" class="level1">
-<h1>1. Project Overview and Scope</h1>
-<p>xxxxxx</p>
+<section id="project-overview-and-scope" class="level2">
+<h2 class="anchored" data-anchor-id="project-overview-and-scope"><em>1.Project Overview and Scope</em></h2>
+<p>In this project, we aim to analyze how different movie genres perform in terms of audience preferences. Our primary focus is to identify genre-based patterns in film popularity and ratings, using a data-driven approach. To make the analysis more meaningful and localized, we enriched a widely-used global movie dataset by merging it with a Turkish-specific movie dataset. Through this project, we plan to discover whether certain genres are more successful among audiences and if factors like production year, runtime, or budget have a significant effect on genre-based popularity.</p>
 </section>
-<section id="data" class="level1">
-<h1>2. Data</h1>
-<p>xxxxxx</p>
-<section id="data-source" class="level2">
-<h2 class="anchored" data-anchor-id="data-source">2.1 Data Source</h2>
-<p>xxxxxx</p>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data"><em>2.Data</em></h2>
+<p>We based our analysis on a combined dataset. The core dataset is <em>ggplot2movies</em>, which includes information about thousands of films worldwide.<br>
+</p>
+<p>To create a more localized perspective, we merged this dataset with a Turkish movie dataset.<br>
+</p>
+<p>The combined data allowed us to create new variables, such as Turkish-specific ratings and popularity scores, which we will use in our comparative analysis.</p>
+<section id="data-source" class="level3">
+<h3 class="anchored" data-anchor-id="data-source"><em>2.1 Data Source</em></h3>
+<ul>
+<li><p>The global movie data is sourced from the open-access <em>ggplot2movies</em> dataset, widely used in data analysis and visualization projects.</p></li>
+<li><p>The Turkish-specific data was obtained from Kaggle, specifically from the <a href="https://www.kaggle.com/datasets/emreokcular/turkish-movies">Turkish Movies Dataset</a> shared by Emre Okçular.</p></li>
+<li><p>Both datasets provide rich information such as film titles, genres, production years, runtimes, IMDb ratings, and other useful attributes for our analysis.</p></li>
+</ul>
 </section>
-<section id="general-information-about-data" class="level2">
-<h2 class="anchored" data-anchor-id="general-information-about-data">2.2 General Information About Data</h2>
-<p>xxxxxx</p>
+<section id="general-information-about-data" class="level3">
+<h3 class="anchored" data-anchor-id="general-information-about-data">2.<em>2 General Information About Data</em></h3>
+<section id="data-combination-process" class="level4">
+<h4 class="anchored" data-anchor-id="data-combination-process"><strong><em>2.2.1 Data Combination Process</em></strong></h4>
+<p>To create a comprehensive and diverse dataset, we combined two different sources.<br>
+First, we imported the original <em>ggplot2movies</em> dataset, which contains global movie information including variables such as title, year, length, budget, rating, votes, and genre indicators.<br>
+Second, we processed a Turkish movie dataset, cleaned it, and expanded its structure to match the global dataset’s format.</p>
+<p>We standardized column names, added missing fields where necessary (e.g., budget, votes, genre dummies), and included a <code>country</code> variable to distinguish between Global and Turkish movies.<br>
+After ensuring consistency across both datasets, we merged them into a single, unified dataset named <code>combined_movies</code>.<br>
+This final dataset preserves authentic movie titles and metadata while also incorporating localized Turkish film information, making it suitable for international and regional analyses.</p>
+<p>The combined dataset was saved in both <code>.RData</code> and <code>.csv</code> formats for flexibility in further exploration and analysis.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Global movies verisini yükle</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"movies.RData"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Turkish movies verisini oku</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>turkish_movies <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"final_dataset.csv"</span>, <span class="at">fileEncoding =</span> <span class="st">"UTF-8"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Turkish movies verisini genişlet</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>turkish_movies_expanded <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">title =</span> turkish_movies<span class="sc">$</span>localized.title,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">year =</span> <span class="fu">as.integer</span>(turkish_movies<span class="sc">$</span>runtimes),</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">length =</span> <span class="fu">as.integer</span>(turkish_movies<span class="sc">$</span>runtimes),</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">budget =</span> <span class="cn">NA</span>,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">rating =</span> turkish_movies<span class="sc">$</span>rating,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">votes =</span> <span class="cn">NA</span>,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">r1 =</span> <span class="cn">NA</span>, <span class="at">r2 =</span> <span class="cn">NA</span>, <span class="at">r3 =</span> <span class="cn">NA</span>, <span class="at">r4 =</span> <span class="cn">NA</span>, <span class="at">r5 =</span> <span class="cn">NA</span>, </span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">r6 =</span> <span class="cn">NA</span>, <span class="at">r7 =</span> <span class="cn">NA</span>, <span class="at">r8 =</span> <span class="cn">NA</span>, <span class="at">r9 =</span> <span class="cn">NA</span>, <span class="at">r10 =</span> <span class="cn">NA</span>,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">mpaa =</span> <span class="cn">NA</span>,</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">Action =</span> <span class="cn">NA</span>, <span class="at">Animation =</span> <span class="cn">NA</span>, <span class="at">Comedy =</span> <span class="cn">NA</span>, <span class="at">Drama =</span> <span class="cn">NA</span>,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">Documentary =</span> <span class="cn">NA</span>, <span class="at">Romance =</span> <span class="cn">NA</span>, <span class="at">Short =</span> <span class="cn">NA</span>,</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">country =</span> <span class="st">"Turkey"</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Global movies'a country kolonu ekle</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>movies<span class="sc">$</span>country <span class="ot">&lt;-</span> <span class="st">"Global"</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Kolon sıralarını eşitle</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>turkish_movies_expanded <span class="ot">&lt;-</span> turkish_movies_expanded[, <span class="fu">names</span>(movies)]</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co"># 6. İkisini birleştir</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>combined_movies <span class="ot">&lt;-</span> <span class="fu">rbind</span>(movies, turkish_movies_expanded)</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co"># 7. Kaydet</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(combined_movies, <span class="at">file =</span> <span class="st">"combined_movies.RData"</span>)</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co"># 8. CSV de oluştur</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(combined_movies, <span class="at">file =</span> <span class="st">"combined_movies.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="reason-of-choice" class="level2">
-<h2 class="anchored" data-anchor-id="reason-of-choice">2.3 Reason of Choice</h2>
-<p>xxxxxx</p>
+<section id="data-combination-process-1" class="level4">
+<h4 class="anchored" data-anchor-id="data-combination-process-1"><strong><em>2.2.2 Data Combination Process</em></strong></h4>
+<p>The final dataset combines global and Turkish movies, resulting in a comprehensive collection of approximately 8,000 films.<br>
+</p>
+<p>It includes a wide range of information for each movie, covering basic metadata, audience ratings, and genre classifications.</p>
+<p>The following code blocks provide an overview of the combined movies dataset, including its structure, dimensions, variable names, sample records, and distribution patterns.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the combined dataset</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"combined_movies.RData"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Show structure</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(combined_movies)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Classes 'tbl_df', 'tbl' and 'data.frame':   67465 obs. of  25 variables:
+ $ title      : chr  "$" "$1000 a Touchdown" "$21 a Day Once a Month" "$40,000" ...
+ $ year       : int  1971 1939 1941 1996 1975 2000 2002 2002 1987 1917 ...
+ $ length     : int  121 71 7 70 71 91 93 25 97 61 ...
+ $ budget     : int  NA NA NA NA NA NA NA NA NA NA ...
+ $ rating     : num  6.4 6 8.2 8.2 3.4 4.3 5.3 6.7 6.6 6 ...
+ $ votes      : int  348 20 5 6 17 45 200 24 18 51 ...
+ $ r1         : num  4.5 0 0 14.5 24.5 4.5 4.5 4.5 4.5 4.5 ...
+ $ r2         : num  4.5 14.5 0 0 4.5 4.5 0 4.5 4.5 0 ...
+ $ r3         : num  4.5 4.5 0 0 0 4.5 4.5 4.5 4.5 4.5 ...
+ $ r4         : num  4.5 24.5 0 0 14.5 14.5 4.5 4.5 0 4.5 ...
+ $ r5         : num  14.5 14.5 0 0 14.5 14.5 24.5 4.5 0 4.5 ...
+ $ r6         : num  24.5 14.5 24.5 0 4.5 14.5 24.5 14.5 0 44.5 ...
+ $ r7         : num  24.5 14.5 0 0 0 4.5 14.5 14.5 34.5 14.5 ...
+ $ r8         : num  14.5 4.5 44.5 0 0 4.5 4.5 14.5 14.5 4.5 ...
+ $ r9         : num  4.5 4.5 24.5 34.5 0 14.5 4.5 4.5 4.5 4.5 ...
+ $ r10        : num  4.5 14.5 24.5 45.5 24.5 14.5 14.5 14.5 24.5 4.5 ...
+ $ mpaa       : chr  "" "" "" "" ...
+ $ Action     : int  0 0 0 0 0 0 1 0 0 0 ...
+ $ Animation  : int  0 0 1 0 0 0 0 0 0 0 ...
+ $ Comedy     : int  1 1 0 1 0 0 0 0 0 0 ...
+ $ Drama      : int  1 0 0 0 0 1 1 0 1 0 ...
+ $ Documentary: int  0 0 0 0 0 0 0 1 0 0 ...
+ $ Romance    : int  0 0 0 0 0 0 0 0 0 0 ...
+ $ Short      : int  0 0 1 0 0 0 0 1 0 0 ...
+ $ country    : chr  "Global" "Global" "Global" "Global" ...</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Number of rows and columns</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(combined_movies)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 67465    25</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Names of variables</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(combined_movies)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "title"       "year"        "length"      "budget"      "rating"     
+ [6] "votes"       "r1"          "r2"          "r3"          "r4"         
+[11] "r5"          "r6"          "r7"          "r8"          "r9"         
+[16] "r10"         "mpaa"        "Action"      "Animation"   "Comedy"     
+[21] "Drama"       "Documentary" "Romance"     "Short"       "country"    </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First 6 rows of data</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(combined_movies)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                     title year length budget rating votes   r1   r2  r3   r4
+1                        $ 1971    121     NA    6.4   348  4.5  4.5 4.5  4.5
+2        $1000 a Touchdown 1939     71     NA    6.0    20  0.0 14.5 4.5 24.5
+3   $21 a Day Once a Month 1941      7     NA    8.2     5  0.0  0.0 0.0  0.0
+4                  $40,000 1996     70     NA    8.2     6 14.5  0.0 0.0  0.0
+5 $50,000 Climax Show, The 1975     71     NA    3.4    17 24.5  4.5 0.0 14.5
+6                    $pent 2000     91     NA    4.3    45  4.5  4.5 4.5 14.5
+    r5   r6   r7   r8   r9  r10 mpaa Action Animation Comedy Drama Documentary
+1 14.5 24.5 24.5 14.5  4.5  4.5           0         0      1     1           0
+2 14.5 14.5 14.5  4.5  4.5 14.5           0         0      1     0           0
+3  0.0 24.5  0.0 44.5 24.5 24.5           0         1      0     0           0
+4  0.0  0.0  0.0  0.0 34.5 45.5           0         0      1     0           0
+5 14.5  4.5  0.0  0.0  0.0 24.5           0         0      0     0           0
+6 14.5 14.5  4.5  4.5 14.5 14.5           0         0      0     1           0
+  Romance Short country
+1       0     0  Global
+2       0     0  Global
+3       0     1  Global
+4       0     0  Global
+5       0     0  Global
+6       0     0  Global</code></pre>
+</div>
+</div>
 </section>
-<section id="preprocessing" class="level2">
-<h2 class="anchored" data-anchor-id="preprocessing">2.4 Preprocessing</h2>
-<p>xxxxxx</p>
 </section>
 </section>
-<section id="analysis" class="level1">
-<h1>3. Analysis</h1>
-<p>xxxxxx</p>
-<section id="exploratory-data-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="exploratory-data-analysis">3.1 Exploratory Data Analysis</h2>
-<p>xxxxxx</p>
+<section id="top-10-highest-rated-movies" class="level1">
+<h1>Top 10 highest rated movies</h1>
+<p>library(dplyr)</p>
+<p>combined_movies %&gt;% arrange(desc(rating)) %&gt;% select(title, rating, country) %&gt;% head(10)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'dplyr' was built under R version 4.4.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggplot2' was built under R version 4.4.3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Top 10 Highest Rated Movies tablosu</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>top10_movies <span class="ot">&lt;-</span> combined_movies <span class="sc">%&gt;%</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(rating)) <span class="sc">%&gt;%</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(title, rating, country) <span class="sc">%&gt;%</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>top10_movies</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 3
+   title                                   rating country
+   &lt;chr&gt;                                    &lt;dbl&gt; &lt;chr&gt;  
+ 1 Dimensia Minds Trilogy: The Hope Factor   10   Global 
+ 2 Fishing for Love                          10   Global 
+ 3 Summer Sonata, A                          10   Global 
+ 4 Black Canyon                               9.9 Global 
+ 5 Buck Privates                              9.9 Global 
+ 6 Defilada                                   9.9 Global 
+ 7 Dimensia Minds Trilogy: The Reds           9.9 Global 
+ 8 Drifting                                   9.9 Global 
+ 9 Ekdromi, I                                 9.9 Global 
+10 Genet parle d'Angela Davis                 9.9 Global </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Top 10 Movies Rating Bar Chart</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(top10_movies, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(title, rating), <span class="at">y =</span> rating, <span class="at">fill =</span> country)) <span class="sc">+</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span>  <span class="co"># Başlıkları yatay gösterir</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Top 10 Highest Rated Movies"</span>,</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Movie Title"</span>,</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Rating"</span>) <span class="sc">+</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="project_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>combined_movies <span class="sc">%&gt;%</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(country) <span class="sc">%&gt;%</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">Average_Rating =</span> <span class="fu">round</span>(<span class="fu">mean</span>(rating, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="dv">2</span>),</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">Average_Length =</span> <span class="fu">round</span>(<span class="fu">mean</span>(length, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="dv">1</span>)</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 3
+  country Average_Rating Average_Length
+  &lt;chr&gt;            &lt;dbl&gt;          &lt;dbl&gt;
+1 Global            5.93           82.3
+2 Turkey            5.52           90.3</code></pre>
+</div>
+</div>
+<section id="reasons-of-choice" class="level3">
+<h3 class="anchored" data-anchor-id="reasons-of-choice">2.<em>3 Reasons of Choice</em></h3>
+<p>We selected this dataset because it offers a rich and diverse set of information about movies across different genres and periods.<br>
+</p>
+<p>The global <em>ggplot2movies</em> dataset provides a well-organized structure for large-scale analysis, while the Turkish Movies dataset adds a localized dimension to the study, making it more relevant to regional audience preferences.<br>
+</p>
+<p>The combination of both datasets allows us to explore general trends as well as cultural differences in movie genre popularity.<br>
+</p>
+<p>Moreover, the variety of available variables such as genre, rating, year, runtime, and awards creates multiple opportunities for deeper analytical approaches.</p>
 </section>
-<section id="trend-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="trend-analysis">3.2 Trend Analysis</h2>
-<p>xxxxxx</p>
-</section>
-<section id="model-fitting" class="level2">
-<h2 class="anchored" data-anchor-id="model-fitting">3.3 Model Fitting</h2>
-<p>xxxxxx</p>
-</section>
-<section id="results" class="level2">
-<h2 class="anchored" data-anchor-id="results">3.4 Results</h2>
-<p>xxxxxx</p>
-</section>
-</section>
-<section id="results-and-key-takeaways" class="level1">
-<h1>4. Results and Key Takeaways</h1>
-<p>xxxxxx</p>
+<section id="preprocessing" class="level3">
+<h3 class="anchored" data-anchor-id="preprocessing"><em>2.4 Preprocessing</em></h3>
+<p>Before starting the analysis, we needed to make sure that our dataset was clean, consistent, and ready for use.<br>
+The original <em>ggplot2movies</em> dataset and the Turkish Movies dataset were first reviewed separately.<br>
+We noticed that there were slight differences in the available columns, especially in genre categorization and runtime fields.</p>
+<p>In order to combine the two datasets properly, we carried out the following preprocessing steps:</p>
+<ul>
+<li><p>Selected the relevant columns from both datasets (e.g., title, year, runtime, genre, rating, votes, and award-related fields).</p></li>
+<li><p>Standardized column names and data formats to ensure consistency.</p></li>
+<li><p>Merged the datasets into a single file by aligning the columns.</p></li>
+<li><p>Replaced Turkish-specific characters (such as “ş”, “ğ”, “ü”, “ö”, “ç”, “ı”) with their English equivalents to prevent encoding problems.</p></li>
+<li><p>Filled missing values in fields like runtime and budget using reasonable defaults where needed.</p></li>
+<li><p>Added a new <code>country</code> column to differentiate between Global and Turkish movies.</p></li>
+<li><p>At the end of the preprocessing phase, we saved the final version of the dataset as an <code>.RData</code> file, making it ready for the subsequent stages of analysis.</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Import CSV Dataset</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>combined_movies <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"combined_movies_final.csv"</span>, <span class="at">fileEncoding =</span> <span class="st">"UTF-8"</span>)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Save as RData</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(combined_movies, <span class="at">file =</span> <span class="st">"combined_movies.RData"</span>)</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Load the dataset</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"combined_movies.RData"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
