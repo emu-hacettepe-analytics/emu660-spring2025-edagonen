@@ -11,8 +11,6 @@ website:
         href: index.qmd
       - text: About Me
         href: about.qmd
-      - text: My Posts
-        href: posts.qmd
       - text: "EMU660 Coursework"
         menu:
           - text: Assignments
