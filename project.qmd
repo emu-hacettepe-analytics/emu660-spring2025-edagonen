@@ -118,10 +118,6 @@ head(combined_movies)
 
 # Top 10 highest rated movies
 
-library(dplyr)
-
-combined_movies %\>% arrange(desc(rating)) %\>% select(title, rating, country) %\>% head(10)
-
 ```{r}
 
 library(dplyr)
