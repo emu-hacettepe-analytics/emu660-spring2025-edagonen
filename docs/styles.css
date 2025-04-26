@@ -1,44 +1,71 @@
-/* Sayfa genel ayarları */
+/* Genel sayfa ayarları */
 body {
-  background-color: #fdf6e3; /* Hafif bej arka plan */
+  background-color: #ffffff;
   font-family: 'Playfair Display', serif;
-  color: #333333; /* Normal yazılar koyu gri */
+  color: #333333;
+  animation: fadeInBody 1s ease-in; /* Sayfa fade-in animasyonu */
 }
 
 /* Navbar */
 .navbar {
-  background-color: #c40000 !important; /* Ferrari kırmızı */
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  background-color: #c40000 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+  animation: fadeInNavbar 1s ease-in; /* Navbar fade-in animasyonu */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 /* Navbar yazıları */
-.navbar-brand, .navbar-nav .nav-link {
-  color: white !important; /* Navbar linkleri beyaz */
+.navbar-brand, 
+.navbar-nav .nav-link, 
+.navbar-nav .dropdown-item {
+  background-color: #c40000 !important;
+  color: white !important;
   font-weight: 600;
   letter-spacing: 0.5px;
   font-family: 'Playfair Display', serif;
+  transition: all 0.3s ease;
 }
 
 /* Navbar hover efekti */
-.navbar-brand:hover, .navbar-nav .nav-link:hover {
-  color: #ffd700 !important; /* Hover: Altın sarısı */
+.navbar-brand:hover, 
+.navbar-nav .nav-link:hover, 
+.navbar-nav .dropdown-item:hover {
+  color: #ffd700 !important;
+  transform: scale(1.05); /* Hover'da hafif büyüme */
 }
 
-/* Sidebar veya Menü için ayarlar */
-.navbar-nav {
-  background-color: #fdf6e3 !important; /* Menü arka planını da bej yap */
+/* Sidebar ve menü */
+.sidebar, .sidebar-navigation, .nav-sidebar, .nav-page {
+  background-color: #ffffff !important;
 }
 
-/* Menüdeki linkler */
-.navbar-nav .nav-link {
-  color: #333333 !important; /* Menüdeki başlıklar koyu gri */
+.nav-sidebar .nav-link, 
+.nav-page .nav-link {
+  color: #333333 !important;
 }
 
-/* İçerik başlıkları */
+/* Başlıklar */
 h1, h2, h3, h4, h5, h6 {
-  color: #222222; /* Başlıklar koyu siyah */
+  color: #222222;
   font-weight: 700;
 }
+
+/* Sayfa fade-in animasyonu */
+@keyframes fadeInBody {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Navbar fade-in animasyonu */
+@keyframes fadeInNavbar {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
 
