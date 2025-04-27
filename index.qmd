@@ -7,7 +7,9 @@ format:
     css: styles.css
 ---
 
-![](images/clipboard-3014854296.gif)
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+![](images/welcomeaboard.gif){fig-align="left" width="531"}
 
 [***Hello! I'm Eda Gönen.***]{style="color:#9932cc"}
 

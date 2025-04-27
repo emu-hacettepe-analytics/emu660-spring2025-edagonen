@@ -2,6 +2,8 @@
 title: "<div style='text-align:center;'><span style='color:#9932cc; font-style:italic;'>Mtcars Statistical Analysis</span></div>"
 ---
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
 ## **Statistical Analysis of the mtcars Dataset in R**
 
 ### *Quick Overview of the `mtcars` Dataset*

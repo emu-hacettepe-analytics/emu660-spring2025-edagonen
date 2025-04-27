@@ -2,6 +2,8 @@
 title: "<div style='text-align:center;'><span style='color:#9932cc; font-style:italic;'>NA_Example</span></div>"
 ---
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
 ## **Handling Missing Values in the dslabs 'na_example' Dataset: Methods and Comparisons**
 
 ### *Installing and Loading the 'dslaps'*

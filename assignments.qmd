@@ -1,6 +1,8 @@
 ---
 title: "<div style='text-align:center;'><span style='color:#9932cc; font-style:italic;'>EMU660 Spring 2024-2025 Assignment Portfolio</span></div>"
 ---
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
 
 ***On this page, I showcase the assignments I conducted for the EMU660 Decision Making with Analytics course during the \[term and year, e.g. Spring 2024-2025\].***
 

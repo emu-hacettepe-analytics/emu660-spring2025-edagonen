@@ -7,6 +7,8 @@ format:
     css: styles.css
 ---
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
 Welcome to our project page.
 
 ***Begüm ÇORUH & Eda GÖNEN***
