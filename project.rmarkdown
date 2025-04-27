@@ -7,6 +7,8 @@ format:
     css: styles.css
 ---
 
+
+
 Welcome to our project page.
 
 ***Begüm ÇORUH & Eda GÖNEN***
@@ -49,6 +51,8 @@ This final dataset preserves authentic movie titles and metadata while also inco
 
 The combined dataset was saved in both `.RData` and `.csv` formats for flexibility in further exploration and analysis.
 
+
+
 ```{r}
 
 # 1. Global movies verisini yükle
@@ -90,6 +94,8 @@ write.csv(combined_movies, file = "combined_movies.csv", row.names = FALSE)
 
 ```
 
+
+
 ### ***2.4 Data Summary***
 
 The final dataset combines global and Turkish movies, resulting in a comprehensive collection of approximately 8,000 films.
@@ -100,6 +106,8 @@ The following code blocks provide an overview of the combined movies dataset, in
 
 #### ***Structure of combined_movies dataset***
 
+
+
 ```{r}
 
 # Load the combined dataset
@@ -109,7 +117,11 @@ load("combined_movies.RData")
 str(combined_movies)
 ```
 
+
+
 #### ***Number of rows and columns***
+
+
 
 ```{r}
 
@@ -117,7 +129,11 @@ str(combined_movies)
 dim(combined_movies)
 ```
 
+
+
 #### ***Names of variables***
+
+
 
 ```{r}
 
@@ -126,7 +142,11 @@ names(combined_movies)
 
 ```
 
+
+
 #### ***First 6 rows of data***
+
+
 
 ```{r}
 
@@ -135,11 +155,15 @@ head(combined_movies)
 
 ```
 
+
+
 ## ***3.Data Analysis***
 
 The analyses presented here are intended solely for illustrative purposes and do not represent a definitive study.
 
 #### ***Top 10 Highest Rated Movies***
+
+
 
 ```{r}
 
@@ -164,9 +188,13 @@ movies %>%
 
 ```
 
+
+
 In this line chart, the same top 10 movies are displayed sequentially based on their ratings. The downward movement highlights the slight decrease between consecutive IMDb ratings. Coloring by release year shows the temporal diversity among the highest-rated films.
 
 #### ***Average Rating and Runtime by Country***
+
+
 
 ```{r}
 
@@ -180,7 +208,11 @@ combined_movies %>%
 
 ```
 
+
+
 #### ***Comparison of IMDb Ratings: Global vs Turkey***
+
+
 
 ```{r}
 # Sahte bir ülke ataması (örnekleme)
@@ -200,6 +232,9 @@ ggplot(movies_grouped, aes(x = country, y = rating, fill = country)) +
   theme_minimal(base_size = 14)
 ```
 
+
+
 This boxplot compares the IMDb rating distributions between films produced globally and those produced in Turkey. Turkish films show a narrower distribution, while global films cover a broader range of ratings. Mean differences and the presence of outliers provide further insights into rating variability between the two groups.
 
 ***To be continued...***
+

@@ -32,7 +32,7 @@ website:
           href: assignments.qmd
         - text: "On Data Science and Industrial Engineering"
           href: assignments/datascience.qmd
-        - text: "MRCars Statistics"
+        - text: "MTCars Statistics"
           href: assignments/statisticsofmrcars.qmd
         - text: "Handling Missing Values"
           href: assignments/handlingna.qmd

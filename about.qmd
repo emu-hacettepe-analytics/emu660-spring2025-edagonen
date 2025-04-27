@@ -11,7 +11,7 @@ As an **industrial engineer** with a passion for data analysis, broadcasting, an
 
 Currently, I am pursuing a master's degree in industrial engineering while developing projects that integrate AI and innovation into the broadcasting industry. I also share insights on industry trends through blog writing and continuously work on enhancing my professional expertise.
 
-## [*Education*]{style="color:#9932cc;"}
+## ***Education***
 
 -   **M.S, Industrial Engineering**, Hacettepe University, *Turkey*
 
@@ -28,7 +28,7 @@ Currently, I am pursuing a master's degree in industrial engineering while devel
 
     -   *2015 - 2020* ![](assets/images/tobblogo.png){width="6%"}
 
-## [*Work Experience*]{style="color:#9932cc;"}
+## ***Work Experience***
 
 -   **TRT**, Planning Specialist, Turkey ![](assets/images/trtlogo.png){width="8%"}
 
@@ -58,7 +58,7 @@ Currently, I am pursuing a master's degree in industrial engineering while devel
 
     -   *Aug 2018- May 2019*\
 
-## [*Competencies*]{style="color:#9932cc;"}
+## ***Competencies***
 
 -   **Mathematical Modelling**
 -   **MS Office**
@@ -67,7 +67,7 @@ Currently, I am pursuing a master's degree in industrial engineering while devel
 -   **MySQL**
 -   **MS Office**
 
-## [*Hobbies*]{style="color:#9932cc;"}
+## ***Hobbies***
 
 -   **Painting & Crafts** 🎨🖌️
 -   **Cinema & Theatre** 🎬🎭
@@ -75,4 +75,4 @@ Currently, I am pursuing a master's degree in industrial engineering while devel
 -   **Photography** 📸
 -   **Cooking** 🍳
 
-[***Learn More -\>***]{style="color:#9932cc"} [Download CV](assets/files/Eda_Gonen.pdf)
+[***Learn More -\>***] [Download CV](assets/files/Eda_Gonen.pdf)
