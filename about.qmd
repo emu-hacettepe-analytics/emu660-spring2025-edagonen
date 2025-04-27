@@ -1,19 +1,17 @@
 ---
-title: "<span style='color:red; font-style:italic'>About Me</span>"
+title: "<span style='color:#9932cc; font-style:italic'>About Me</span>"
 sidebar: false
 format:
   html:
     theme: journal
     css: styles.css
-
 ---
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
 As an **industrial engineer** with a passion for data analysis, broadcasting, and artificial intelligence, I have built my career on exploring innovative solutions in these fields. After graduating from TOBB University, I began working as a data analyst in the broadcasting sector, specifically at TRT1, where I focused on broadcast planning and data analysis.
 
 Currently, I am pursuing a master's degree in industrial engineering while developing projects that integrate AI and innovation into the broadcasting industry. I also share insights on industry trends through blog writing and continuously work on enhancing my professional expertise.
 
-## [*Education*]{style="color:red;"}
+## [*Education*]{style="color:#9932cc;"}
 
 -   **M.S, Industrial Engineering**, Hacettepe University, *Turkey*
 
@@ -30,7 +28,7 @@ Currently, I am pursuing a master's degree in industrial engineering while devel
 
     -   *2015 - 2020* ![](assets/images/tobblogo.png){width="6%"}
 
-## [*Work Experience*]{style="color:red;"}
+## [*Work Experience*]{style="color:#9932cc;"}
 
 -   **TRT**, Planning Specialist, Turkey ![](assets/images/trtlogo.png){width="8%"}
 
@@ -60,7 +58,7 @@ Currently, I am pursuing a master's degree in industrial engineering while devel
 
     -   *Aug 2018- May 2019*\
 
-## [*Competencies*]{style="color:red;"}
+## [*Competencies*]{style="color:#9932cc;"}
 
 -   **Mathematical Modelling**
 -   **MS Office**
@@ -69,7 +67,7 @@ Currently, I am pursuing a master's degree in industrial engineering while devel
 -   **MySQL**
 -   **MS Office**
 
-## [*Hobbies*]{style="color:red;"}
+## [*Hobbies*]{style="color:#9932cc;"}
 
 -   **Painting & Crafts** 🎨🖌️
 -   **Cinema & Theatre** 🎬🎭
@@ -77,4 +75,4 @@ Currently, I am pursuing a master's degree in industrial engineering while devel
 -   **Photography** 📸
 -   **Cooking** 🍳
 
-[***Learn More -\>***]{style="color:Red"} [Download CV](assets/files/Eda_Gonen.pdf)
+[***Learn More -\>***]{style="color:#9932cc"} [Download CV](assets/files/Eda_Gonen.pdf)

@@ -1,18 +1,38 @@
 /* Genel sayfa ayarları */
 body {
-  background-color: #ffffff;
+  background: linear-gradient(90deg, #ffffff 0%, #fff5f9 40%, #ffe6f0 70%, #ffe0eb 100%);
   font-family: 'Playfair Display', serif;
   color: #333333;
-  animation: fadeInBody 1s ease-in; /* Sayfa fade-in animasyonu */
+  animation: fadeInBody 1s ease-in;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Arka plan parıltı efekti */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,192,203,0.25) 0%, rgba(255,255,255,0) 40%),
+    radial-gradient(circle at 70% 60%, rgba(255,192,203,0.2) 0%, rgba(255,255,255,0) 40%),
+    radial-gradient(circle at 50% 50%, rgba(255,228,225,0.2) 0%, rgba(255,255,255,0) 50%);
+  background-repeat: no-repeat;
+  animation: shimmer 30s linear infinite;
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* Navbar */
 .navbar {
-  background-color: #c40000 !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  background-color: #e75480 !important; /* Tatlı koyu pembe navbar */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  animation: fadeInNavbar 1s ease-in; /* Navbar fade-in animasyonu */
+  animation: fadeInNavbar 1s ease-in;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -22,7 +42,7 @@ body {
 .navbar-brand, 
 .navbar-nav .nav-link, 
 .navbar-nav .dropdown-item {
-  background-color: #c40000 !important;
+  background-color: #e75480 !important;
   color: white !important;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -35,12 +55,12 @@ body {
 .navbar-nav .nav-link:hover, 
 .navbar-nav .dropdown-item:hover {
   color: #ffd700 !important;
-  transform: scale(1.05); /* Hover'da hafif büyüme */
+  transform: scale(1.05);
 }
 
 /* Sidebar ve menü */
 .sidebar, .sidebar-navigation, .nav-sidebar, .nav-page {
-  background-color: #ffffff !important;
+  background-color: transparent !important;
 }
 
 .nav-sidebar .nav-link, 
@@ -50,7 +70,7 @@ body {
 
 /* Başlıklar */
 h1, h2, h3, h4, h5, h6 {
-  color: #222222;
+  color: #9932cc; /* Canlı, koyu pembe başlıklar */
   font-weight: 700;
 }
 
@@ -66,7 +86,18 @@ h1, h2, h3, h4, h5, h6 {
   to { opacity: 1; transform: translateY(0); }
 }
 
-
+/* Arka plan shimmer (ışıltı) animasyonu */
+@keyframes shimmer {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
 
 
 

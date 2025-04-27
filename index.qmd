@@ -1,5 +1,5 @@
 ---
-title: "<span style='color:red; font-style:italic'>Welcome to My Analytic Lab</span>"
+title: "<span style='color:#9932cc; font-style:italic'>Welcome to My Analytic Lab</span>"
 sidebar: false
 format:
   html:
@@ -9,7 +9,7 @@ format:
 
 ![](images/clipboard-3014854296.gif)
 
-[***Hello! I'm Eda Gönen.***]{style="color:red"}
+[***Hello! I'm Eda Gönen.***]{style="color:#9932cc"}
 
 Welcome to my personal website! Here, I share my work in data analytics, blog posts, and a few different projects. I enjoy working with data and finding new ways to understand it. I’ll also be sharing my thoughts on technology from time to time.
 

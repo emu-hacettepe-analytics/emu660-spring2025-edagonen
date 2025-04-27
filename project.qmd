@@ -1,5 +1,5 @@
 ---
-title: "<span style='color:red; font-style:italic'>Project Genre Matters: Exploring Film Audience Preferences</span>"
+title: "<span style='color:#9932cc; font-style:italic'>Project Genre Matters: Exploring Film Audience Preferences</span>"
 sidebar: false
 format:
   html:

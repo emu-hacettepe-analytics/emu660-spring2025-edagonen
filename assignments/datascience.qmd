@@ -1,5 +1,5 @@
 ---
-title: "<div style='text-align:center;'><span style='color:red; font-style:italic;'>On Data Science and Industrial Engineering</span></div>"
+title: "<div style='text-align:center;'><span style='color:#9932cc; font-style:italic;'>On Data Science and Industrial Engineering</span></div>"
 ---
 
 Below, you will find a brief summary of the discussion video on data analytics and industrial engineering, available at the following link:

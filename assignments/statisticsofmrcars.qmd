@@ -1,5 +1,5 @@
 ---
-title: "<div style='text-align:center;'><span style='color:red; font-style:italic;'>Mtcars Statistical Analysis</span></div>"
+title: "<div style='text-align:center;'><span style='color:#9932cc; font-style:italic;'>Mtcars Statistical Analysis</span></div>"
 ---
 
 ## **Statistical Analysis of the mtcars Dataset in R**

@@ -1,5 +1,5 @@
 ---
-title: "<div style='text-align:center;'><span style='color:red; font-style:italic;'>NA_Example</span></div>"
+title: "<div style='text-align:center;'><span style='color:#9932cc; font-style:italic;'>NA_Example</span></div>"
 ---
 
 ## **Handling Missing Values in the dslabs 'na_example' Dataset: Methods and Comparisons**
