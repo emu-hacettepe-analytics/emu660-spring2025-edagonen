@@ -60,19 +60,19 @@ Currently, I am pursuing a master's degree in industrial engineering while devel
 
 ## ***Competencies***
 
--   **Mathematical Modelling**
--   **MS Office**
--   **R**
--   **CPLEX**
--   **MySQL**
--   **MS Office**
+-   Mathematical Modelling
+-   MS Office
+-   R
+-   CPLEX
+-   MySQL
+-   MS Office
 
 ## ***Hobbies***
 
--   **Painting & Crafts** 🎨🖌️
--   **Cinema & Theatre** 🎬🎭
--   **Traveling & Exploring New Places** ✈️🌍
--   **Photography** 📸
--   **Cooking** 🍳
+-   Painting & Crafts 🎨🖌️
+-   Cinema & Theatre 🎬🎭
+-   Traveling & Exploring New Places ✈️🌍
+-   Photography 📸
+-   Cooking 🍳
 
-[***Learn More -\>***] [Download CV](assets/files/Eda_Gonen.pdf)
+\[***Learn More -\>***\] [Download CV](assets/files/Eda_Gonen.pdf)

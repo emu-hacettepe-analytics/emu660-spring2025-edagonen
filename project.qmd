@@ -11,7 +11,7 @@ Welcome to our project page.
 
 ***Begüm ÇORUH & Eda GÖNEN***
 
-Keep an eye on this space to stay updated with my project activities.
+Keep an eye on this space to stay updated with our project activities.
 
 ## ***1.Project Overview and Scope***
 
@@ -35,19 +35,19 @@ The combined data allowed us to create new variables, such as Turkish-specific r
 
 ### **2.*2 Reasons of Choice***
 
-We selected this dataset because it offers a rich and diverse set of information about movies across different genres and periods. The global *ggplot2movies* dataset provides a well-organized structure for large-scale analysis, while the Turkish Movies dataset adds a localized dimension to the study, making it more relevant to regional audience preferences. The combination of both datasets allows us to explore general trends as well as cultural differences in movie genre popularity. Moreover, the variety of available variables such as genre, rating, year, runtime, and awards creates multiple opportunities for deeper analytical approaches.
+We selected this dataset because it offers a rich and diverse set of information about movies across different genres and periods. The global ***ggplot2movies*** dataset provides a well-organized structure for large-scale analysis, while the ***Turkish Movies*** dataset adds a localized dimension to the study, making it more relevant to regional audience preferences. **The combination of both datasets allows us to explore general trends as well as cultural differences in movie genre popularity. Moreover, the variety of available variables such as genre, rating, year, runtime, and awards creates multiple opportunities for deeper analytical approaches.**
 
 ### ***2.3 Data Combination Process & Preprocessing***
 
-To create a comprehensive and diverse dataset, we combined two different sources.\
-First, we imported the original *ggplot2movies* dataset, which contains global movie information including variables such as title, year, length, budget, rating, votes, and genre indicators.\
-Second, we processed a Turkish movie dataset, cleaned it, and expanded its structure to match the global dataset's format.
+**To create a comprehensive and diverse dataset, we combined two different sources.**\
+First, we imported the original ***ggplot2movies*** **dataset**, which contains global movie information including variables such as title, year, length, budget, rating, votes, and genre indicators.\
+Second, we processed a ***Turkish movie*** **dataset**, cleaned it, and expanded its structure to match the global dataset's format.
 
 We standardized column names, added missing fields where necessary (e.g., budget, votes, genre dummies), and included a `country` variable to distinguish between Global and Turkish movies.\
 After ensuring consistency across both datasets, we merged them into a single, unified dataset named `combined_movies`.\
 This final dataset preserves authentic movie titles and metadata while also incorporating localized Turkish film information, making it suitable for international and regional analyses.
 
-The combined dataset was saved in both `.RData` and `.csv` formats for flexibility in further exploration and analysis.
+**The combined dataset was saved in both `.RData` and `.csv` formats for flexibility in further exploration and analysis.**
 
 ```{r}
 
@@ -137,7 +137,7 @@ head(combined_movies)
 
 ## ***3.Data Analysis***
 
-The analyses presented here are intended solely for illustrative purposes and do not represent a definitive study.
+**The analyses presented here are intended solely for illustrative purposes and do not represent a definitive study.**
 
 #### ***Top 10 Highest Rated Movies***
 
@@ -164,7 +164,7 @@ movies %>%
 
 ```
 
-In this line chart, the same top 10 movies are displayed sequentially based on their ratings. The downward movement highlights the slight decrease between consecutive IMDb ratings. Coloring by release year shows the temporal diversity among the highest-rated films.
+**In this line chart, the same top 10 movies are displayed sequentially based on their ratings. The downward movement highlights the slight decrease between consecutive IMDb ratings. Coloring by release year shows the temporal diversity among the highest-rated films.**
 
 #### ***Average Rating and Runtime by Country***
 
@@ -200,6 +200,6 @@ ggplot(movies_grouped, aes(x = country, y = rating, fill = country)) +
   theme_minimal(base_size = 14)
 ```
 
-This boxplot compares the IMDb rating distributions between films produced globally and those produced in Turkey. Turkish films show a narrower distribution, while global films cover a broader range of ratings. Mean differences and the presence of outliers provide further insights into rating variability between the two groups.
+**This boxplot compares the IMDb rating distributions between films produced globally and those produced in Turkey. Turkish films show a narrower distribution, while global films cover a broader range of ratings. Mean differences and the presence of outliers provide further insights into rating variability between the two groups.**
 
 ***To be continued...***

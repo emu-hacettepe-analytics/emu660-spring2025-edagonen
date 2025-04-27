@@ -202,7 +202,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Welcome to our project page.</p>
 <p><strong><em>Begüm ÇORUH &amp; Eda GÖNEN</em></strong></p>
-<p>Keep an eye on this space to stay updated with my project activities.</p>
+<p>Keep an eye on this space to stay updated with our project activities.</p>
 <section id="project-overview-and-scope" class="level2">
 <h2 class="anchored" data-anchor-id="project-overview-and-scope"><strong><em>1.Project Overview and Scope</em></strong></h2>
 <p>In this project, we aim to analyze how different movie genres perform in terms of audience preferences. Our primary focus is to identify genre-based patterns in film popularity and ratings, using a data-driven approach. To make the analysis more meaningful and localized, we enriched a widely-used global movie dataset by merging it with a Turkish-specific movie dataset. Through this project, we plan to discover whether certain genres are more successful among audiences and if factors like production year, runtime, or budget have a significant effect on genre-based popularity.</p>
@@ -222,17 +222,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="reasons-of-choice" class="level3">
 <h3 class="anchored" data-anchor-id="reasons-of-choice"><strong>2.<em>2 Reasons of Choice</em></strong></h3>
-<p>We selected this dataset because it offers a rich and diverse set of information about movies across different genres and periods. The global <em>ggplot2movies</em> dataset provides a well-organized structure for large-scale analysis, while the Turkish Movies dataset adds a localized dimension to the study, making it more relevant to regional audience preferences. The combination of both datasets allows us to explore general trends as well as cultural differences in movie genre popularity. Moreover, the variety of available variables such as genre, rating, year, runtime, and awards creates multiple opportunities for deeper analytical approaches.</p>
+<p>We selected this dataset because it offers a rich and diverse set of information about movies across different genres and periods. The global <strong><em>ggplot2movies</em></strong> dataset provides a well-organized structure for large-scale analysis, while the <strong><em>Turkish Movies</em></strong> dataset adds a localized dimension to the study, making it more relevant to regional audience preferences. <strong>The combination of both datasets allows us to explore general trends as well as cultural differences in movie genre popularity. Moreover, the variety of available variables such as genre, rating, year, runtime, and awards creates multiple opportunities for deeper analytical approaches.</strong></p>
 </section>
 <section id="data-combination-process-preprocessing" class="level3">
 <h3 class="anchored" data-anchor-id="data-combination-process-preprocessing"><strong><em>2.3 Data Combination Process &amp; Preprocessing</em></strong></h3>
-<p>To create a comprehensive and diverse dataset, we combined two different sources.<br>
-First, we imported the original <em>ggplot2movies</em> dataset, which contains global movie information including variables such as title, year, length, budget, rating, votes, and genre indicators.<br>
-Second, we processed a Turkish movie dataset, cleaned it, and expanded its structure to match the global dataset’s format.</p>
+<p><strong>To create a comprehensive and diverse dataset, we combined two different sources.</strong><br>
+First, we imported the original <strong><em>ggplot2movies</em></strong> <strong>dataset</strong>, which contains global movie information including variables such as title, year, length, budget, rating, votes, and genre indicators.<br>
+Second, we processed a <strong><em>Turkish movie</em></strong> <strong>dataset</strong>, cleaned it, and expanded its structure to match the global dataset’s format.</p>
 <p>We standardized column names, added missing fields where necessary (e.g., budget, votes, genre dummies), and included a <code>country</code> variable to distinguish between Global and Turkish movies.<br>
 After ensuring consistency across both datasets, we merged them into a single, unified dataset named <code>combined_movies</code>.<br>
 This final dataset preserves authentic movie titles and metadata while also incorporating localized Turkish film information, making it suitable for international and regional analyses.</p>
-<p>The combined dataset was saved in both <code>.RData</code> and <code>.csv</code> formats for flexibility in further exploration and analysis.</p>
+<p><strong>The combined dataset was saved in both <code>.RData</code> and <code>.csv</code> formats for flexibility in further exploration and analysis.</strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Global movies verisini yükle</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"movies.RData"</span>)</span>
@@ -373,7 +373,7 @@ This final dataset preserves authentic movie titles and metadata while also inco
 </section>
 <section id="data-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="data-analysis"><strong><em>3.Data Analysis</em></strong></h2>
-<p>The analyses presented here are intended solely for illustrative purposes and do not represent a definitive study.</p>
+<p><strong>The analyses presented here are intended solely for illustrative purposes and do not represent a definitive study.</strong></p>
 <section id="top-10-highest-rated-movies" class="level4">
 <h4 class="anchored" data-anchor-id="top-10-highest-rated-movies"><strong><em>Top 10 Highest Rated Movies</em></strong></h4>
 <div class="cell">
@@ -425,7 +425,7 @@ Attaching package: 'dplyr'</code></pre>
 </div>
 </div>
 </div>
-<p>In this line chart, the same top 10 movies are displayed sequentially based on their ratings. The downward movement highlights the slight decrease between consecutive IMDb ratings. Coloring by release year shows the temporal diversity among the highest-rated films.</p>
+<p><strong>In this line chart, the same top 10 movies are displayed sequentially based on their ratings. The downward movement highlights the slight decrease between consecutive IMDb ratings. Coloring by release year shows the temporal diversity among the highest-rated films.</strong></p>
 </section>
 <section id="average-rating-and-runtime-by-country" class="level4">
 <h4 class="anchored" data-anchor-id="average-rating-and-runtime-by-country"><strong><em>Average Rating and Runtime by Country</em></strong></h4>
@@ -471,7 +471,7 @@ Attaching package: 'dplyr'</code></pre>
 </div>
 </div>
 </div>
-<p>This boxplot compares the IMDb rating distributions between films produced globally and those produced in Turkey. Turkish films show a narrower distribution, while global films cover a broader range of ratings. Mean differences and the presence of outliers provide further insights into rating variability between the two groups.</p>
+<p><strong>This boxplot compares the IMDb rating distributions between films produced globally and those produced in Turkey. Turkish films show a narrower distribution, while global films cover a broader range of ratings. Mean differences and the presence of outliers provide further insights into rating variability between the two groups.</strong></p>
 <p><strong><em>To be continued…</em></strong></p>
 
 
