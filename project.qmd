@@ -1,17 +1,18 @@
 ---
-title: "<span style='color:#9932cc; font-style:italic'>Project Genre Matters: Exploring Film Audience Preferences</span>"
-sidebar: false
+title: "Project Genre Matters: Exploring Film Audience Preferences"
 format:
   html:
     theme: journal
     css: styles.css
     code-fold: true
     code-summary: "Kodu Göster / Gizle"
+  pdf:
+    keep-md: true
 execute:
   warning: false
   message: false
-editor: 
-  markdown: 
+editor:
+  markdown:
     wrap: sentence
 encoding: UTF-8
 ---
