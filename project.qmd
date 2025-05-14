@@ -5,6 +5,8 @@ format:
   html:
     theme: journal
     css: styles.css
+    code-fold: true
+    code-summary: "Kodu Göster / Gizle"
 editor: 
   markdown: 
     wrap: sentence

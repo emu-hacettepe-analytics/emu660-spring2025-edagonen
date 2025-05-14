@@ -296,11 +296,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="structure-of-combined_movies-dataset" class="level4">
 <h4 class="anchored" data-anchor-id="structure-of-combined_movies-dataset"><strong><em>Structure of combined_movies dataset</em></strong></h4>
 <div class="cell">
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the combined dataset</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"combined_movies.RData"</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Show structure</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(combined_movies)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Classes 'tbl_df', 'tbl' and 'data.frame':   67465 obs. of  25 variables:
  $ title      : chr  "$" "$1000 a Touchdown" "$21 a Day Once a Month" "$40,000" ...
@@ -334,8 +337,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="number-of-rows-and-columns" class="level4">
 <h4 class="anchored" data-anchor-id="number-of-rows-and-columns"><strong><em>Number of rows and columns</em></strong></h4>
 <div class="cell">
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Number of rows and columns</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(combined_movies)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 67465    25</code></pre>
 </div>
@@ -344,8 +350,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="names-of-variables" class="level4">
 <h4 class="anchored" data-anchor-id="names-of-variables"><strong><em>Names of variables</em></strong></h4>
 <div class="cell">
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Names of variables</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(combined_movies)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "title"       "year"        "length"      "budget"      "rating"     
  [6] "votes"       "r1"          "r2"          "r3"          "r4"         
@@ -358,8 +367,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="first-6-rows-of-data" class="level4">
 <h4 class="anchored" data-anchor-id="first-6-rows-of-data"><strong><em>First 6 rows of data</em></strong></h4>
 <div class="cell">
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First 6 rows of data</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(combined_movies)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>                     title year length budget rating votes   r1   r2  r3   r4
 1                        $ 1971    121     NA    6.4   348  4.5  4.5 4.5  4.5
@@ -392,7 +404,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="top-10-highest-rated-movies" class="level3">
 <h3 class="anchored" data-anchor-id="top-10-highest-rated-movies"><strong><em>3.1 Top 10 Highest Rated Movies</em></strong></h3>
 <div class="cell">
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'dplyr' was built under R version 4.4.3</code></pre>
 </div>
@@ -410,14 +425,22 @@ Attaching package: 'dplyr'</code></pre>
 
     intersect, setdiff, setequal, union</code></pre>
 </div>
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'ggplot2' was built under R version 4.4.3</code></pre>
 </div>
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'scales' was built under R version 4.4.3</code></pre>
 </div>
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Top 10 Movies Rating Plot - Star Shaped Points</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>combined_movies <span class="sc">%&gt;%</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(country <span class="sc">==</span> <span class="st">"Global"</span>, rating <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
@@ -438,6 +461,7 @@ Attaching package: 'dplyr'</code></pre>
 <span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>),</span>
 <span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>)</span>
 <span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -447,6 +471,8 @@ Attaching package: 'dplyr'</code></pre>
 </div>
 </div>
 <div class="cell">
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)  </span>
@@ -471,6 +497,7 @@ Attaching package: 'dplyr'</code></pre>
 <span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>),</span>
 <span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>)</span>
 <span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -484,6 +511,8 @@ Attaching package: 'dplyr'</code></pre>
 <section id="comparison-of-imdb-ratings-global-vs-turkey" class="level3">
 <h3 class="anchored" data-anchor-id="comparison-of-imdb-ratings-global-vs-turkey"><strong><em>3.2 Comparison of IMDb Ratings: Global vs Turkey</em></strong></h3>
 <div class="cell">
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>movies_grouped <span class="ot">&lt;-</span> combined_movies <span class="sc">%&gt;%</span></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(rating), <span class="sc">!</span><span class="fu">is.na</span>(length)) <span class="sc">%&gt;%</span></span>
@@ -498,6 +527,7 @@ Attaching package: 'dplyr'</code></pre>
 <span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Country"</span>,</span>
 <span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"IMDb Rating"</span>) <span class="sc">+</span></span>
 <span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -512,6 +542,8 @@ Attaching package: 'dplyr'</code></pre>
 <section id="distribution-of-imdb-ratings-in-relation-to-vote-counts" class="level3">
 <h3 class="anchored" data-anchor-id="distribution-of-imdb-ratings-in-relation-to-vote-counts"><strong><em>3.3 Distribution of IMDb Ratings in Relation to Vote Counts</em></strong></h3>
 <div class="cell">
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(movies_grouped, <span class="fu">aes</span>(<span class="at">x =</span> votes, <span class="at">y =</span> rating)) <span class="sc">+</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.4</span>, <span class="at">color =</span> <span class="st">"#8e44ad"</span>) <span class="sc">+</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
@@ -521,6 +553,7 @@ Attaching package: 'dplyr'</code></pre>
 <span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"IMDb Rating"</span></span>
 <span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 4518 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
@@ -536,6 +569,8 @@ Attaching package: 'dplyr'</code></pre>
 <p>Bu grafik, IMDb üzerindeki filmlerin oy sayıları ile aldıkları puanlar arasındaki ilişkiyi sergilemektedir. Yatay eksen, filmlerin aldığı oy sayısının logaritmik ölçümünü sunarken; dikey eksende IMDb puanları yer almaktadır.</p>
 <p>Dikkat çeken nokta, az oy alan filmlerin çok çeşitli puan aralıklarına yayılmasıdır; bu durum, bu filmler hakkında önemli farklılıkların bulunduğunu göstermektedir. Ancak oy sayısı arttıkça puanlar daha sınırlı bir aralıkta toplanmakta ve genellikle 6 ila 8 arasında yoğunlaşmaktadır. Özellikle 10.000 ve üzeri oy almış filmlerde, puanlar daha tutarlı bir şekilde seyrederken, aşırı düşük veya yüksek puanların sayısının azaldığı göze çarpmaktadır. Bu durum, çok sayıda oy alan filmlerin daha geniş bir kitle tarafından değerlendirildiğini ve bu sebeple puanlarının daha dengeli olduğunu ortaya koymaktadır.</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -547,10 +582,13 @@ Attaching package: 'dplyr'</code></pre>
 <span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">log_votes =</span> <span class="fu">log10</span>(votes <span class="sc">+</span> <span class="dv">1</span>)</span>
 <span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
 <span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(rating, log_budget, log_votes, year, length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Using `across()` in `filter()` was deprecated in dplyr 1.0.8.
 ℹ Please use `if_any()` or `if_all()` instead.</code></pre>
 </div>
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>scaled_data <span class="ot">&lt;-</span> <span class="fu">scale</span>(clust_data)</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>k_result <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(scaled_data, <span class="at">centers =</span> <span class="dv">3</span>)</span>
@@ -564,6 +602,7 @@ Attaching package: 'dplyr'</code></pre>
 <span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Log10(Number of Votes)"</span>, <span class="at">y =</span> <span class="st">"IMDb Rating"</span>) <span class="sc">+</span></span>
 <span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="at">palette =</span> <span class="st">"Set1"</span>) <span class="sc">+</span></span>
 <span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -583,11 +622,16 @@ Attaching package: 'dplyr'</code></pre>
 <section id="imdb-rating-density-by-mpaa-rating-a-ridge-plot-visualization" class="level3">
 <h3 class="anchored" data-anchor-id="imdb-rating-density-by-mpaa-rating-a-ridge-plot-visualization"><strong><em>3.4 IMDb Rating Density by MPAA Rating: A Ridge Plot Visualization</em></strong></h3>
 <div class="cell">
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggridges)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'ggridges' was built under R version 4.4.3</code></pre>
 </div>
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>movies_grouped <span class="sc">%&gt;%</span></span>
@@ -600,6 +644,7 @@ Attaching package: 'dplyr'</code></pre>
 <span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"MPAA Rating"</span></span>
 <span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Picking joint bandwidth of 0.438</code></pre>
 </div>
@@ -626,6 +671,8 @@ Attaching package: 'dplyr'</code></pre>
 <section id="relationship-between-film-length-and-imdb-ratings-a-comparative-sample" class="level3">
 <h3 class="anchored" data-anchor-id="relationship-between-film-length-and-imdb-ratings-a-comparative-sample"><strong><em>3.5 Relationship Between Film Length and IMDb Ratings: A Comparative Sample</em></strong></h3>
 <div class="cell">
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -673,6 +720,7 @@ Attaching package: 'dplyr'</code></pre>
 <span id="cb31-45"><a href="#cb31-45" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb31-46"><a href="#cb31-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">150</span>) <span class="sc">+</span></span>
 <span id="cb31-47"><a href="#cb31-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -687,16 +735,24 @@ Attaching package: 'dplyr'</code></pre>
 <section id="beeswarm-plot-of-imdb-ratings-by-genre" class="level3">
 <h3 class="anchored" data-anchor-id="beeswarm-plot-of-imdb-ratings-by-genre"><strong><em>3.6 Beeswarm Plot of IMDb Ratings by Genre</em></strong></h3>
 <div class="cell">
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'tidyr' was built under R version 4.4.3</code></pre>
 </div>
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggbeeswarm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'ggbeeswarm' was built under R version 4.4.3</code></pre>
 </div>
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)  <span class="co"># Ensure reproducible sampling</span></span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>movies_sampled <span class="ot">&lt;-</span> movies_grouped <span class="sc">%&gt;%</span></span>
@@ -719,6 +775,7 @@ Attaching package: 'dplyr'</code></pre>
 <span id="cb36-20"><a href="#cb36-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>),</span>
 <span id="cb36-21"><a href="#cb36-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"none"</span></span>
 <span id="cb36-22"><a href="#cb36-22" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -733,6 +790,8 @@ Attaching package: 'dplyr'</code></pre>
 <section id="heatmap-of-genre-distribution-across-imdb-rating-ranges" class="level3">
 <h3 class="anchored" data-anchor-id="heatmap-of-genre-distribution-across-imdb-rating-ranges"><strong><em>3.7 Heatmap of Genre Distribution Across IMDb Rating Ranges</em></strong></h3>
 <div class="cell">
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
@@ -760,6 +819,7 @@ Attaching package: 'dplyr'</code></pre>
 <span id="cb37-25"><a href="#cb37-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
 <span id="cb37-26"><a href="#cb37-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>)</span>
 <span id="cb37-27"><a href="#cb37-27" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -775,6 +835,8 @@ Attaching package: 'dplyr'</code></pre>
 <section id="imdb-rating-distributions-by-production-budget-groups" class="level3">
 <h3 class="anchored" data-anchor-id="imdb-rating-distributions-by-production-budget-groups"><strong><em>3.8 IMDb Rating Distributions by Production Budget Groups</em></strong></h3>
 <div class="cell">
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>movies_grouped <span class="sc">%&gt;%</span></span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(budget), <span class="sc">!</span><span class="fu">is.na</span>(rating)) <span class="sc">%&gt;%</span></span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">budget_group =</span> <span class="fu">cut</span>(<span class="fu">log10</span>(budget),</span>
@@ -798,6 +860,7 @@ Attaching package: 'dplyr'</code></pre>
 <span id="cb38-21"><a href="#cb38-21" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb38-22"><a href="#cb38-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>) <span class="sc">+</span></span>
 <span id="cb38-23"><a href="#cb38-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
 ℹ Please use `linewidth` instead.</code></pre>
@@ -815,6 +878,8 @@ Attaching package: 'dplyr'</code></pre>
 <section id="average-star-ratings-r1-r10-by-genre" class="level3">
 <h3 class="anchored" data-anchor-id="average-star-ratings-r1-r10-by-genre"><strong><em>3.9 Average Star Ratings (r1-r10) by Genre</em></strong></h3>
 <div class="cell">
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
 <span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
@@ -849,6 +914,7 @@ Attaching package: 'dplyr'</code></pre>
 <span id="cb40-32"><a href="#cb40-32" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb40-33"><a href="#cb40-33" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb40-34"><a href="#cb40-34" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(line_plot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -864,17 +930,25 @@ Attaching package: 'dplyr'</code></pre>
 <section id="most-frequent-words-in-movie-titles" class="level3">
 <h3 class="anchored" data-anchor-id="most-frequent-words-in-movie-titles"><strong><em>3.10 Most Frequent Words in Movie Titles</em></strong></h3>
 <div class="cell">
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'stringr' was built under R version 4.4.3</code></pre>
 </div>
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggwordcloud)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'ggwordcloud' was built under R version 4.4.3</code></pre>
 </div>
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Stopwords to exclude</span></span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>remove_words <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"the"</span>, <span class="st">"and"</span>, <span class="st">"for"</span>, <span class="st">"with"</span>, <span class="st">"from"</span>, <span class="st">"you"</span>, <span class="st">"your"</span>, <span class="st">"are"</span>, <span class="st">"not"</span>, <span class="st">"this"</span>, <span class="st">"that"</span>, <span class="st">"what"</span>, <span class="st">"who"</span>, <span class="st">"film"</span>, <span class="st">"movie"</span>, <span class="st">"its"</span>, <span class="st">"was"</span>, <span class="st">"has"</span>, <span class="st">"have"</span>, <span class="st">"one"</span>, <span class="st">"all"</span>,<span class="st">"der"</span>,<span class="st">"die"</span>,<span class="st">"les"</span>,<span class="st">"del"</span>,<span class="st">"sex"</span>,<span class="st">"des"</span>,<span class="st">"das"</span>,<span class="st">"his"</span>,<span class="st">"los"</span>,<span class="st">"las"</span>,<span class="st">"una"</span>,<span class="st">"town"</span>)</span>
 <span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -906,6 +980,7 @@ Attaching package: 'dplyr'</code></pre>
 <span id="cb45-29"><a href="#cb45-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
 <span id="cb45-30"><a href="#cb45-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>)</span>
 <span id="cb45-31"><a href="#cb45-31" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -917,6 +992,8 @@ Attaching package: 'dplyr'</code></pre>
 <p>Bu kelime bulutu, film isimlerinde en çok rastlanan ilk 100 kelimeyi göstermektedir.</p>
 <p>Grafikte en dikkat çekici ve büyük harflerle öne çıkan kelimeler arasında; insan temaları, duygular, zaman ve mekân gibi kavramların yer aldığı görülmektedir. Bu durum, sinemada anlatılan hikâyelerin sıklıkla bu temalar etrafında şekillendiğini ve izleyiciyle bağ kurmakta önemli rol oynadığını vurgulamaktadır.</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
 <span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
@@ -963,6 +1040,7 @@ Attaching package: 'dplyr'</code></pre>
 <span id="cb46-44"><a href="#cb46-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
 <span id="cb46-45"><a href="#cb46-45" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>)</span>
 <span id="cb46-46"><a href="#cb46-46" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -977,11 +1055,16 @@ Attaching package: 'dplyr'</code></pre>
 <section id="linear-regression-model" class="level2">
 <h2 class="anchored" data-anchor-id="linear-regression-model"><strong>4. Linear Regression Model</strong></h2>
 <div class="cell">
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'patchwork' was built under R version 4.4.3</code></pre>
 </div>
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>combined_movies<span class="sc">$</span>log_budget <span class="ot">&lt;-</span> <span class="fu">log10</span>(combined_movies<span class="sc">$</span>budget)</span>
 <span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>base_theme <span class="ot">&lt;-</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>) <span class="sc">+</span></span>
@@ -1011,6 +1094,7 @@ Attaching package: 'dplyr'</code></pre>
 <span id="cb49-27"><a href="#cb49-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"IMDb Rating Regressions by Predictor"</span>,</span>
 <span id="cb49-28"><a href="#cb49-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">theme =</span> <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>))</span>
 <span id="cb49-29"><a href="#cb49-29" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 62282 rows containing non-finite outside the scale range
 (`stat_smooth()`).</code></pre>
@@ -1042,8 +1126,11 @@ Attaching package: 'dplyr'</code></pre>
 </ul>
 <p><strong>Puanlar açısından oy sayısının etkisi daha belirginken, bütçenin etkisi sınırlı ve negatif bir niteliktedir.</strong></p>
 <div class="cell">
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'car' was built under R version 4.4.3</code></pre>
 </div>
@@ -1062,6 +1149,8 @@ Attaching package: 'car'</code></pre>
 
     recode</code></pre>
 </div>
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>movies_model <span class="ot">&lt;-</span> combined_movies <span class="sc">%&gt;%</span></span>
 <span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(rating), <span class="sc">!</span><span class="fu">is.na</span>(budget), <span class="sc">!</span><span class="fu">is.na</span>(votes), <span class="sc">!</span><span class="fu">is.na</span>(year)) <span class="sc">%&gt;%</span></span>
 <span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">log_budget =</span> <span class="fu">log10</span>(budget <span class="sc">+</span> <span class="dv">1</span>))</span>
@@ -1070,6 +1159,7 @@ Attaching package: 'car'</code></pre>
 <span id="cb60-6"><a href="#cb60-6" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(rating <span class="sc">~</span> log_budget <span class="sc">+</span> votes <span class="sc">+</span> year, <span class="at">data =</span> movies_model)</span>
 <span id="cb60-7"><a href="#cb60-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb60-8"><a href="#cb60-8" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -1092,13 +1182,19 @@ Residual standard error: 1.46 on 5211 degrees of freedom
 Multiple R-squared:  0.1104,    Adjusted R-squared:  0.1099 
 F-statistic: 215.5 on 3 and 5211 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>log_budget      votes       year 
   1.165258   1.148283   1.033985 </code></pre>
 </div>
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>))</span>
 <span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1159,7 +1255,10 @@ F-statistic: 215.5 on 3 and 5211 DF,  p-value: &lt; 2.2e-16</code></pre>
 </tbody>
 </table>
 <div class="cell">
+<details class="code-fold">
+<summary>Kodu Göster / Gizle</summary>
 <div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
