@@ -20,7 +20,6 @@ encoding: UTF-8
 
 ![](images/project2.gif){fig-align="center" width="50%"}
 
-
 Welcome to our project page.
 
 ***Begüm ÇORUH & Eda GÖNEN***
@@ -159,7 +158,7 @@ head(combined_movies)
 
 ## ***3.Data Analysis***
 
-### ***3.1 Top 10 Highest Rated Movies***
+### ***3.1 Top 10 Highest & Most Rated Movies***
 
 ```{r}
 
@@ -222,6 +221,44 @@ combined_movies %>%
 Bu R kodları, Türkiye ve küresel ölçekteki filmler arasında IMDb puanına göre en yüksek sıralamada yer alan ilk 10 filmi belirleyerek bir grafik oluşturur.
 Grafik, bu filmlerin IMDb puanlarını yatay düzlemde gösterir ve her film, yayınlandığı yıla göre farklı renklerle ifade edilmiştir.
 Böylece hem ülkelere göre en yüksek puanlı filmler görselleştirilmiş olur hem de bu filmlerin hangi yıllarda üretildiği anlaşılır şekilde sunulmaktadır.
+
+```{r}
+library(DT)
+library(dplyr)
+
+# En çok oy alan 10 filmi seç
+top_films <- combined_movies %>%
+  filter(!is.na(title), !is.na(votes), !is.na(rating)) %>%
+  arrange(desc(votes)) %>%
+  slice_head(n = 20) %>%
+  select(title, year, rating, votes)
+
+# Etkileşimli tablo oluştur
+datatable(
+  top_films,
+  options = list(
+    pageLength = 10,
+    autoWidth = TRUE,
+    dom = 't',
+    class = 'stripe hover order-column compact',
+    columnDefs = list(
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE,
+  caption = htmltools::tags$caption(
+    style = 'caption-side: top; text-align: left; 
+             font-size: 16px; font-weight: bold; color: black;',
+    '🎬 Top 10 Most Voted Films (IMDb)'
+  )
+) %>%
+  formatStyle(
+    columns = names(top_films),
+    color = 'black',
+    fontWeight = 'normal'
+  )
+
+```
 
 ### ***3.2 Comparison of IMDb Ratings: Global vs Turkey***
 
@@ -772,7 +809,7 @@ plot(model)
     Grafikte bazı gözlemler (örneğin 2979 ve 21798), Cook’s distance sınırını aşmaktadır; bu da bu gözlemlerin model üzerinde orantısız bir etkisi olabileceğini göstermektedir.
 
 | **Tanı Grafiği** | **Amaç** | **Gözlem** | **Yorum** |
-|----------------|------------------|-----------------|--------------------|
+|------------------|------------------|------------------|--------------------|
 | **Residuals vs Fitted** | Doğrusallığı kontrol etmek | Hafif eğrilik gözlemleniyor | Modelde doğrusal olmayan bir ilişki olabilir |
 | **Normal Q-Q Plot** | Artıkların normalliğini değerlendirmek | Uç değerlerde sapma var | Artıklar tam olarak normal dağılmıyor olabilir |
 | **Scale-Location** | Varyansın sabitliğini (homoskedastisite) test etmek | Tahminler arttıkça yayılım da artıyor | Heteroskedastisite (değişken varyans) olabilir |
