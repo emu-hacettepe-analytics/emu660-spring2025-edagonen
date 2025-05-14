@@ -1,4 +1,4 @@
-/* Genel sayfa ayarları */
+/* Genel sayfa ayarlarD1 */
 body {
   background: linear-gradient(90deg, #ffffff 0%, #ffffff 75%, #fff0f5 85%, #ffc1d9 100%);
   font-family: 'Playfair Display', serif;
@@ -33,7 +33,7 @@ body::before {
 
 /* Navbar */
 .navbar {
-  background-color: #e75480 !important; /* Tatlı koyu pembe */
+  background-color: #e75480 !important; /* TatlD1 koyu pembe */
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -43,7 +43,7 @@ body::before {
   z-index: 1000;
 }
 
-/* Navbar yazıları */
+/* Navbar yazD1larD1 */
 .navbar-brand, 
 .navbar-nav .nav-link, 
 .navbar-nav .dropdown-item {
@@ -62,15 +62,15 @@ body::before {
   transform: scale(1.05);
 }
 
-/* Dropdown Menüsü */
+/* Dropdown MenC<sC< */
 .dropdown-menu {
-  background-color: #c46ed8; /* Tatlı koyu mor-pembe */
+  background-color: #c46ed8; /* TatlD1 koyu mor-pembe */
   border: none;
   box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
   animation: fadeDropdown 0.5s ease forwards;
 }
 
-/* Dropdown item yazıları */
+/* Dropdown item yazD1larD1 */
 .dropdown-item {
   color: white !important;
   font-weight: 600;
@@ -84,7 +84,7 @@ body::before {
   text-shadow: 0 0 6px #ffd700;
 }
 
-/* Sidebar ve menü */
+/* Sidebar ve menC< */
 .sidebar, .sidebar-navigation, .nav-sidebar, .nav-page {
   background-color: transparent !important;
 }
@@ -94,14 +94,14 @@ body::before {
   color: #333333 !important;
 }
 
-/* Başlıklar */
+/* BaElD1klar */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Lora', serif;
   color: #9932cc;
   font-weight: 700;
 }
 
-/* Welcome başlığı ve taç animasyonu */
+/* Welcome baElD1DD1 ve taC' animasyonu */
 .welcome-heading {
   animation: fadeSlideIn 1s ease-out, glitterGlow 3s ease-in-out infinite;
 }
@@ -181,14 +181,6 @@ footer {
   50% { transform: translateY(-8px); }
 }
 
-/* Crown sallanma animasyonu */
-@keyframes crownWave {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(8deg); }
-  50% { transform: rotate(0deg); }
-  75% { transform: rotate(-8deg); }
-  100% { transform: rotate(0deg); }
-}
 
 
 

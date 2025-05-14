@@ -18,6 +18,9 @@ encoding: UTF-8
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
 
+![](images/project2.gif){fig-align="center" width="50%"}
+
+
 Welcome to our project page.
 
 ***Begüm ÇORUH & Eda GÖNEN***
@@ -801,3 +804,19 @@ Bu oldukça düşük bir orandır ve filmlerin puanlarını etkileyen birçok ba
 
 Modeldeki tüm değişkenler istatistiksel olarak anlamlıdır.
 Ancak düşük R² değeri, IMDb puanlarının yalnızca bütçe, oy sayısı ve yıl gibi faktörlerle tam olarak açıklanamayacağını; hikâye, oyunculuk, yönetmenlik gibi daha soyut değişkenlerin de önemli rol oynadığını göstermektedir.
+
+## **5. Results and Key Takeaways**
+
+Bu çalışmada, global ve yerel film veri kümelerinin bir araya getirilmesiyle oluşturulan detaylı bir veri seti aracılığıyla, çeşitli film türlerinin izleyici değerlendirmeleri üzerindeki etkileri incelenmiştir.
+Yapılan analizler sonucunda bazı önemli sonuçlar ortaya çıkmıştır: Genel eğilimlere bakıldığında, global filmler Türkiye yapımı filmlere oranla daha yüksek ve dengeli IMDb puanları almıştır.
+Ancak bazı yerel yapımlar, az sayıda oy almasına rağmen yüksek puanlar alarak dikkati üzerine çekmiştir.
+Film türlerinin popülaritesi, izleyicilerin değerlendirmelerinde büyük bir öneme sahiptir.
+Belgesel, animasyon ve dram gibi türler genellikle daha yüksek puanlar alırken, bazı türlerde puan dağılımı daha düzensiz olmuştur.
+Oy sayısının, IMDb puanları üzerinde belirgin bir etkisi bulunmaktadır.
+Daha fazla oy alan filmler genellikle daha yüksek ve dengeli puanlar elde ederken, az oy alan filmler daha uç değerler göstermektedir.
+Bu durum, popülaritenin kalite algısını etkileyebileceğini göstermektedir.
+Bütçe ile IMDb puanı arasında doğrudan bir olumlu ilişki kurulamadığı için yüksek bütçeli filmlerin daha yüksek puanlar aldığı hakkında genel düşünce zayıf kalmıştır.
+Ancak, oy sayısı ile puan arasında güçlü ve anlamlı bir ilişki bulunmuştur.
+Film süresi, MPAA kategorileri ve başlıktaki kelimeler gibi diğer faktörlerin de izleyici puanlarını etkileyebileceği gözlemlenmiştir; fakat bu etkilerin çoğu dolaylı veya bağlamsal olarak değerlendirilmiştir.
+Sonuç olarak bu analiz, film değerlendirme süreçlerini etkileyen birçok faktörün bulunduğunu ve bu faktörlerin sadece sayısal verilerle değil, kültürel ve içeriksel bağlamlarla birlikte incelenmesi gerektiğini ortaya koymaktadır.
+Elde edilen bulgular, yapımcılar, dağıtımcılar ve dijital platformlar için izleyici davranışlarını daha iyi anlamak açısından değerli bilgiler sunmaktadır.
