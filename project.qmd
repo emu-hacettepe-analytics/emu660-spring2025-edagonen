@@ -7,6 +7,9 @@ format:
     css: styles.css
     code-fold: true
     code-summary: "Kodu Göster / Gizle"
+execute:
+  warning: false
+  message: false
 editor: 
   markdown: 
     wrap: sentence
@@ -119,7 +122,6 @@ Aşağıda yer alan kod blokları, bu birleştirilmiş film veri setinin yapıs�
 #### ***Structure of combined_movies dataset***
 
 ```{r}
-
 # Load the combined dataset
 load("combined_movies.RData")
 
